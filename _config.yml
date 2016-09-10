@@ -29,7 +29,7 @@ ga:
 
 # disqus setup
 disqus:
-  shortname: Jim Zhan
+  shortname: jim_zhan
 
 # 主题设置，自动激活某个标签
 active: UAV_Tasks
