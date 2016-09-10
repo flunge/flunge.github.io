@@ -2,42 +2,41 @@ permalink: /:year/:month/:day/:title.html
 paginate: 10
 markdown: redcarpet
 
-# 作者信息
+# Blogger's information
 author: 
-  name: Anya Lin
-  email: lay.1010@hotmail.com
-  link: http://painterlin.com
-  weibo: http://weibo.com/orangeissweet
-  github: http://github.com/lay1010
-  music: http://site.douban.com/linanya
-  linkedin: https://www.linkedin.com/pub/anya-lin/81/91/232
+  name: H.Y. ZHAN
+  email: zhanhuangying@gmail.com
+  link: https://huangying-zhan.github.io/
+  # weibo: http://weibo.com/orangeissweet
+  github: https://github.com/Huangying-Zhan
+  # music: http://site.douban.com/linanya
+  # linkedin: https://www.linkedin.com/
 
-# 站点信息
-title: 林安亚的博客
+# Website's inforamtion
+title: Huangying's Blog
 description: My personal blog
-url: http://painterlin.com
+url: https://huangying-zhan.github.io/
 rss_url: /pages/atom.xml
 
-# gavatar头像及Favicon
+# gavatar profile picture and Favicon
 gavatar: /public/img/deer3.png
 favicon: /public/img/deer3.png
 
-# google analytics 设置
+# google analytics setup
 ga:
-  id: UA-54262064-1 
-  url: painterlin.com
+  # id: UA-54262064-1 
+  # url: painterlin.com
 
-# disqus 设置
+# disqus setup
 disqus:
-  shortname: painterlin
+  shortname: H.Y. Zhan
 
 # 主题设置，自动激活某个标签
-active: 读书
+active: UAV
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Optimization
-  - LaTeX
+  - Setup
 
 # 中文本地化
 locals:
