@@ -35,6 +35,4 @@ titlename: Homepage
     </div>
   {% endfor %}
 </div>
-Thanks <a href="http://painterlin.com/">Anya Lin
-</a> for creating such beautiful template!
  
