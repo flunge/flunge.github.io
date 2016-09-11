@@ -44,7 +44,7 @@ Open *_config.yml* and make modifications according to your needs. The following
 
 Other parts can be updated if necessary.
 
-
+<br><br>
 
 #### 1.2. Delete, add and upload
 
