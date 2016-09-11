@@ -18,7 +18,7 @@ This article provides two ways to create a github page/blog (github.io). All the
 
 ### Part 1. Lazy method
 
-![fork.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/Create_a_github_blog/fork.png)
+![fork.png]({{site.url}}/public/post_resource/Technical/Create_a_github_blog/fork.png)
 
 1. Fork a repository template from others
 2. Click "Settings"
