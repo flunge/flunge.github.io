@@ -166,10 +166,10 @@ __Cons__
 ________________________________________
 
 
-[R-CNN]: {{site.url}}/assets/post/detection/2015_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
+[R-CNN]: {{site.url}}/public/post/detection/2015_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
 
-[SPP-net]: {{site.url}}/assets/post/detection/2015_Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
+[SPP-net]: {{site.url}}/public/post/detection/2015_Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
 
-[Fast R-CNN]: {{site.url}}/assets/post/detection/2015_Fast_R-CNN.pdf
+[Fast R-CNN]: {{site.url}}/public/post/detection/2015_Fast_R-CNN.pdf
 
-[Faster R-CNN]: {{site.url}}/assets/post/detection/2016_faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf
+[Faster R-CNN]: {{site.url}}/public/post/detection/2016_faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf
