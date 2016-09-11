@@ -37,7 +37,7 @@ After forking a repository, clone the repository to your local machine.
 
 	git clone https://github.com/Huangying-Zhan/huangying-zhan.github.io.git
 
-Open *_config.yml* and make modifications according to your need. Some necessary parts requiring update are,
+Open *_config.yml* and make modifications according to your needs. The following parts are required to update.
 
 + Blogger's information
 + Website's inforamtion
@@ -45,18 +45,21 @@ Open *_config.yml* and make modifications according to your need. Some necessary
 Other parts can be updated if necessary.
 
 
-### 1.2. Delete, add and upload
+#### 1.2. Delete, add and upload
 
-How to write your own posts and update the website? First, you need to clean up the existing posts first. There is a folder named
+How to write your own posts and update the website? First of all, you need to clean up the existing posts first. There is a folder named *_post*, which stores all posts that you are going to create. Clear the whole folder except keeping one post. This kept post is a reference for you for writing your own article later on.
 
-
+Suppose you have written a new post. Now we are going to update the changes we have made so far and upload the repository to Github.
 
 ```
-git add .
-git commit -m "update _config.yml"
-git push origin master
+cd $BLOG # $BLOG is the directory of the blog on your local machine
+git add --all # track all modified files
+git commit -m "First update" # Submit all modified files with message "First update"
+git push origin master # Upload the submitted files to Github
 ```
 
+Wait for a while and refresh your website. You should see a brand new page with your first post.
+~ The blog is created! ~
 
 ## Create .github.io
 Suppose you have a github account.
@@ -168,7 +171,7 @@ Refer to the following link.
 * [Jekyll Documentation](https://jekyllrb.com/docs/home/)
 
 * [Update ruby](http://my.oschina.net/fxhover/blog/382634)
-1
+
 
 1. hyperlink inside a post
 2. update resource link
