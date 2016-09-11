@@ -9,6 +9,7 @@ tags: Jekyll Blog
 ### Summary
 This article provides two ways to create a github page/blog (github.io). All the procedures are based on Ubuntu.
 
+**Table of Content**
 1. Lazy way (fork and modify an existing blog)
 2. Hard way (create from scratch)
 
@@ -18,18 +19,30 @@ This article provides two ways to create a github page/blog (github.io). All the
 
 ### Part 1. Lazy method
 
+#### 1.1. Fork, clone and modify
 ![fork.png]({{site.url}}/public/post_resource/Technical/Create_a_github_blog/fork.png)
 
 1. Fork a repository template from others
 2. Click "Settings"
 3. Rename the repository to "*yourUserName.github.io*" (yourUserName should be in lower case)
-4. Update _config.yml and others if necessary
+4. Update *_config.yml* and others if necessary
 
 After forking a repository, clone the repository to your local machine.
 
 	git clone https://github.com/Huangying-Zhan/huangying-zhan.github.io.git
 
-Open *_config.yml*, 
+Open *_config.yml* and make modifications according to your need. Some necessary parts requiring update are,
+
++ Blogger's information
++ Website's inforamtion
+
+Other parts can be updated if necessary.
+
+#### 1.2. Delete, add and upload
+
+How to write your own posts and update the website? First, you need to clean up the existing posts first. There is a folder named
+
+
 
 ```
 git add .

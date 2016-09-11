@@ -36,7 +36,7 @@ active: Technical
 
 # The categories displaying on homepage, except the Newest
 cates: 
-  - Setup
+  - Technical
 
 # Name of some specific pages
 locals:
