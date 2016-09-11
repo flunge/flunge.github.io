@@ -169,3 +169,7 @@ Refer to the following link.
 
 * [Update ruby](http://my.oschina.net/fxhover/blog/382634)
 1
+
+1. hyperlink inside a post
+2. update resource link
+3. 
