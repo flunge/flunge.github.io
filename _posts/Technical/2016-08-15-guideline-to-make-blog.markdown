@@ -1,20 +1,46 @@
 ---
 layout: post
-title:  "Guideline to make blog!"
+title:  "Guideline to create a github page/blog"
 date:   2016-08-15
-categories: General
-tags: Jekyll
+categories: Technical
+tags: Jekyll Blog
 ---
 
-Procedures to start a github.io
-====================
+### Summary
+This article provides two ways to create a github page/blog (github.io). All the procedures are based on Ubuntu.
+
+1. [Lazy way](###Part 1. Lazy method) (fork and modify an existing blog)
+2. Hard way (create from scratch)
+
+*Prerequisite:*
++ A Github account
++ git is installed (`sudo apt-get git`)
+
+### Part 1. Lazy method
+
+1. Fork a repository template from others
+2. Change name of repository to "username.github.io"
+3. Clone to local
+4. Update _config.yml and others if necessary
+
+After forking a repository,
+
+`git clone https://github.com/Huangying-Zhan/huangying-zhan.github.io.git`
+
+After updating _config.yml
+
+```
+git add .
+git commit -m "update _config.yml"
+git push origin master
+```
+
 
 ## Create .github.io
 Suppose you have a github account.
 
 1. Click New repository
-2. Repository name must be username.github.io
-> e.g. huangying-zhan.github.io
+2. Repository name must be username.github.io e.g. huangying-zhan.github.io
 3. Click Settings and the button "Launch automatic page generator"
 4. Choose a theme
 5. A simple github.io is created
@@ -101,24 +127,6 @@ Create a server at localhost: https://localhost:4000
 
 
 
-### Lazy method
-
-1. Fork a repository template from others
-2. Change name of repository to "username.github.io"
-3. Clone to local
-4. Update _config.yml and others if necessary
-
-After forking a repository
-
-`git clone https://github.com/Huangying-Zhan/huangying-zhan.github.io.git`
-
-After updating _config.yml
-
-```
-git add .
-git commit -m "update _config.yml"
-git push origin master
-```
 
 
 
@@ -127,8 +135,7 @@ git push origin master
 Refer to the following link.
 [Generating ssh-key](https://help.github.com/articles/generating-an-ssh-key/)
 
-    
-    
+
 
 ### Reference
 
