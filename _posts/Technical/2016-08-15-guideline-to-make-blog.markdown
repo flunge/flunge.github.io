@@ -23,9 +23,9 @@ ___________________________________________________________________
 
 ___________________________________________________________________
 
-## Part 1. Lazy way
+### Part 1. Lazy way
 
-### 1.1. Fork, clone and modify
+#### 1.1. Fork, clone and modify
 
 ![fork.png]({{site.url}}/public/post_resource/Technical/Create_a_github_blog/fork.png)
 
