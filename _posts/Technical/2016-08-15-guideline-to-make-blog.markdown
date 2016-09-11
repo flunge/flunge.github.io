@@ -18,12 +18,12 @@ ___
 
 ### Table of Content
 
-1. Lazy way (fork and modify an existing blog)
+1. [Lazy way](#Lazy way) (fork and modify an existing blog)
 2. Hard way (create from scratch) [To be edited]
 
 ___
 
-### Part 1. Lazy way
+### Part 1. Lazy way<a name="Lazy way"></a>
 
 #### 1.1. Fork, clone and modify
 
