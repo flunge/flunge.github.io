@@ -7,7 +7,7 @@ tags: Jekyll Blog
 ---
 
 ### Summary
-This article provides two methods to create a github page/blog (github.io). All the procedures are based on Ubuntu.
+This article provides two methods to create a github page/blog (github.io). A lazy way which fork an existing repository and make modifications based on it; A hard way which create your own blog from scratch. All the procedures are based on Ubuntu.
 
 *Prerequisite:*
 
@@ -18,8 +18,8 @@ ___
 
 ### Table of Content
 
-1. [Lazy way](#Lazy way) (fork and modify an existing blog)
-2. [Hard way](#Hard way) (create from scratch) [To be edited]
+1. [Lazy way](#Lazy way)
+2. [Hard way](#Hard way)
 
 ___
 
