@@ -1,4 +1,4 @@
-/* 页面配置 */
+/* Page setup */
 .container {
   width: 100%;
   height: 100%;
@@ -12,18 +12,18 @@ body, html {
 .row {
   height: 100%;
 }
-/* 导航栏 + 目录栏 */
+/* Navigation side & and content table */
 .aside {
   height: 100%;
 }
-/* 左侧导航栏 */
+/* Left side (navigation)*/
 .aside1 {
   /*background-color: #1f2c39;*/
   background-color: #1abc9c;
   /*background-image: url(/public/img/bg_grid.jpg);*/
   height: 100%;
   padding-left: 0px;
-  padding-right: 0px;
+  padding-right: 10px;
   text-align: center;
   /*box-shadow: inset -15px 0 20px -15px #77AEF4;*/
 }
@@ -63,7 +63,7 @@ body, html {
 .aside1_bottom > .table {
   margin-bottom: 0px;
 }
-/* 中部目录栏 */
+/* Middle (content table) */
 .aside2 {
   /*background-color: #fafaf6;*/
   /*background-image: url(/public/img/body_bg.jpg);*/
@@ -76,7 +76,7 @@ body, html {
   margin-top: 40px;
 }
 
-/* 右侧内容栏 */
+/* Right side (content) */
 .aside3 {
   height: 100%;
   overflow-y: auto;
@@ -111,7 +111,7 @@ body, html {
 blockquote p {
   font-size: 20px;
 }
-/* 其他配置 */
+/* other setup */
 .center {
   text-align: center;
 }
@@ -119,7 +119,7 @@ blockquote p {
   color: #fff;
   background-color: #303030;
 }
-/* 显示评论按钮 */
+/* Show comment button */
 .show-commend {
   width: 100%;
   margin-bottom: 40px;
