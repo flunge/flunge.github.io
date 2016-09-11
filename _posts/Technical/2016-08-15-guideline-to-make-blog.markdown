@@ -19,7 +19,7 @@ ___
 ### Table of Content
 
 1. [Lazy way](#Lazy way) (fork and modify an existing blog)
-2. Hard way (create from scratch) [To be edited]
+2. [Hard way](#Hard way) (create from scratch) [To be edited]
 
 ___
 
@@ -65,6 +65,6 @@ Wait for a while and refresh your website. You should see a brand new page with 
 
 ___
 
-### Part 2. Hard way
+### Part 2. Hard way <a name="Hard way"></a>
 
 To be edited.
