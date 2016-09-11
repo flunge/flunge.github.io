@@ -7,10 +7,10 @@ author:
   name: H.Y. ZHAN
   email: zhanhuangying@gmail.com
   link: https://huangying-zhan.github.io/
-  # weibo: http://weibo.com/orangeissweet
+  # weibo: 
   github: https://github.com/Huangying-Zhan
-  # music: http://site.douban.com/linanya
-  # linkedin: https://www.linkedin.com/
+  # music: 
+  # linkedin: 
 
 # Website's inforamtion
 title: Huangying's Blog
@@ -31,14 +31,14 @@ ga:
 disqus:
   shortname: jim_zhan
 
-# 主题设置，自动激活某个标签
-active: UAV_Tasks
+# Auto activate a category
+active: Technical
 
-# 首页除了最新文章外显示分类
+# The categories displaying on homepage, except the Newest
 cates: 
   - Setup
 
-# 中文本地化
+# Name of some specific pages
 locals:
   tags: Tags
   about: About

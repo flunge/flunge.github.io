@@ -22,14 +22,14 @@ This article provides two ways to create a github page/blog (github.io). All the
 
 1. Fork a repository template from others
 2. Click "Settings"
-3. Rename the repository to "yourUserName.github.io" (yourUserName should be in lower case)
+3. Rename the repository to "*yourUserName.github.io*" (yourUserName should be in lower case)
 4. Update _config.yml and others if necessary
 
-After forking a repository,
+After forking a repository, clone the repository to your local machine.
 
 	git clone https://github.com/Huangying-Zhan/huangying-zhan.github.io.git
 
-Open _config.yml, 
+Open *_config.yml*, 
 
 ```
 git add .
