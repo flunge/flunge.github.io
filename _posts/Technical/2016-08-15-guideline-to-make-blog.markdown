@@ -14,14 +14,14 @@ This article provides two methods to create a github page/blog (github.io). All 
 + A Github account
 + git is installed (`sudo apt-get git`)
 
-___________________________________________________________________
+___
 
-**Table of Content**
+### Table of Content
 
 1. Lazy way (fork and modify an existing blog)
 2. Hard way (create from scratch)
 
-___________________________________________________________________
+___
 
 ### Part 1. Lazy way
 
@@ -32,7 +32,6 @@ ___________________________________________________________________
 1. Fork a repository template from others
 2. Click "Settings"
 3. Rename the repository to "*yourUserName.github.io*" (yourUserName should be in lower case)
-4. Update *_config.yml* and others if necessary
 
 After forking a repository, clone the repository to your local machine.
 
