@@ -63,6 +63,8 @@ Wait for a while and refresh your website. You should see a brand new page with 
 
 ~ The blog is created! ~
 
+___
+
 ### Part 2. Hard way
 
 To be edited.
