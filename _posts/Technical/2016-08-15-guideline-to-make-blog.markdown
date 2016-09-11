@@ -14,11 +14,7 @@ This article provides two ways to create a github page/blog (github.io). All the
 + A Github account
 + git is installed (`sudo apt-get git`)
 
-
-
-
-
-
+***
 
 **Table of Content**
 
