@@ -15,6 +15,11 @@ This article provides two ways to create a github page/blog (github.io). All the
 + git is installed (`sudo apt-get git`)
 
 
+
+
+
+
+
 **Table of Content**
 
 1. Lazy way (fork and modify an existing blog)
