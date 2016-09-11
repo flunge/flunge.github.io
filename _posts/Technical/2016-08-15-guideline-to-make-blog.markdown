@@ -45,6 +45,7 @@ Open *_config.yml* and make modifications according to your needs. The following
 Other parts can be updated if necessary.
 
 
+
 #### 1.2. Delete, add and upload
 
 How to write your own posts and update the website? First of all, you need to clean up the existing posts first. There is a folder named *_post*, which stores all posts that you are going to create. Clear the whole folder except keeping one post. This kept post is a reference for you for writing your own article later on.
@@ -53,12 +54,13 @@ Suppose you have written a new post. Now we are going to update the changes we h
 
 ```
 cd $BLOG # $BLOG is the directory of the blog on your local machine
-git add --all # track all modified files
+git add . # track all modified files
 git commit -m "First update" # Submit all modified files with message "First update"
 git push origin master # Upload the submitted files to Github
 ```
 
-Wait for a while and refresh your website. You should see a brand new page with your first post.
+Wait for a while and refresh your website. You should see a brand new page with your first post. 
+
 ~ The blog is created! ~
 
 ## Create .github.io
