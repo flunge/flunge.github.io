@@ -23,7 +23,8 @@ ___
 
 ___
 
-### Part 1. Lazy way<a name="Lazy way"></a>
+<a name="Lazy way"></a>
+### Part 1. Lazy way
 
 #### 1.1. Fork, clone and modify
 
@@ -65,6 +66,7 @@ Wait for a while and refresh your website. You should see a brand new page with 
 
 ___
 
-### Part 2. Hard way <a name="Hard way"></a>
+<a name="Hard way"></a>
+### Part 2. Hard way 
 
 To be edited.
