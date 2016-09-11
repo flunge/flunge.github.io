@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Guideline to create a github page/blog"
+title:  "Create a github page/blog"
 date:   2016-08-15
 categories: Technical
 tags: Jekyll Blog
@@ -10,7 +10,7 @@ tags: Jekyll Blog
 This article provides two ways to create a github page/blog (github.io). All the procedures are based on Ubuntu.
 
 1. [Lazy way](###Part 1. Lazy method) (fork and modify an existing blog)
-2. Hard way (create from scratch)
+2. [Hard way](###Reference) (create from scratch)
 
 *Prerequisite:*
 + A Github account
