@@ -16,7 +16,7 @@ This article provides two methods to create a Github page/blog (github.io). A la
 
 ___
 
-### Table of Content
+### Contents
 
 1. [Lazy way](#Lazy way)
 2. [Hard way](#Hard way)
