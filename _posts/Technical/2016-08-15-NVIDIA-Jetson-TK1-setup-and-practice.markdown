@@ -101,6 +101,8 @@ Now, we need to install some prerequisites for Caffe, including,
     sudo apt-get install libopencv4tegra libopencv4tegra-dev
     ```
 
+<br></br>
+
 #### 1.3 Install Caffe and PyCaffe
 
 In this part, we are finally going to download and install Caffe! First, make sure you have installed git `sudo apt-get install git`. PyCaffe is the Python interface for Caffe. For Caffe installation, there might be some unexpected errors. Please try to google the error. There must be other people encounted same error as you. Specifically, you can refer to the [Caffe Google group](https://groups.google.com/forum/#!forum/caffe-users) or [Caffe Github](https://github.com/BVLC/caffe/issues) and look for a solution to your problem.
@@ -135,6 +137,7 @@ In this part, we are finally going to download and install Caffe! First, make su
 
 Up to this stage, if you didn't encounter any error. Caffe is installed on TK1! 
 
+<br></br>
 
 ### Part 2. Real-time handwritten digit recognition
 
@@ -158,9 +161,12 @@ For preparation of dataset and network trainign, basically, follow the tutorial 
     cd $CAFFE_ROOT
     ./examples/mnist/train_lenet.sh # The trained model is stored in $CAFFE/example/mnist/ and named *lenet_iter_10000.caffemodel*
     ```
+    
+	Now, LeNet model is ready for use!
 
+<br></br>
 
-### Testing
+#### 2.2 Testing
 
 1. Take a photo and store in caffe/data/mnist/sample_digit.png or .jpg
 2. Run python end_to_end_digit_recognition.py
