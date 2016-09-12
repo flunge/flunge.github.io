@@ -27,7 +27,7 @@ ___
 #### 1.1. Remote access to TK1
 
 Remote access to TK1 is not a compulsory procedure to operate TK1, provide that you have prepared necessary computer accessories, including a display monitor, a keyboard and mouse. However, if you prefer using your computer to operate TK1 remotely, there are many ways to do this. Here is a simple way using *ssh* service.
-General speaking, you need to setup a ssh server on TK1 first, and then access to TK1 from your own computer.
+General speaking, you need to setup a ssh server on TK1 first, and then access to TK1 from your own computer. Now, suppose your TK1 is connected to internet via ethernet.
 
 1. Open a terminal on TK1 and install ssh server on TK1 
 
@@ -39,16 +39,11 @@ General speaking, you need to setup a ssh server on TK1 first, and then access t
 
 3. Check IP address of TK1 network
 
- 1. click network->connection information
- 2. check IP address at IPv4
+		ifconfig #If ethernet is used, check *inent addr* on *eth0*
 
-Remote access TK1 from your PC, suppose the IP address of TK1 is 172.16.134.90. 
+4. Remote access TK1 from your PC, suppose the IP address of TK1 is 123.456.78.90
 
-Enter the following command in your PC's terminal.
-
-    ssh ubuntu@172.16.134.90
-    
-The default password is "ubuntu".
+		ssh ubuntu@123.456.78.90 # The default password is "ubuntu".
 
 
 # Install necessary packages in TK1
