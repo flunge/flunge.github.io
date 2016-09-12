@@ -1,14 +1,17 @@
 ---
 layout: post
-title:  "NVIDIA-TK1 Setup"
+title:  "NVIDIA Jetson TK1 Setup and Practice"
 date:   2016-08-15
 categories: Technical
-tags: [Hardware Setup, NVIDIA TK1, MNIST]
+tags: [Hardware Setup, Jetson TK1, MNIST]
 ---
 
 ### Summary
 
-Tegra-K1(TK1) is an embedded system provided by NVIDIA, it is designed for applications involving GPU computing, such as deep learning. This article records the procedures for setting up TK1 and a simple implementation example, a handwritten digit recognition system ([LeNet](http://yann.lecun.com/exdb/lenet/)).
+Jetson Tegra-K1(TK1) is an embedded system provided by NVIDIA. It is designed for applications involving GPU computing, such as deep learning. This article records the procedures for setting up TK1 and a simple implementation example, a handwritten digit recognition system ([LeNet](http://yann.lecun.com/exdb/lenet/)).
+
+![TK1.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/NVIDIA_Jetson_TK1_setup_and_practice/TK1.png)
+*TK1*
 
 ___
 

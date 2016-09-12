@@ -125,3 +125,5 @@ blockquote p {
   width: 100%;
   margin-bottom: 40px;
 }
+/*Image with caption*/
+img + em { }
