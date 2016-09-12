@@ -24,10 +24,10 @@ ___
 
 ### Part 1. Caffe installation on TK1
 
-#### 1.1. Remote access to TK1
+#### 1.1. Remote access TK1
 
-Remote access to TK1 is not a compulsory procedure to operate TK1, provide that you have prepared necessary computer accessories, including a display monitor, a keyboard and mouse. However, if you prefer using your computer to operate TK1 remotely, there are many ways to do this. Here is a simple way using *ssh* service.
-General speaking, you need to setup a ssh server on TK1 first, and then access to TK1 from your own computer. Now, suppose your TK1 is connected to internet via ethernet.
+Remote accessing TK1 is not a compulsory procedure to operate TK1, provide that you have prepared necessary computer accessories, including a display monitor, a keyboard and mouse. However, if you prefer using your computer to operate TK1 remotely, there are many ways to do this. Here is a simple way using *ssh* service.
+General speaking, you need to setup a ssh server on TK1 first, and then access TK1 from your own computer. Now, suppose your TK1 is connected to internet via ethernet.
 
 1. Open a terminal on TK1 and install ssh server on TK1 
 
@@ -108,6 +108,7 @@ Now, we need to install some prerequisites for Caffe, including,
 In this part, we are finally going to download and install Caffe! First, make sure you have installed git `sudo apt-get install git`. PyCaffe is the Python interface for Caffe. For Caffe installation, there might be some unexpected errors. Please try to google the error. There must be other people encounted same error as you. Specifically, you can refer to the [Caffe Google group](https://groups.google.com/forum/#!forum/caffe-users) or [Caffe Github](https://github.com/BVLC/caffe/issues) and look for a solution to your problem.
 
 1. Clone and Complie Caffe
+
     ```
     # Suppose you are going to install Caffe on Desktop
     cd /home/ubuntu/Desktop
@@ -125,6 +126,7 @@ In this part, we are finally going to download and install Caffe! First, make su
     ```
 
 2. Install Python related package
+
     ```
     cd $CAFFE/python
     sudo apt-get install python-pip
