@@ -179,7 +179,7 @@ To make this become real-time, there are many ways, such as reading captured ima
 
 1. Use camera to capture and save pictures from time to time
 2. The saved picture must be stored in same directory and same name, i.e. *sample_digit.png*
-3. end_to_end_digit_recognition.py reads the picture from time to time.
+3. `end_to_end_digit_recognition.py` reads the picture from time to time.
 
 Here is a simple demo video.
 
