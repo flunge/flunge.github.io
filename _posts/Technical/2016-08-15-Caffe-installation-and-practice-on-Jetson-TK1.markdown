@@ -10,7 +10,7 @@ tags: [Caffe, Jetson TK1, MNIST]
 
 Jetson Tegra-K1(TK1) is an embedded system provided by NVIDIA. It is designed for applications involving GPU computing, such as deep learning. This article records the procedures for installation of Caffe on TK1 and a simple implementation example, a real-time handwritten digit recognition system ([LeNet]).
 
-<center>![TK1.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/Caffe_installation_and_practice_on_Jetson_TK1/TK1.png)</center>
+<center>![TK1.png]({{site.url}}/public/post_resource/Technical/Caffe_installation_and_practice_on_Jetson_TK1/TK1.png)</center>
 <center><u>Jetson TK1</u></center>
 
 ___
@@ -169,70 +169,28 @@ For preparation of dataset and network trainign, basically, follow the tutorial 
 
 <br></br>
 
-#### 2.2 Testing
+#### 2.2. Real-time recognition
+A simple [end-to-end-digit recognition][end_to_end_digit_recognition] written by Python is provided for testing LeNet. However, make sure that you are using a white paper and the digit written on the paper is large enough. If the digit is too small / lines are too thin, the system might not be able to recognize the digit correctly. Before the details of real-time implementation, we try to recognize a digit in a single picture first.
 
-1. Take a photo and store in caffe/data/mnist/sample_digit.png or .jpg
-2. Run python end_to_end_digit_recognition.py
+1. Take a photo and store as $CAFFE/data/mnist/sample_digit.png
+2. Run `python end_to_end_digit_recognition.py`
 
-#### Real-time picture reading from camera
+To make this become real-time, there are many ways, such as reading captured image from camera or reading a locally saved  picutre from time to time. The later one is implemented since it suits to different cameras. Basically, the idea is
 
-Installation of OpenCV-Python, mainly refer to the [tutorial](http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/)
+1. Use camera to capture and save pictures from time to time
+2. The saved picture must be stored in same directory and same name, i.e. *sample_digit.png*
+3. end_to_end_digit_recognition.py reads the picture from time to time.
 
+Here is a simple demo video.
+<iframe width="427" height="240" src="https://www.youtube.com/embed/5_aONXUhKbE" frameborder="0" allowfullscreen></iframe>
 
-```
-sudo apt-get install libxtst6:i386 libjpeg62:i386
-sudo apt-get install build-essential cmake git pkg-config
-sudo apt-get install libjpeg8-dev libtiff4-dev libjasper-dev libpng12-dev
-sudo apt-get install libgtk2.0-dev
-sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-sudo apt-get install libatlas-base-dev gfortran
-wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
-cd ~
-git clone https://github.com/opencv/opencv.git
-cd ~/opencv
-mkdir build
-cd build
-cmake -DWITH_CUDA=ON -DCUDA_ARCH_BIN="3.2" -DCUDA_ARCH_PTX="" -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF ..
-
-sudo make -j4 install
-sudo ldconfig
-echo "# Use OpenCV and other custom-built libraries." >> ~/.bashrc
-echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/" >> ~/.bashrc
-source ~/.bashrc
-```    
-
-read video from openCV
-
-```
-import numpy as np
-import cv2
-
-cap = cv2.VideoCapture(0)
-
-while(True):
-    # Capture frame-by-frame
-    ret, frame = cap.read()
-    # Our operations on the frame come here
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    # Display the resulting frame
-    cv2.imshow('frame',gray)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-# When everything done, release the capture
-cap.release()
-cv2.destroyAllWindows()
-```
+<br></br>
 
 
-# Reference
-
-[MNIST change](https://github.com/BVLC/caffe/pull/2359/commits/dd3a5f9268ca3bdf19a17760bd6f568e21c1b521)
-
-[run caffe on TK1](https://petewarden.com/2014/10/25/how-to-run-the-caffe-deep-learning-vision-library-on-nvidias-jetson-mobile-gpu-board/)
+### Reference
 
 
+[Run caffe on TK1](https://petewarden.com/2014/10/25/how-to-run-the-caffe-deep-learning-vision-library-on-nvidias-jetson-mobile-gpu-board/)
 
 [CUDA for Jetson installation instruction]: http://elinux.org/Jetson/Installing_CUDA
 
@@ -243,3 +201,5 @@ cv2.destroyAllWindows()
 [MNIST LeNet example]: http://caffe.berkeleyvision.org/gathered/examples/mnist.html
 
 [LeNet]:http://yann.lecun.com/exdb/lenet/
+
+[end_to_end_digit_recognition]:{{site.url}}/public/post_resource/Technical/Caffe_installation_and_practice_on_Jetson_TK1/end_to_end_digit_recognition.py
