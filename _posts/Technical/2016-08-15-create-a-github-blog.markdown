@@ -64,6 +64,7 @@ Wait for a while and refresh your website. You should see a brand new page with 
 
 ~ The blog is created! ~
 
+<br></br>
 ___
 
 <a name="Hard way"></a>
