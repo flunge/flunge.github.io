@@ -10,7 +10,7 @@ tags: [Caffe, Jetson TK1, MNIST]
 
 Jetson Tegra-K1(TK1) is an embedded system provided by NVIDIA. It is designed for applications involving GPU computing, such as deep learning. This article records the procedures for installation of Caffe on TK1 and a simple implementation example, a handwritten digit recognition system ([LeNet](http://yann.lecun.com/exdb/lenet/)).
 
-<center>![TK1.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/Caffe_installation_and_practice_on_Jetson_TK1/TK1.png)</center>
+<center>![TK1.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/NVIDIA_Jetson_TK1_setup_and_practice/TK1.png)</center>
 <center><u>Jetson TK1</u></center>
 
 ___
@@ -47,44 +47,50 @@ General speaking, you need to setup a ssh server on TK1 first, and then access t
 
 <br></br>
 
-#### 1.2 Install prerequisites for Caffe
+#### 1.2 Install necessary packages in TK1
 
-Now, we need to install some prerequisites for Caffe, including,
+Now, we need to install some necessary packages 
 
-+ General dependencies
-+ CUDA for ARM package
-+ OpenCV for Tegra
+### Install system packages need for Caffe
 
-1. Install  general dependencies for Caffe
+```
+sudo add-apt-repository universe
+sudo apt-get install libprotobuf-dev protobuf-compiler gfortran \
+libboost-dev cmake libleveldb-dev libsnappy-dev \
+libboost-thread-dev libboost-system-dev \
+libatlas-base-dev libhdf5-serial-dev libgflags-dev \
+libgoogle-glog-dev liblmdb-dev gcc-4.7 g++-4.7 \
+libboost-all-dev
+```
 
-    ```
-    sudo add-apt-repository universe
-    sudo apt-get install libprotobuf-dev protobuf-compiler gfortran \
-    libboost-dev cmake libleveldb-dev libsnappy-dev \
-    libboost-thread-dev libboost-system-dev \
-    libatlas-base-dev libhdf5-serial-dev libgflags-dev \
-    libgoogle-glog-dev liblmdb-dev gcc-4.7 g++-4.7 \
-    libboost-all-dev
-    ```
+_suppose we make a directory in Desktop to store all downloaded package_
 
-2. Install CUDA package
-
-	Visit NVIDIA's developer page for [Tegra](https://developer.nvidia.com/linux-tegra-rel-21) and download CUDA 6.5 Toolkit for L4T Rel 21. Let's make directory in Desktop to store all downloaded package.
-
-    ```
     mkdir /home/ubuntu/Desktop/packages_for_caffe
     cd /home/ubuntu/Desktop/packages_for_caffe
-    sudo dpkg -i cuda-repo-l4t-r21.2-6-5-prod_6.5-34_armhf.deb
-    sudo apt-get update
-    sudo apt-get install cuda-toolkit-6-5
-    sudo usermod -a -G video $USER
-    echo "# Add CUDA bin & library paths:" >> ~/.bashrc
-    echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
-    echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
-    source ~/.bashrc
-    ```
 
-	After installation of CUDA, run `nvcc -V` to check whether everything is installed correctly.
+### Install CUDA package
+
+To install CUDA, you first need to register to nVidia's [embedded developer program](https://developer.nvidia.com/gameworks-registered-developer-program%20on%20your%20main%20machine) and download [CUDA package](https://developer.nvidia.com/rdp/assets/cuda-l4t-r192) to your local machine. 
+
+
+Start a new terminal on PC, then copy the package to TK1.
+
+    scp cuda-repo-l4t-r19.2_6.0-42_armhf.deb  ubuntu@172.16.134.90://home/ubuntu/Desktop/packages_for_caffe/
+
+Back to TK1 ssh terminal,
+
+```
+sudo dpkg -i cuda-repo-l4t-r19.2_6.0-42_armhf.deb
+sudo apt-get update
+sudo apt-get install cuda-toolkit-6-5
+sudo usermod -a -G video $USER
+echo "# Add CUDA bin & library paths:" >> ~/.bashrc
+echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
+source ~/.bashrc
+```
+
+After installation of CUDA, run `nvcc -V` to check whether everything is installed correctly.
 CUDA 6.5 should be installed.
 
 ### Install OpenCV for TK1
@@ -251,8 +257,6 @@ cv2.destroyAllWindows()
 # Reference
 
 [run caffe on TK1](https://petewarden.com/2014/10/25/how-to-run-the-caffe-deep-learning-vision-library-on-nvidias-jetson-mobile-gpu-board/)
-
-[Jetson Installing CUDA](http://elinux.org/Jetson/Installing_CUDA)
 
 [MNIST LeNet example](http://caffe.berkeleyvision.org/gathered/examples/mnist.html)
 
