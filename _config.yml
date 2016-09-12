@@ -34,7 +34,7 @@ disqus:
 # Auto activate a category
 active: Technical
 
-# The categories displaying on homepage, except the Newest
+# The tags displaying on homepage, except the Newest
 cates: 
   - Blog
 
