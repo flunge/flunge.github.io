@@ -8,7 +8,7 @@ tags: [Caffe, Jetson TK1, MNIST]
 
 ### Summary
 
-Jetson Tegra-K1(TK1) is an embedded system provided by NVIDIA. It is designed for applications involving GPU computing, such as deep learning. This article records the procedures for installation of Caffe on TK1 and a simple implementation example, a real-time handwritten digit recognition system ([LeNet].
+Jetson Tegra-K1(TK1) is an embedded system provided by NVIDIA. It is designed for applications involving GPU computing, such as deep learning. This article records the procedures for installation of Caffe on TK1 and a simple implementation example, a real-time handwritten digit recognition system ([LeNet]).
 
 <center>![TK1.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/Caffe_installation_and_practice_on_Jetson_TK1/TK1.png)</center>
 <center><u>Jetson TK1</u></center>
@@ -227,9 +227,9 @@ cv2.destroyAllWindows()
 
 # Reference
 
-[run caffe on TK1](https://petewarden.com/2014/10/25/how-to-run-the-caffe-deep-learning-vision-library-on-nvidias-jetson-mobile-gpu-board/)
+[run caffe on TK1]: https://petewarden.com/2014/10/25/how-to-run-the-caffe-deep-learning-vision-library-on-nvidias-jetson-mobile-gpu-board/
 
-[CUDA for Jetson installation instruction](http://elinux.org/Jetson/Installing_CUDA)
+[CUDA for Jetson installation instruction]: http://elinux.org/Jetson/Installing_CUDA
 
 [OpenCV for Jeton installation guideline](http://elinux.org/Jetson/Installing_OpenCV)
 
@@ -241,4 +241,4 @@ cv2.destroyAllWindows()
 
 [OpenCV installation guideline](http://elinux.org/Jetson/Installing_OpenCV)
 
-[LeNet](http://yann.lecun.com/exdb/lenet/)
+[LeNet]:http://yann.lecun.com/exdb/lenet/
