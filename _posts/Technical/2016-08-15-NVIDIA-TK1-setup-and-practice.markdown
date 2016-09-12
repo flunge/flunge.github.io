@@ -2,7 +2,7 @@
 layout: post
 title:  "NVIDIA-TK1 Setup"
 date:   2016-08-15
-categories: Setup
+categories: Technical
 tags: [Hardware Setup, NVIDIA TK1, MNIST]
 ---
 
@@ -24,19 +24,19 @@ ___
 #### 1.1. Remote access to TK1
 
 Remote access to TK1 is not a compulsory procedure to operate TK1, provide that you have prepared necessary computer accessories, including a display monitor, a keyboard and mouse. However, if you prefer using your computer to operate TK1 remotely, there are many ways to do this. Here is a simple way using *ssh* service.
-General speaking, you need to setup a ssh server on TK1 first, and then access to TK1 on your own computer.
+General speaking, you need to setup a ssh server on TK1 first, and then access to TK1 from your own computer.
 
 1. Open a terminal on TK1 and install ssh server on TK1 
 
+
 	sudo apt-get install openssh-server
 
-Check server setup
 
-    ps -e|grep ssh
+2. Check server setup
 
-If similar message, " 5313 ?        00:00:00 sshd", appeared, ssh server is set up successfully.
+    ps -e|grep ssh #If similar message, *"5313 ? 00:00:00 sshd"*, appeared, ssh server is set up successfully.
 
-Check IP address of TK1 network
+3. Check IP address of TK1 network
 
  1. click network->connection information
  2. check IP address at IPv4
