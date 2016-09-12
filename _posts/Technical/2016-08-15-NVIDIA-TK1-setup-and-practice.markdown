@@ -28,13 +28,11 @@ General speaking, you need to setup a ssh server on TK1 first, and then access t
 
 1. Open a terminal on TK1 and install ssh server on TK1 
 
-
-	sudo apt-get install openssh-server
-
+		sudo apt-get install openssh-server
 
 2. Check server setup
 
-    ps -e|grep ssh #If similar message, *"5313 ? 00:00:00 sshd"*, appeared, ssh server is set up successfully.
+    	ps -e|grep ssh #If similar message, *"5313 ? 00:00:00 sshd"*, appeared, ssh server is set up successfully.
 
 3. Check IP address of TK1 network
 
