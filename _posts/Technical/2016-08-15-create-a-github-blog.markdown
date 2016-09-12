@@ -3,7 +3,7 @@ layout: post
 title:  "Create a Github blog"
 date:   2016-08-15
 categories: Technical
-tags: [Jekyll, Blog, Github page]
+tags: [Jekyll, Github page]
 ---
 
 ### Summary
