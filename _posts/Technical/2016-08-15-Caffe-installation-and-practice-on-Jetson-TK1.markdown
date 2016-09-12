@@ -140,6 +140,7 @@ In this part, we are finally going to download and install Caffe! First, make su
 Up to this stage, if you didn't encounter any error. Caffe is installed on TK1! 
 
 <br></br>
+___
 
 ### Part 2. Real-time handwritten digit recognition
 
