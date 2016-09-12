@@ -227,18 +227,18 @@ cv2.destroyAllWindows()
 
 # Reference
 
-[run caffe on TK1]: https://petewarden.com/2014/10/25/how-to-run-the-caffe-deep-learning-vision-library-on-nvidias-jetson-mobile-gpu-board/
+[MNIST change](https://github.com/BVLC/caffe/pull/2359/commits/dd3a5f9268ca3bdf19a17760bd6f568e21c1b521)
+
+[run caffe on TK1](https://petewarden.com/2014/10/25/how-to-run-the-caffe-deep-learning-vision-library-on-nvidias-jetson-mobile-gpu-board/)
+
+
 
 [CUDA for Jetson installation instruction]: http://elinux.org/Jetson/Installing_CUDA
 
-[OpenCV for Jeton installation guideline](http://elinux.org/Jetson/Installing_OpenCV)
+[OpenCV for Jeton installation guideline]: http://elinux.org/Jetson/Installing_OpenCV
 
-[NVIDIA's developer page for Tegra](https://developer.nvidia.com/linux-tegra-rel-21)
+[NVIDIA's developer page for Tegra]: https://developer.nvidia.com/linux-tegra-rel-21
 
-[MNIST LeNet example](http://caffe.berkeleyvision.org/gathered/examples/mnist.html)
-
-[MNIST change](https://github.com/BVLC/caffe/pull/2359/commits/dd3a5f9268ca3bdf19a17760bd6f568e21c1b521)
-
-[OpenCV installation guideline](http://elinux.org/Jetson/Installing_OpenCV)
+[MNIST LeNet example]: http://caffe.berkeleyvision.org/gathered/examples/mnist.html
 
 [LeNet]:http://yann.lecun.com/exdb/lenet/
