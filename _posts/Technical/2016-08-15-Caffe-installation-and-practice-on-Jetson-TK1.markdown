@@ -17,11 +17,11 @@ ___
 
 ### Contents
 
-1. Caffe installation on TK1
-2. Real-time handwritten digit recognition on TK1
+1. [Caffe installation on TK1](#Caffe installation on TK1)
+2. [Real-time handwritten digit recognition on TK1](#Real-time handwritten digit recognition on TK1)
 
 ___
-
+<a name="Caffe installation on TK1"></a>
 ### Part 1. Caffe installation on TK1
 
 #### 1.1. Remote access TK1
@@ -47,7 +47,7 @@ General speaking, you need to setup a ssh server on TK1 first, and then access T
 
 <br></br>
 
-#### 1.2 Install prerequisites for Caffe
+#### 1.2. Install prerequisites for Caffe
 
 Now, we need to install some prerequisites for Caffe, including,
 
@@ -103,7 +103,7 @@ Now, we need to install some prerequisites for Caffe, including,
 
 <br></br>
 
-#### 1.3 Install Caffe and PyCaffe
+#### 1.3. Install Caffe and PyCaffe
 
 In this part, we are finally going to download and install Caffe! First, make sure you have installed git `sudo apt-get install git`. PyCaffe is the Python interface for Caffe. For Caffe installation, there might be some unexpected errors. Please try to google the error. There must be other people encounted same error as you. Specifically, you can refer to the [Caffe Google group](https://groups.google.com/forum/#!forum/caffe-users) or [Caffe Github](https://github.com/BVLC/caffe/issues) and look for a solution to your problem.
 
@@ -141,7 +141,7 @@ Up to this stage, if you didn't encounter any error. Caffe is installed on TK1!
 
 <br></br>
 ___
-
+<a name = "Real-time handwritten digit recognition on TK1"></a>
 ### Part 2. Real-time handwritten digit recognition
 
 In this part, we will see how to train a classical convolutional neural network ([LeNet]) on TK1 and implement a handwritten digit recognition system in real-time. Actually, TK1 is not designed for deep neural network training due to its hardware limits. It is more likely an embedded device for implementation of trained neural network models. Therefore, **DON'T TRAIN** other deep neural networks on TK1. However, our ultimate goal is to build a real-time recognition system using TK1. We certainly need a trained model.

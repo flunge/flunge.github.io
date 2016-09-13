@@ -36,7 +36,8 @@ ___
 
 After forking a repository, clone the repository to your local machine.
 
-	git clone https://github.com/Huangying-Zhan/huangying-zhan.github.io.git
+	git clone https://github.com/XXX/xxx.github.io.git 
+    # XXX should be your own Github name, e.g. XXX = Huangying-Zhan; xxx = huangying-zhan
 
 Open *_config.yml* and make modifications according to your needs. The following parts are required to update.
 
@@ -60,7 +61,7 @@ git commit -m "First update" # Submit all modified files with message "First upd
 git push origin master # Upload the submitted files to Github
 ```
 
-Wait for a while and refresh your website. You should see a brand new page with your first post. 
+Wait for a while and refresh your website. You should see a brand new page with your first post.
 
 ~ The blog is created! ~
 
