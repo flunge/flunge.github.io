@@ -13,7 +13,7 @@ As the name given, ZED Stereo Camera(ZED) is a stereo camera produced by [Steteo
 ### Contents
 
 1. [Setup of ZED on TK1](#Setup of ZED camera)
-2. Capture implementation
+2. [Capture picture and depth map](#Capture picture and depth map)
 
 ___
 <a name = "Setup of ZED camera"></a>
@@ -46,15 +46,13 @@ The installation of ZED on TK1 is actually quite straightforward. The [official 
     # Accept the statement and follow installation instruction.
     ```
 
-	Now, ZED SDK should be installed and there are many interesting demos. The SDK is installed at `/usr/local/zed` by default. However, before running these examples, you might encounter a problem, there is only one USB port on TK1. It is not enought for your keyboard, mouse, and ZED. Unless you have a USB3.0 hub, you need remote control TK1.
-    
-    ```
-    cd /usr/local/zed
-    
-    ```
+	Now, ZED SDK should be installed and there are many interesting demos. The SDK is installed at `/usr/local/zed` by default. However, before running these examples, you might encounter a problem, there is only one USB port on TK1. It is not enought for your keyboard, mouse, and ZED. Unless you have a USB3.0 hub, you need [remote control](https://huangying-zhan.github.io/2016/09/13/Linux-cheat-sheet.html#Remote) TK1 from your computer. 
+
 <br></br>
 ___
-### Part 2.
+
+<a name="Capture picture and depth map"></a>
+### Part 2. Capture picture and depth map
     
 
 ### Reference
