@@ -7,8 +7,11 @@ tags: [Linux]
 ---
 
 ### Contents
-1. Remote
+1. [Remote](#Remote)
 
+___
+
+<a name = "Remote"></a>
 ### Remote
 Allow display/GUI
 

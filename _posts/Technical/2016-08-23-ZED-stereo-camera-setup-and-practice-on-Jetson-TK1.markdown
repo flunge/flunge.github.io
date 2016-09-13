@@ -12,11 +12,11 @@ As the name given, ZED Stereo Camera(ZED) is a stereo camera produced by [Steteo
 
 ### Contents
 
-1. Setup of ZED on TK1
+1. [Setup of ZED on TK1](#Setup of ZED camera)
 2. Capture implementation
 
 ___
-
+<a name = "Setup of ZED camera"></a>
 ### Part 1. Setup of ZED camera
 
 The installation of ZED on TK1 is actually quite straightforward. The [official instruction: TK1 & ZED](https://www.stereolabs.com/blog/index.php/2015/09/24/getting-started-with-jetson-tk1-and-zed/) is well written. Just follow the steps and everything should be done. Here is a quick summary for all steps. There might be one thing that you need to 
@@ -46,6 +46,12 @@ The installation of ZED on TK1 is actually quite straightforward. The [official 
     # Accept the statement and follow installation instruction.
     ```
 
+	Now, ZED SDK should be installed and there are many interesting demos. The SDK is installed at `/usr/local/zed` by default. However, before running these examples, you might encounter a problem, there is only one USB port on TK1. It is not enought for your keyboard, mouse, and ZED. Unless you have a USB3.0 hub, you need remote control TK1.
+    
+    ```
+    cd /usr/local/zed
+    
+    ```
 <br></br>
 ___
 ### Part 2.
