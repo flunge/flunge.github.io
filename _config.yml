@@ -24,8 +24,8 @@ favicon: /public/img/dream.jpg
 
 # google analytics setup
 ga:
-  # id: UA-54262064-1 
-  # url: painterlin.com
+  id: UA-84078420-1
+  url: https://huangying-zhan.github.io/
 
 # disqus setup
 disqus:
