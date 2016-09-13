@@ -91,7 +91,7 @@ Now, we need to install some prerequisites for Caffe, including,
 
 3. Install OpenCV for TK1
 
-	Now, we can install OpenCV for Jetson. The installation is also based on the official [OpenCV for Jeton installation guideline]. Again, refer to the page if there is any problem. Before installation, visit [NVIDIA's developer page for Tegra] again and download *OpenCV4Tegra for L4T 21.x*
+	Now, we can install OpenCV for Jetson. The installation is also based on the official [OpenCV for Jeton installation guideline]. Again, refer to the page if there is any problem. Before installation, visit [NVIDIA's developer page for Tegra] again and download *OpenCV4Tegra for L4T 21.x*.
 
     ```
     cd /home/ubuntu/Desktop/packages_for_caffe
@@ -113,13 +113,14 @@ In this part, we are finally going to download and install Caffe! First, make su
     # Suppose you are going to install Caffe on Desktop
     cd /home/ubuntu/Desktop
     git clone https://github.com/BVLC/caffe.git
-    cd $CAFFE # From now on, for simplicity, $CAFFE is the caffe's directory
+    cd $CAFFE # From now on, for simplicity, $CAFFE refers to Caffe's directory
     cp Makefile.config.example Makefile.config
     sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib
     sed -i "s/# CUSTOM_CXX := g++/CUSTOM_CXX := g++-4.6/" Makefile.config
+
     make all -j4
     make test -j4
-	# After installation, runtest to test caffe layers.
+	# After installation, runtest to test Caffe layers.
     make runtest -j4
     # Run a benchmark test to check again.
     build/tools/caffe time --model=models/bvlc_alexnet/deploy.prototxt --gpu=0
@@ -146,7 +147,7 @@ ___
 
 In this part, we will see how to train a classical convolutional neural network ([LeNet]) on TK1 and implement a handwritten digit recognition system in real-time. Actually, TK1 is not designed for deep neural network training due to its hardware limits. It is more likely an embedded device for implementation of trained neural network models. Therefore, **DON'T TRAIN** other deep neural networks on TK1. However, our ultimate goal is to build a real-time recognition system using TK1. We certainly need a trained model.
 
-For preparation of dataset and network trainign, basically, follow the tutorial of [MNIST example](http://caffe.berkeleyvision.org/gathered/examples/mnist.html) in Caffe official page.
+For the preparation of dataset and network training, basically, follow the tutorial of [MNIST example](http://caffe.berkeleyvision.org/gathered/examples/mnist.html) in Caffe official page.
 
 #### 2.1.  Train LeNet
 
@@ -160,6 +161,7 @@ For preparation of dataset and network trainign, basically, follow the tutorial 
 
 2. Train LeNet
 	This step takes about 15 minutes. Go and make a cup of coffee first~
+    
     ```
     cd $CAFFE_ROOT
     ./examples/mnist/train_lenet.sh # The trained model is stored in $CAFFE/example/mnist/ and named *lenet_iter_10000.caffemodel*
@@ -175,9 +177,9 @@ A simple [end-to-end-digit recognition][end_to_end_digit_recognition] written by
 1. Take a photo and store as $CAFFE/data/mnist/sample_digit.png
 2. Run `python end_to_end_digit_recognition.py`
 
-To make this become real-time, there are many ways, such as reading captured image from camera or reading a locally saved  picutre from time to time. The later one is implemented since it suits to different cameras. Basically, the idea is
+To make this as a real-time implementation, there are many ways, such as reading captured image from camera or reading a locally saved  picutre from time to time. The later one is implemented since it suits to different cameras. Basically, the idea is,
 
-1. Use camera to capture and save pictures from time to time
+1. Use a camera to capture and save pictures from time to time
 2. The saved picture must be stored in same directory and same name, i.e. *sample_digit.png*
 3. `end_to_end_digit_recognition.py` reads the picture from time to time.
 
