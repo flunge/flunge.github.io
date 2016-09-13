@@ -12,21 +12,43 @@ As the name given, ZED Stereo Camera(ZED) is a stereo camera produced by [Steteo
 
 ### Contents
 
-1. Installation of ZED on TK1
+1. Setup of ZED on TK1
 2. Capture implementation
 
 ___
 
-### Setup of ZED camera
-Mainly refer to [official blog: TK1 & ZED](https://www.stereolabs.com/blog/index.php/2015/09/24/getting-started-with-jetson-tk1-and-zed/)
+### Part 1. Setup of ZED camera
 
-*Requirement: *
+The installation of ZED on TK1 is actually quite straightforward. The [official instruction: TK1 & ZED](https://www.stereolabs.com/blog/index.php/2015/09/24/getting-started-with-jetson-tk1-and-zed/) is well written. Just follow the steps and everything should be done. Here is a quick summary for all steps. There might be one thing that you need to 
+
+*Requirement: (refer to [here](https://huangying-zhan.github.io/2016/08/15/Caffe-installation-and-practice-on-Jetson-TK1.html#title4))*
 
 * CUDA 6.5 R.21
 * openCV4tegra 2.4.10
 
+1. Enable USB3.0
+	
+    ZED Camera requires a USB3.0 port. TK1 has only one USB3.0 port. Make good use of it~
 
+    ```
+    sudo vi /boot/extlinux/extlinux.conf
+    # Replace ‘usb_port_owner_info=0‘ by ‘usb_port_owner_info=2‘.
+    # Save and exit (*:wq*)
+    ```
 
+2. Download and install ZED SDK for Jetson
+
+	Visit [ZED download page](https://www.stereolabs.com/developers/#download_anchor) and download ZED SDK for Jetson, which is a *.run* file
+    
+    ```
+    chmod +x ZED_SDK_JTK1_v*.run
+	./ZED_SDK_JTK1_v*.run
+    # Accept the statement and follow installation instruction.
+    ```
+
+<br></br>
+___
+### Part 2.
     
 
 ### Reference

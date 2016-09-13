@@ -8,7 +8,7 @@ tags: [Caffe, Jetson TK1, MNIST]
 
 ### Summary
 
-Jetson Tegra-K1([TK1]) is an embedded system provided by NVIDIA. It is designed for applications involving GPU computing, such as deep learning. This article records the procedures for installation of Caffe on TK1 and a simple implementation example, a real-time handwritten digit recognition system ([LeNet]). All the procedures are based on Ubuntu 14.04.
+Jetson Tegra-K1([TK1]) is an embedded system provided by NVIDIA. It is designed for applications involving GPU computing, such as deep learning. While [Caffe] is a deep learning framework developed by Berkeley Vision and Learning Center (BVLC). This article records the procedures for installation of Caffe on TK1 and a simple implementation example, a real-time handwritten digit recognition system ([LeNet]). All the procedures are based on Ubuntu 14.04.
 
 <center>![TK1.png]({{site.url}}/public/post_resource/Technical/Caffe_installation_and_practice_on_Jetson_TK1/TK1.png)</center>
 <center><u>Jetson TK1</u></center>
@@ -44,6 +44,7 @@ General speaking, you need to setup a ssh server on TK1 first, and then access T
 4. Remote access TK1 from your PC, suppose the IP address of TK1 is *123.456.78.90*
 
 		ssh ubuntu@123.456.78.90 # The default password is "ubuntu".
+
 
 <br></br>
 
@@ -208,3 +209,5 @@ Here is a simple demo video.
 [end_to_end_digit_recognition]:{{site.url}}/public/post_resource/Technical/Caffe_installation_and_practice_on_Jetson_TK1/end_to_end_digit_recognition.py
 
 [TK1]: http://www.nvidia.com/object/tegra-k1-processor.html
+
+[Caffe]: http://caffe.berkeleyvision.org/
