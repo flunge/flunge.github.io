@@ -14,7 +14,8 @@ ___
 <a name = "Remote"></a>
 ### Remote
 
-SSH 
+SSH
+
 1. Open a terminal on TK1 and install ssh server on TK1 
 
 		sudo apt-get install openssh-server
