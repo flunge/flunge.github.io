@@ -26,7 +26,7 @@ The installation of ZED on TK1 is actually quite straightforward. The [official 
 * CUDA 6.5 R.21
 * openCV4tegra 2.4.10
 
-Now, let's start setup the ZED camera!
+Now, let's start!
 
 1. Enable USB3.0
 	
