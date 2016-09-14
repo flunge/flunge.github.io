@@ -57,7 +57,7 @@ If you do not have a NVIDIA GPU supporting CUDA, you actually can ignore this st
 
 After entering the download page, you will see that there are 3 types of installer. Just pick one and follow the installation instructions.
 
-![CUDA.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/GPU_and_caffe_installation_in_Ubuntu/CUDA.png)
+![CUDA.png]({{site.url}}/public/post_resource/Technical/GPU_and_caffe_installation_in_Ubuntu/CUDA.png)
 
 After installation, you need to set CUDA environment.
 
