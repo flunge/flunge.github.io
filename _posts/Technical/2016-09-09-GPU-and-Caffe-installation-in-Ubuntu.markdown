@@ -8,7 +8,7 @@ tags: [GPU, Caffe]
 
 ### Summary
 
-[Caffe] is a deep learning framework developed by Berkeley Vision and Learning Center (BVLC). It is specifically designed for deep neural network training and application, especially for convolutional nerual network. However, the training/computation is time-consuming in CPU mode. Therefore, GPU computing is introduced to accelerate the computation. In this post, NVIDIA GTX-1080 is used. GTX-1080 and Caffe installation procedure is recorded. The whole process is operated in Ubuntu 14.04.
+[Caffe] is a deep learning framework developed by Berkeley Vision and Learning Center (BVLC). It is specifically designed for deep neural network training and application, especially for convolutional neural networks. However, the training/computation is time-consuming in CPU mode. Therefore, GPU computing is introduced to accelerate the computation. In this post, NVIDIA GTX-1080 is used. GTX-1080 and Caffe installation procedure is recorded. The whole process is operated in Ubuntu 14.04.
 
 ___
 
@@ -24,7 +24,8 @@ ___
 
 The installation of GTX-1080 mainly refers to [yangcha's tutorial](yangcha.github.io/GTX-1080). 
 
-Install Nvidia driver first,
+For different GPU devices, different driver should be installed. In here, the instruction is just for GTX-1080.
+
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
@@ -39,9 +40,9 @@ sudo reboot
 ___
 
 <a name = "Caffe installation"></a>
-###　Part 2. Caffe installation
+### Part 2. Caffe installation
 
-In this part, a simple installation instruction of Caffe is introduced. Basically, the steps are as following. First, install some dependencies for Caffe; Second, download and install Caffe; Third, compile Caffe.
+In this part, a simple installation instruction of Caffe is recorded. Basically, the steps are as following. First, install some dependencies for Caffe; Second, download and install Caffe; Third, compile Caffe.
 
 The installation mainly refers to the following websites.
 
@@ -52,7 +53,7 @@ The installation mainly refers to the following websites.
 
 #### 2.1 Install CUDA
 
-If you do not have a NVIDIA GPU supporting CUDA, you actually can ignore this step and move on to next step. Running Caffe without GPU is still possible, but sacraffcing GPU computing feature. Now, for GPU users, visit NVIDIA's [cuda-toolkit](https://developer.nvidia.com/cuda-toolkit) and download CUDA 8.0RC. However, this requrest requires a NVIDIA membership, so join it and download CUDA 8.0RC.
+If you do not have a NVIDIA GPU supporting CUDA, you actually can ignore this step and move on to next step. Running Caffe without GPU is still possible, but losing the GPU computing feature. Now, for GPU users, visit NVIDIA's [cuda-toolkit](https://developer.nvidia.com/cuda-toolkit) and download CUDA 8.0RC. However, this requrest requires a NVIDIA membership, so join it and download CUDA 8.0RC.
 
 After entering the download page, you will see that there are 3 types of installer. Just pick one and follow the installation instructions.
 
@@ -65,7 +66,7 @@ export PATH=/usr/local/cuda-8.0/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH  
 ```
 
-If you later on find that this *export* doesn't work for Caffe, you can directly update Makefile.config in Caffe. We will see.
+If you later on find that this `export` doesn't work for Caffe, you can directly update Makefile.config in Caffe. We will see.
 
 <br></br>
 
@@ -161,6 +162,8 @@ make test -j8
 make runtest -j8
 ```
 If there is no error up to this stage, Caffe installation is completed.
+
+<br></br>
 
 #### 2.6. (Optional) Install PyCaffe (Python Caffe Interface)
 
