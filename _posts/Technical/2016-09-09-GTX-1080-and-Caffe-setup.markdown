@@ -2,8 +2,8 @@
 layout: post
 title:  "GTX1080 setup & Caffe Installation on Ubuntu14.04"
 date:   2016-09-09
-categories: Setup
-tags: Hardware Setup Caffe
+categories: Technical
+tags: [GPU, Caffe]
 ---
 
 GTX 1080 installation
