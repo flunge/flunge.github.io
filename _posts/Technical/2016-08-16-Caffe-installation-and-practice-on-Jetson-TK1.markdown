@@ -127,6 +127,7 @@ Up to this stage, if you didn't encounter any error. Caffe is installed on TK1!
 
 <br></br>
 ___
+
 <a name = "Real-time handwritten digit recognition on TK1"></a>
 ### Part 2. Real-time handwritten digit recognition
 
