@@ -2,7 +2,7 @@
 layout: post
 title:  "NUS UAV group meeting"
 date:   2016-09-14
-categories: Presentation
+categories: PPT
 tags: [Presentation]
 ---
 
