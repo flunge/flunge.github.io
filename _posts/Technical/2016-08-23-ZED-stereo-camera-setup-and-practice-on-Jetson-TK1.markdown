@@ -48,7 +48,7 @@ Now, let's start setup the ZED camera!
     # Accept the statement and follow installation instruction.
     ```
 
-	Now, ZED SDK should be installed and there are many interesting demos. The SDK is installed at `/usr/local/zed` by default. However, before running these examples, you might encounter a problem, there is only one USB port on TK1. It is not enought for your keyboard, mouse, and ZED. Unless you have a USB3.0 hub, you need [remote control](https://huangying-zhan.github.io/2016/09/13/Linux-cheat-sheet.html#Remote) TK1 from your computer. 
+	Now, ZED SDK should be installed and there are many interesting demos. The SDK is installed at `/usr/local/zed` by default. However, before running these examples, you might encounter a problem, there is only one USB port on TK1. It is not enough for your keyboard, mouse, and ZED. Unless you have a USB3.0 hub, you need to [remote control](https://huangying-zhan.github.io/2016/09/13/Linux-cheat-sheet.html#Remote) TK1 from your computer. 
 
 <br></br>
 ___
@@ -57,13 +57,17 @@ ___
 ### Part 2. Capture picture and depth map
 
 #### 2.1. Summary
-To study ZED, we can learn from it's [blog examples](https://www.stereolabs.com/blog/) or study the [Github examples](https://github.com/stereolabs). Basically, the examples are the same, blog examples provide more detailed explanations but some parts of the code are quite outdated. The reason is that ZED released Ver.1.0 and made some changes. The blog examples were written before Ver.1.0. Nevertheless, Github examples provide update codes. In summary, study both at the same time should be more efficient. 
+To study ZED, we can learn from it's [blog examples](https://www.stereolabs.com/blog/) or study the [Github examples](https://github.com/stereolabs). Basically, the examples are the same. Blog examples provide more detailed explanations but some parts of the code are quite outdated. The reason is that ZED released Ver.1.0 and made some changes. The blog examples were written before Ver.1.0. Nevertheless, Github examples provide update codes. In summary, study both at the same time should be more efficient. 
+
+<br></br>
 
 #### 2.2. Hello World
-Before jumping to the later content. A simple ["Hello-world" example](https://www.stereolabs.com/blog/index.php/2015/07/15/hello-world/) is suggested to be implemented by yourself first. Follow the instruction and build a Hello-World program. However, as I mentioned before, the blog examples are quite outdated. Please use this [main_hello_world.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main_hello_world.cpp) and [CMakeLists.txt](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/CMakeLists.txt) to build the program. Remember to rename *main_hello_world.cpp* to *main.cpp*.
+Before jumping to the later content, a simple ["Hello-world" example](https://www.stereolabs.com/blog/index.php/2015/07/15/hello-world/) is suggested to be implemented by yourself first. Follow the instruction and build a Hello-World program. However, as mentioned before, the blog examples are quite outdated. Please use this [main-hello-world.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main-hello-world.cpp) and [CMakeLists.txt](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/CMakeLists.txt) to build the program. Remember to rename *main-hello-world.cpp* as *main.cpp*.
+
+<br></br>
 
 #### 2.3. Capture pictures and depth maps
-Suppose you have built your `Hello World`. In this part, we will see a simple modification based on a ZED's [OpenCV example](https://github.com/stereolabs/zed-opencv). The ultimate goal is to capture RGB pictures and their corresponding depth map from time to time. First, let's have a taste on the original example.
+Suppose you have built your `Hello World`. In this part, we will see a simple modification based on a ZED's [OpenCV example](https://github.com/stereolabs/zed-opencv). The ultimate goal is to capture RGB pictures, their corresponding dispartiy image and depth map from time to time. First, let's have a taste on the original example.
 
 ```
 cp /usr/local/zed/sample/cpu/with\ OpenCV ~/Desktop/zed_capture #copy and rename the example to desktop
@@ -75,7 +79,7 @@ make # If you can see "Linking CXX executable "ZED with OpenCV" ", the program i
 ./ZED\ with\ OpenCV
 ```
 
-Play around with the program first. Then, download and rename [main_capture.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main_capture.cpp) as *main.cpp*.
+Play around with the program first. Then, download and rename [main-capture.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main-capture.cpp) as *main.cpp*.
 Now, replace the original *main.cpp* by this new *main.cpp* and build the program again.
 
 ```
@@ -84,7 +88,7 @@ make
 ./ZED\ with\ OpenCV
 ```
 
-This program allows you to save images, disparity images and depth maps from time totime. However, there are some settings you can modify in the *main.cpp*. Please refer to *main setup parameters* at the beginning of the code. After modification, you have to build the program again.
+This program allows you to save images, disparity images and depth maps from time to time. However, there are some settings you can modify in the *main.cpp*. Please refer to *main setup parameters* at the beginning of the code. After modification, you have to build the program again.
 
 
 
