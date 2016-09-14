@@ -21,7 +21,7 @@ ___
 
 The installation of ZED on TK1 is actually quite straightforward. The [official instruction: TK1 & ZED](https://www.stereolabs.com/blog/index.php/2015/09/24/getting-started-with-jetson-tk1-and-zed/) is well written. Just follow the steps and everything should be done. Here is a quick summary for all steps. 
 
-*Requirement: (refer to [here](https://huangying-zhan.github.io/2016/08/15/Caffe-installation-and-practice-on-Jetson-TK1.html#title4))*
+*Requirement: (refer to [here](https://huangying-zhan.github.io/2016/08/16/Caffe-installation-and-practice-on-Jetson-TK1.html#title2))*
 
 * CUDA 6.5 R.21
 * openCV4tegra 2.4.10
