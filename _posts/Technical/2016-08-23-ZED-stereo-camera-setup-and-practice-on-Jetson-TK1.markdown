@@ -53,10 +53,40 @@ ___
 
 <a name="Capture picture and depth map"></a>
 ### Part 2. Capture picture and depth map
-    
+
+#### 2.1. Summary
+To study ZED, we can learn from it's [blog examples](https://www.stereolabs.com/blog/) or study the [Github examples](https://github.com/stereolabs). Basically, the examples are the same, blog examples provide more detailed explanations but some parts of the code are quite outdated. The reason is that ZED released Ver.1.0 and made some changes. The blog examples were written before Ver.1.0. Nevertheless, Github examples provide update codes. In summary, study both at the same time should be more efficient. 
+
+#### 2.2. Hello World
+Before jumping to the later content. A simple ["Hello-world" example](https://www.stereolabs.com/blog/index.php/2015/07/15/hello-world/) is suggested to be implemented by yourself first. Follow the instruction and build a Hello-World program. However, as I mentioned before, the blog examples are quite outdated. Please use this [main_hello_world.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main_hello_world.cpp) and [CMakeLists.txt](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/CMakeLists.txt) to build the program. Remember to rename *main_hello_world.cpp* to *main.cpp*.
+
+#### 2.3. Capture pictures and depth maps
+Suppose you have built your `Hello World`. In this part, we will see a simple modification based on a ZED's [OpenCV example](https://github.com/stereolabs/zed-opencv). The ultimate goal is to capture RGB pictures and their corresponding depth map from time to time. First, let's have a taste on the original example.
+
+```
+cp /usr/local/zed/sample/cpu/with\ OpenCV ~/Desktop/zed_capture #copy and rename the example to desktop
+cd $zed_capture # For simplicity, $zed_capture represents the full directory of /zed_capture
+mkdir build
+cd build
+cmake ..
+make # If you can see "Linking CXX executable "ZED with OpenCV" ", the program is built sucessfully
+./ZED\ with\ OpenCV
+```
+
+Play around with the program first. Then, download and rename [main_capture.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main_capture.cpp) as *main.cpp*.
+Now, replace the original *main.cpp* by this new *main.cpp* and build the program again.
+
+```
+cd $zed_capture/build
+make
+./ZED\ with\ OpenCV
+```
+
+This program allows you to save images, disparity images and depth maps from time totime. However, there are some settings you can modify in the *main.cpp*. Please refer to *main setup parameters* at the beginning of the code. After modification, you have to build the program again.
+
+
 
 ### Reference
 
-* [e-CAM40_CUMI4682_MOD - 4 MP OV4682 RGB IR Camera Module](https://www.e-consystems.com/OV4682-RGB-IR-MIPI-CAMERA-Module.asp)
 
-* [official blog: TK1 & ZED](https://www.stereolabs.com/blog/index.php/2015/09/24/getting-started-with-jetson-tk1-and-zed/)    
+[official blog: TK1 & ZED](https://www.stereolabs.com/blog/index.php/2015/09/24/getting-started-with-jetson-tk1-and-zed/)    
