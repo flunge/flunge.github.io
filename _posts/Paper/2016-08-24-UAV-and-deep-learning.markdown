@@ -21,7 +21,8 @@ ___
 | Author |  Dong Ki Kim, Tsuhan Chen |
 | Year   | 2015  |
 
-__Summary__
+
+**Summary**
 
 This paper propose an integration of deep learning algorithm and UAV drone. The target is to allow a drone automatically navigating in an indoor environment & searching for a school bag.
 
@@ -31,16 +32,16 @@ It is a classification problem. 6 types of commands (classes) are trained with C
 
 The dataset construction is based on human response imitation. Firstly, human control the drone in the environment using computer command which will be sent to the drone. Second, the commands are recorded as label of image seen by the drone. Third, train a DNN as classification problem.
 
-__Key points__
+**Key points**
 
-* human response imitation
+* Human response imitation
 
-__Pros__: 
+**Pros**
 
 * Easy dataset construction
 * Simple classification problem -> easy to train a DNN
 
-__Cons__ 
+**Cons**
 
 * Specific drone required
 * Limited command(?)
@@ -48,19 +49,13 @@ __Cons__
 ________________________________________
 
 
-__Title__ 
+| Title  | [A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]  |
+|--------|---|
+| Author |  Alessandro Giusti, Luca M.Gambardella |
+| Year   | 2015  |
 
-* [A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]
 
-__Author__ 
-
-* Alessandro Giusti, Luca M.Gambardella
-
-__Year__ 
-
-* 2015
-
-__Summary__
+**Summary**
 
 This paper integrates deep learning (classification) and UAV drone. The target is to allow UAV to recognize forest trail and make a corresponding move decision, including,
 
@@ -72,16 +67,16 @@ This paper integrates deep learning (classification) and UAV drone. The target i
 
 The dataset construction method is innovative. A hiker put 3 cameras (GoPro) on his head and walks straghtly in forest trails. The images taken by 3 cameras corresponds to 3 different classes.
 
-__Key points__
+**Key points**
 
 * 3 cameras for dataset construction
 
-__Pros__: 
+**Pros**
 
 * Easy dataset construction
 * Simple classification problem -> easy to train a DNN
 
-__Cons__ 
+**Cons**
 
 * Limited command, because only 3 kinds of actions can be recorded
 
