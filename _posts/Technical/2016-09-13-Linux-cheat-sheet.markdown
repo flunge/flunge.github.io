@@ -35,3 +35,13 @@ SSH
 Allow display/GUI
 
 	export DISPLAY=:0 # if there is more than one display output, change 0 accordingly.
+
+<br></br>
+___
+
+### Problem and solution
+
+1. Ethernet wire is connected but can't connect to internet
+
+    Solution:
+    Suspend the system and login again
