@@ -1,5 +1,5 @@
 ---
-layout: /post_resource/
+layout: post
 title:  "UAV and Deep Learning"
 date:   2016-08-24
 categories: Paper
