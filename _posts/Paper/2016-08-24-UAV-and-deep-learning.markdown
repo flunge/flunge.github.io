@@ -82,10 +82,12 @@ The dataset construction method is innovative. A hiker put 3 cameras (GoPro) on 
 
 _____________________________
 
-[Deep Neural Network for Real-Time Autonmous Indoor Navigation]: {{site.url}}/public/post_resource/UAV_paper/navigation/2015_DNN_for_real-time_Autonomous_Indoor_Navigation.pdf
+[Deep Neural Network for Real-Time Autonmous Indoor Navigation]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/2015_DNN_for_real-time_Autonomous_Indoor_Navigation.pdf
 
-[img_1]: {{site.url}}/public/post_resource//UAV_paper/navigation/img_1.png
+[img_1]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/img_1.png
 
-[A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]: {{site.url}}/public/post_resource/UAV_paper/navigation/2015_A_Machine_Learning_Approach_to_the_Visual_Perception_of_Forest_Trails_for_Mobile_Robots.pdf
 
-[img_2]: {{site.url}}/public/post_resource/UAV_paper/navigation/img_2.png
+[A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/2015_A_Machine_Learning_Approach_to_the_Visual_Perception_of_Forest_Trails_for_Mobile_Robots.pdf
+
+
+[img_2]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/img_2.png
