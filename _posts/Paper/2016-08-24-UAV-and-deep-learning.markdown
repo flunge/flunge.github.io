@@ -24,13 +24,13 @@ ___
 
 **Summary**
 
-This paper propose an integration of deep learning algorithm and UAV drone. The target is to allow a drone automatically navigating in an indoor environment & searching for a school bag.
+This paper proposes an integration of deep learning algorithm and UAV drone. The target is to allow a drone automatically navigating in an indoor environment & searching for a school bag.
 
 It is a classification problem. 6 types of commands (classes) are trained with CaffeNet, including, 
 
 ![img_1]
 
-The dataset construction is based on human response imitation. Firstly, human control the drone in the environment using computer command which will be sent to the drone. Second, the commands are recorded as label of image seen by the drone. Third, train a DNN as classification problem.
+The dataset construction is based on human response imitation. Firstly, human control the drone in the environment using computer command which will be sent to the drone. Second, the commands are recorded as label of images seen by the drone. Third, train a DNN as classification problem.
 
 **Key points**
 
