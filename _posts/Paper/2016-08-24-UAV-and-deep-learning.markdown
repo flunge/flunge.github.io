@@ -3,14 +3,17 @@ layout: post
 title:  "UAV and Deep Learning"
 date:   2016-08-24
 categories: Paper
-tags: [Paper, Navigation, Deep Learning]
+tags: [Navigation, Deep Learning]
 ---
 
 ### Contents
 
-1. Navigation
+1. [Navigation](#[Navigation])
 
 
+___
+
+<a name = "Navigation"></a>
 ### Navigation
 
 ___
@@ -46,7 +49,7 @@ The dataset construction is based on human response imitation. Firstly, human co
 * Specific drone required
 * Limited command(?)
 
-________________________________________
+<br></br>
 
 
 | Title  | [A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]  |
