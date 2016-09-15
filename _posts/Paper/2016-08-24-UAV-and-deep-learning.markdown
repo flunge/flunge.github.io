@@ -15,17 +15,18 @@ tags: [Paper, Navigation, Deep Learning]
 
 ___
  
-##### Title
+Title
 
 * [Deep Neural Network for Real-Time Autonmous Indoor Navigation]
 
-##### Author
+Author
 
 * Dong Ki Kim, Tsuhan Chen
 
-##### Year
+Year
 
 * 2015
+
 
 
 | Tables        | Are           | Cool  |
@@ -33,6 +34,8 @@ ___
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
+
 
 __Summary__
 
