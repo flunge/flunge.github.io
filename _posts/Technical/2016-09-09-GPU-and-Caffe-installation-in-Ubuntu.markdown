@@ -181,6 +181,6 @@ cd ..
 make pycaffe
 ```
 
-Up to here, hope you can install Caffe without any problem!
+Up to here, the installation is completed!
 
 [Caffe]: http://caffe.berkeleyvision.org/
