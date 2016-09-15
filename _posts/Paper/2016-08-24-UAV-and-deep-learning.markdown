@@ -29,12 +29,17 @@ Year
 
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+require 'redcarpet'
+markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :tables => true)
 
+text = <<END
+| header 1 | header 2 |
+| -------- | -------- |
+| cell 1   | cell 2   |
+| cell 3   | cell 4   |
+END
+
+puts markdown.render(text)
 
 
 __Summary__
