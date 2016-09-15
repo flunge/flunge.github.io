@@ -1,26 +1,38 @@
 ---
 layout: post
-title:  "UAV Paper"
+title:  "UAV and Deep Learning"
 date:   2016-08-24
-categories: Paper_Summary
-tags: Paper UAV Navigation Detection Deep_Learning
+categories: Paper
+tags: [Paper, Navigation, Deep Learning]
 ---
 
-## Navigation
+### Contents
 
-________________________________________
+1. Navigation
 
-__Title__ 
+
+### Navigation
+
+___
+ 
+##### Title
 
 * [Deep Neural Network for Real-Time Autonmous Indoor Navigation]
 
-__Author__ 
+##### Author
 
 * Dong Ki Kim, Tsuhan Chen
 
-__Year__ 
+##### Year
 
 * 2015
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 __Summary__
 
