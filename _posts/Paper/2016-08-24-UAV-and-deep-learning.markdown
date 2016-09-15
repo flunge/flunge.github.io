@@ -35,22 +35,17 @@ It is a classification problem. 6 types of commands (classes) are trained with C
 
 The dataset construction is based on human response imitation. Firstly, human control the drone in the environment using computer command which will be sent to the drone. Second, the commands are recorded as label of images seen by the drone. Third, train a DNN as classification problem.
 
-**Key points**
+**Key point**
 
 * Human response imitation
-
-**Pros**
-
 * Easy dataset construction
 * Simple classification problem -> easy to train a DNN
-
-**Cons**
-
 * Specific drone required
 * Limited command(?)
 
-<br></br>
 
+<br></br>
+___
 
 | Title  | [A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]  |
 |--------|---|
@@ -70,17 +65,11 @@ This paper integrates deep learning (classification) and UAV drone. The target i
 
 The dataset construction method is innovative. A hiker put 3 cameras (GoPro) on his head and walks straghtly in forest trails. The images taken by 3 cameras corresponds to 3 different classes.
 
-**Key points**
+**Key point**
 
 * 3 cameras for dataset construction
-
-**Pros**
-
 * Easy dataset construction
 * Simple classification problem -> easy to train a DNN
-
-**Cons**
-
 * Limited command, because only 3 kinds of actions can be recorded
 
 _____________________________

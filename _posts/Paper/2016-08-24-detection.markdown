@@ -6,21 +6,24 @@ categories: Paper
 tags: [Detection, Deep Learning]
 ---
 
-________________________________________
+### Contents
 
-__Title__ 
+1. [R-CNN](#R-CNN)
+2. [SPP-net](#SPP-net)
+3. [Fast R-CNN](#Fast R-CNN)
+4. [Faster R-CNN](#Faster R-CNN)
 
-* [Region-based Convolutional Networks forAccurate Object Detection and Segmentation][R-CNN]
+___
 
-__Author__ 
 
-* Ross Girshick, Trevor Darrell
+| Title  | [Region-based Convolutional Networks for Accurate Object Detection and Segmentation][R-CNN]  |
+|--------|---|
+| Author |  Ross Girshick, Trevor Darrell |
+| Year   | 2015  |
+| Link   |https://github.com/rbgirshick/rcnn|
 
-__Year__ 
 
-* 2015
-
-__Summary__
+**Summary**
 
 This paper proposes a multi-step object detection pipeline. 
 
@@ -38,22 +41,14 @@ Training:
 2. Use extracted features to train a SVM to classify n classes. 
 3. Use extracted features to train a bbox regressor (output: predicted bbox; label: correct bbox(x,y,w,h)
 
-__Key points__
+**Key point**
 
 * Multi-stages pipeline for object detection
-
-__Pros__: 
-
-* OpenSource
-    * https://github.com/rbgirshick/rcnn
 * High mAP in PASCAL VOC at that time
-
-__Cons__ 
-
 * Very slow due to following reasons
     * Proposal stage (time-consuming, ~2k proposals for each image)
     * Feature extraction (each image need forward propagation)
-* Multi-stages -> indivitual process -> inconvenient
+* Multi-stages, each stage is an indivitual process, which is inconvenient
 ________________________________________
 
 
@@ -166,10 +161,10 @@ __Cons__
 ________________________________________
 
 
-[R-CNN]: {{site.url}}/public/post/detection/2015_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
+[R-CNN]: {{site.url}}/public/post_resource/detection/2015_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
 
-[SPP-net]: {{site.url}}/public/post/detection/2015_Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
+[SPP-net]: {{site.url}}/public/post_resource/detection/2015_Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
 
-[Fast R-CNN]: {{site.url}}/public/post/detection/2015_Fast_R-CNN.pdf
+[Fast R-CNN]: {{site.url}}/public/post_resource/detection/2015_Fast_R-CNN.pdf
 
-[Faster R-CNN]: {{site.url}}/public/post/detection/2016_faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf
+[Faster R-CNN]: {{site.url}}/public/post_resource/detection/2016_faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf
