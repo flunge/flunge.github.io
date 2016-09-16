@@ -117,7 +117,7 @@ An updated version of R-CNN. The main idea is a combination of R-CNN and SPP lay
 * Porposal is still needed at the beginning.
 
 
-
+<br></br>
 ________________________________________
 
 <a name = "Faster R-CNN"></a>
