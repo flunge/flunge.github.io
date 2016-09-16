@@ -56,6 +56,7 @@ Training:
 
 ___
 
+<a name = "SPP-net"></a>
 | Title  | [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition][SPP-net]  |
 |--------|---|
 | Author |  Kaiming He, Jian Sun |
@@ -65,56 +66,62 @@ ___
 
 **Summary**
 
-This paper propose a new ConvNet architecture and detection pipeline based on R-CNN. In this ConvNet, it also follows "Proposal->classification->regressor" pipeline. However, for each proposed region, warp/crop doesn't required to change the size of image to a required size (e.g. 227x227 in AlexNet). The main idea includes,
+This paper propose a new ConvNet architecture and detection pipeline based on R-CNN. In this ConvNet, it also follows "Proposal->Feedforward each proposal region into whole ConvNet for classification->regressor" pipeline. However, for each proposed region, warp/crop doesn't required to change the size of image to a required size (e.g. 227x227 in AlexNet). The main idea includes,
+
+![SPP-net.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Paper/detection/SPP-net.png)
 
 1. Conv layers actually do not request a fixed size input image but a fixed size output vector/feature map for later FC layers.
-2. Flexible pyramid pooling at the end of Conv layers (depend on input image size and output vector length) is introduced to produce a fixed vector output.
+2. Flexible pyramid pooling　(SPP layer) at the end of Conv layers (depend on input image size and output vector length) is introduced to produce fixed vectors and aggregate them together.
     * e.g. pooling window's size can be changed according to input imagesize. i.e. larger image -> more Conv output -> larger Conv map -> larger pooling window
-3. A SPP layer is introduced to aggregate all feature maps
+
 
 
 **Key points**
 
-* Vary image input size
-* Conv layers still have fixed filters, but feature maps's size changed accordiningly
+* Variable image input size
+* Conv layers still have fixed filters, but feature maps's size change accordiningly.
 * SPP layer to aggregate all feature maps (different pooling operations)
-* fast due to single conv operation
-* Vary input size
 * can't update conv layer parameters due to pyramid structure
 
-________________________________________
+<br></br>
 
-__Title__ 
+___
+<a name = "Fast R-CNN"></a>
+| Title  | [Fast R-CNN]  |
+|--------|---|
+| Author |  Ross Girshick |
+| Year   | 2015  |
+| Link   |https://github.com/rbgirshick/fast-rcnn|
 
-* [Fast R-CNN]
+**Summary**
 
-__Author__ 
+An updated version of R-CNN. The main idea is a combination of R-CNN and SPP layer from SPP-net. Moreover, this paper also integrates feature extractor, SVM, bbox regressor together. The whole forward pipeline is as following,
 
+![fast_rcnn.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Paper/detection/fast_rcnn.png)
 
-* Ross Girshick
+1. Proposal (e.g. Selective search)
+2. For each image, feed forward and obtain a Conv feature map from the last Conv layer.
+3. Project each proposal (Region of Interest, RoI) to the Conv map to get a RoI feature map.
+4. For each RoI feature map, use a RoI pooling layer (single SPP layer, SPP layer varies its size according to input size and output a fixed size vector) to get a fixed feature vector.
+5. Pass the fixed feature vector through fully-connect layers for classification and bbox regressor.
 
-__Year__ 
-
-* 2015
-
-__Summary__
-
-A updated version of R-CNN. Most idea is similar to R-CNN, but integrating feature extractor, SVM, bbox regressor together. Also, proposal is done at the end of front Conv layers rather than raw images.
-Proposal -> Classification & Regressor
-
-__Key points__
+**Key points**
 
 * Integrate bbox regressor with classification -> more end-to-end
-* Proposal made in the last Conv layer
-
-__Pros__: 
-
+* For each image, a Conv operation is required, then use the last Conv feature map for later operations.
 * Faster and better than R-CNN since features+classifier+regressor are integrated.
-
-__Cons__ 
+* Porposal is still needed at the beginning.
 
 
 ________________________________________
+
+<a name = "Faster R-CNN"></a>
+| Title  | [Faster R-CNN]  |
+|--------|---|
+| Author |  Ross Girshick |
+| Year   | 2015  |
+| Link   |https://github.com/ShaoqingRen/faster_rcnn; 
+https://github.com/rbgirshick/py-faster-rcnn|
 
 __Title__ 
 
@@ -154,6 +161,10 @@ __Cons__
 
 
 ________________________________________
+
+Reference
+
+[zhangliliang's　论文笔记 《Fast R-CNN》](http://zhangliliang.com/2015/05/17/paper-note-fast-rcnn/)
 
 
 [R-CNN]: {{site.url}}/public/post_resource/Paper/detection/2014_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
