@@ -106,7 +106,7 @@ Follow the installation guideline and accept the statements.
 After installation, open a new terminal and check for it by typing `python` in the terminal.
 After entering Python, you should see the Python version is something like `Python 2.7.12 |Anaconda 4.1.1 (64-bit)|`
 
-Installation of Anaconda is completed! To know more, please refer to Anaconda's tutorial or homepage.
+Installation of Anaconda is completed! To know more, please refer to [Anaconda's tutorial](http://conda.pydata.org/docs/) or homepage.
 
 <br></br>
 
@@ -136,7 +136,11 @@ You can modify the configuration before `make` in this `Makefile.config`. Here a
 
 ```
 # Anaconda (Uncomment the related part)
-# If you are using Anaconda2, remember to udpate ANACONDA_HOME to anaconda2
+# If you are using Anaconda2, remember to udpate ANACONDA_HOME to anaconda2, uncomment this part and comment the original python setup
+
+# PYTHON_INCLUDE := /usr/include/python2.7 \
+#                /usr/lib/python2.7/dist-packages/numpy/core/include
+
 ANACONDA_HOME := $(HOME)/anaconda2
 PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
                  $(ANACONDA_HOME)/include/python2.7 \

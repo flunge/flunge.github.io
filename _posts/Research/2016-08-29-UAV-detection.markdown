@@ -23,8 +23,55 @@ ___
 
 ### Part 1. Setup py-faster-rcnn
 
-Mainly refer to [py-faster-rcnn].
+Mainly refer to [py-faster-rcnn]. The official instruction is well written and easy to follow. 
 
+1. Clone the Faster R-CNN repo
+	
+    ```
+	# Make sure to clone with --recursive
+	git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
+    ```
+
+2. Lets call the directory into `FRCN_ROOT`
+
+3. Build the Cython modules
+
+    ```
+    cd $FRCN_ROOT/lib
+	make
+    ```
+    
+4. Build Caffe and PyCaffe
+	
+    For this part, please refer to [Caffe official installation instruction](http://caffe.berkeleyvision.org/installation.html) or my post about [Caffe installation](https://huangying-zhan.github.io/2016/09/09/GPU-and-Caffe-installation-in-Ubuntu.html#Caffe%20installation)
+	If you have experience with Caffe, just follow the code at below.
+    
+    ```
+	cd $FRCN_ROOT/caffe-fast-rcnn
+    cp Makefile.config.example Makefile.config
+    # Modify Makefile.config, uncommment this line
+    WITH_PYTHON_LAYER := 1
+    # Modifiy Makefile.config according to your need, such as setup related to GPU support, cuDNN, CUDA version, Anaconda, OpenCV, etc.
+    
+    # After modification on Makefile.config
+    make -j4 # 4 is the number of core in your CPU, change it according to your computer CPU  
+    # Suppose your have installed prerequites for PyCaffe, otherwise, go back to installation instructions.
+    make pycaffe -j4
+    ```
+    
+5. Download pre-computed Faster R-CNN dtectors
+
+	```
+    cd $FRCN_ROOT
+	./data/scripts/fetch_faster_rcnn_models.sh
+    ```
+
+6. Run the demo
+	However, in this part you might get into trouble with different errors, such as without some packages. At the end of this post, some encountered errors and solution are provided. For those unexpected error, google and you should be able to find a solution.
+    
+	```
+    ./tools/demo.py
+    ```
 
 <br></br>
 
@@ -133,13 +180,23 @@ ___
 2. no easydict, cv2
 
     ```
+    # Without Anaconda
     sudo pip install easydict
-    sudo apt-get install libopencv4tegra-python
+    sudo apt-get install python-opencv
+    
+    # With Anaconda
+    conda install opencv
+    conda install -c auto easydict
     ```
 
 3. roi_pooling_layer.cu:91 check failed: error == cudaSuccess(8 vs 0)
 
 	change this line: `__C.USE_GPU_NMS = True` to `__C.USE_GPU_NMS = False` in py-faster-rcnn/lib/fast_rcnn/config.py
+
+4. libcudart.so.8.0: cannot open shared object file: No such file or directory
+	
+    	sudo ldconfig /usr/local/cuda/lib64
+
 
 ### Reference
 
