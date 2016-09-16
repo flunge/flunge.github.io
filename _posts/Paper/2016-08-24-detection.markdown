@@ -15,17 +15,19 @@ tags: [Detection, Deep Learning]
 
 ___
 
-
+<a name = "R-CNN"></a>
 | Title  | [Region-based Convolutional Networks for Accurate Object Detection and Segmentation][R-CNN]  |
 |--------|---|
 | Author |  Ross Girshick, Trevor Darrell |
-| Year   | 2015  |
+| Year   | 2014  |
 | Link   |https://github.com/rbgirshick/rcnn|
 
 
 **Summary**
 
-This paper proposes a multi-step object detection pipeline. 
+This paper proposes a multi-step object detection pipeline.
+
+![rcnn.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Paper/detection/rcnn.png)
 
 Forward pass:
 
@@ -44,27 +46,24 @@ Training:
 **Key point**
 
 * Multi-stages pipeline for object detection
-* High mAP in PASCAL VOC at that time
+* State-of-art mAP in PASCAL VOC (53.7 on PASCAL VOC 2010)
 * Very slow due to following reasons
     * Proposal stage (time-consuming, ~2k proposals for each image)
     * Feature extraction (each image need forward propagation)
 * Multi-stages, each stage is an indivitual process, which is inconvenient
-________________________________________
+
+<br></br>
+
+___
+
+| Title  | [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition][SPP-net]  |
+|--------|---|
+| Author |  Kaiming He, Jian Sun |
+| Year   | 2014  |
+| Link   |https://github.com/ShaoqingRen/SPP_net|
 
 
-__Title__ 
-
-* [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition][SPP-net]
-
-__Author__ 
-
-* Kaiming He, Jian Sun
-
-__Year__ 
-
-* 2015
-
-__Summary__
+**Summary**
 
 This paper propose a new ConvNet architecture and detection pipeline based on R-CNN. In this ConvNet, it also follows "Proposal->classification->regressor" pipeline. However, for each proposed region, warp/crop doesn't required to change the size of image to a required size (e.g. 227x227 in AlexNet). The main idea includes,
 
@@ -73,20 +72,16 @@ This paper propose a new ConvNet architecture and detection pipeline based on R-
     * e.g. pooling window's size can be changed according to input imagesize. i.e. larger image -> more Conv output -> larger Conv map -> larger pooling window
 3. A SPP layer is introduced to aggregate all feature maps
 
-__Key points__
+
+**Key points**
 
 * Vary image input size
 * Conv layers still have fixed filters, but feature maps's size changed accordiningly
 * SPP layer to aggregate all feature maps (different pooling operations)
-
-__Pros__: 
-
 * fast due to single conv operation
 * Vary input size
-
-__Cons__ 
-
 * can't update conv layer parameters due to pyramid structure
+
 ________________________________________
 
 __Title__ 
@@ -161,9 +156,9 @@ __Cons__
 ________________________________________
 
 
-[R-CNN]: {{site.url}}/public/post_resource/Paper/detection/2015_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
+[R-CNN]: {{site.url}}/public/post_resource/Paper/detection/2014_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
 
-[SPP-net]: {{site.url}}/public/post_resource/Paper/detection/2015_Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
+[SPP-net]: {{site.url}}/public/post_resource/Paper/detection/2014_Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
 
 [Fast R-CNN]: {{site.url}}/public/post_resource/Paper/detection/2015_Fast_R-CNN.pdf
 
