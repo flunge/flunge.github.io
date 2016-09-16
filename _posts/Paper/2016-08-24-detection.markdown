@@ -72,6 +72,7 @@ This paper propose a new ConvNet architecture and detection pipeline based on R-
 
 ![SPP-net.png]({{site.url}}public/post_resource/Paper/detection/SPP-net.png)
 
+
 1. Conv layers actually do not request a fixed size input image but a fixed size output vector/feature map for later FC layers.
 2. Flexible pyramid pooling (SPP layer) at the end of Conv layers (depend on input image size and output vector length) is introduced to produce fixed vectors and aggregate them together.
     * e.g. pooling window's size can be changed according to input imagesize. i.e. larger image -> more Conv output -> larger Conv map -> larger pooling window
