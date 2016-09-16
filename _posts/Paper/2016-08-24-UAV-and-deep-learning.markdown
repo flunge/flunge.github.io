@@ -3,7 +3,7 @@ layout: post
 title:  "UAV and Deep Learning"
 date:   2016-08-24
 categories: Paper
-tags: [Navigation, Deep Learning]
+tags: [Navigation, DeepLearning]
 ---
 
 ### Contents

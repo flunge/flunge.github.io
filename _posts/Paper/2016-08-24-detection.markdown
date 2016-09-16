@@ -3,7 +3,7 @@ layout: post
 title:  "Detection"
 date:   2016-08-24
 categories: Paper
-tags: [Detection, Deep Learning]
+tags: [Detection, DeepLearning]
 ---
 
 ### Contents
