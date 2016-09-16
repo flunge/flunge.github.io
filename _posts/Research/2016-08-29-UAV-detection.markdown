@@ -52,6 +52,8 @@ tar xvf VOCdevkit_08-Jun-2007.tar
 ln -s VOCdevkit VOCdevkit2007 #create a softlink
 ```
 
+<br></br>
+
 #### 2.2. Training
 
 ```
@@ -69,6 +71,8 @@ ___
 
 #### 3.1. Summary
 
+<br></br>
+
 #### 3.2. ZED practice
 [Hello World](https://www.stereolabs.com/blog/index.php/2015/07/15/hello-world/)
 
@@ -78,6 +82,8 @@ Since ZED SDK is updated, init() is changed to sl::zed::InitParams structure
 Therefore, to initialize ZED, 
     sl::zed::InitParams params;
 
+<br></br>
+
 #### 3.3. Read from ZED
 [ZED save depth](https://github.com/stereolabs/zed-save-depth)
 
@@ -86,6 +92,7 @@ Problem and solution
 utility.hpp is not found
     include <opencv2/gpu/device/utility.hpp>
 
+<br></br>
 
 #### 3.4. How to use
 There are various setups provided by the module.
