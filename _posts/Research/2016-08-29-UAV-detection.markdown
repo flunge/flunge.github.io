@@ -23,7 +23,7 @@ ___
 
 ### Part 1. Setup py-faster-rcnn
 
-Mainly refer to [py-faster-rcnn]. The official instruction is well written and easy to follow. 
+In this part, a simple instruction for install py-faster-rcnn is introduced. The instruction mainly refers to [py-faster-rcnn]. 
 
 1. Clone the Faster R-CNN repo
 	
@@ -44,11 +44,12 @@ Mainly refer to [py-faster-rcnn]. The official instruction is well written and e
 4. Build Caffe and PyCaffe
 	
     For this part, please refer to [Caffe official installation instruction](http://caffe.berkeleyvision.org/installation.html) or my post about [Caffe installation](https://huangying-zhan.github.io/2016/09/09/GPU-and-Caffe-installation-in-Ubuntu.html#Caffe%20installation)
-	If you have experience with Caffe, just follow the code at below.
+	If you have experience with Caffe, just follow the code below.
     
     ```
 	cd $FRCN_ROOT/caffe-fast-rcnn
     cp Makefile.config.example Makefile.config
+    
     # Modify Makefile.config, uncommment this line
     WITH_PYTHON_LAYER := 1
     # Modifiy Makefile.config according to your need, such as setup related to GPU support, cuDNN, CUDA version, Anaconda, OpenCV, etc.
@@ -81,31 +82,44 @@ ___
 
 ### Part 2. Training
 
-Train original VOC dataset
+In this part, the training of py-faster-rcnn will be explained. Firstly, an original training procedure on PASCAL VOC dataset is provided. The purpose is to understand the structure of dataset and training steps.
 
-#### 2.1. Prepare dataset and ConvNet model (initialization)
+#### 2.1. Prepare dataset and ConvNet model
 
-Download VOC dataset
+1. Download VOC dataset
 
-```
-cd $FRCN_ROOT/data
-wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
-wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
-wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
+    ```
+    cd $FRCN_ROOT/data
+    wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
+    wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
+    wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
 
-tar xvf VOCtrainval_06-Nov-2007.tar
-tar xvf VOCtest_06-Nov-2007.tar
-tar xvf VOCdevkit_08-Jun-2007.tar 
-ln -s VOCdevkit VOCdevkit2007 #create a softlink
-```
+    tar xvf VOCdevkit_08-Jun-2007.tar 
+    tar xvf VOCtrainval_06-Nov-2007.tar
+    tar xvf VOCtest_06-Nov-2007.tar
+
+    ln -s VOCdevkit VOCdevkit2007 #create a softlink
+    ```
+
+2. Download pre-trained models
+
+	```
+    cd $FRCN_ROOT
+	./data/scripts/fetch_imagenet_models.sh
+    ```
+
 
 <br></br>
 
 #### 2.2. Training
 
+There are 2 types of training methods provided. One is using the alternating optimization algrithm while another one is approximate joint training method. In this post, approximate joint training method is introduced. For the details, please refer to the paper, Faster R-CNN.
+
 ```
 cd $FRCN_ROOT
-./experiments
+# ./experiments/scripts/faster_rcnn_end2end.sh [GPU_ID] [NET] [DATASET]
+# Directly run this command might have an error "AssertionError: Selective search data not found at:". For the solution, please refer to Part 4.
+./experiments/scripts/faster_rcnn_end2end.sh 0 ZF pascal_voc
 ```
 
 <br></br>
@@ -186,7 +200,8 @@ ___
     
     # With Anaconda
     conda install opencv
-    conda install -c auto easydict
+    conda install -c verydeep easydict
+    # Normally, people will follow the online instruction at https://anaconda.org/auto/easydict and install auto/easydict. However, this easydict (ver.1.4) has a problem in passing the message of configuration and cause many unexpected error while verydeep/easydict (ver.1.6) won't cause these errors
     ```
 
 3. roi_pooling_layer.cu:91 check failed: error == cudaSuccess(8 vs 0)
