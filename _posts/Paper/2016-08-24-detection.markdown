@@ -141,11 +141,13 @@ Forward pass:
 
 1. For each image, feed forward to get a Conv feature map (Conv') from the last Conv layer.
 2. RPN to determine object or not
+
 	2.1. On Conv'(256 channels), a 3x3 Conv layer is sliding across the map.
 	2.2. At each sliding region, a 256-d feature vector is produced and fully connected to cls layer and reg layer
 	2.3. cls layer is a 2-class classification layer (object or not)
 	2.4. reg layer is a bbox regressor to adjust the position of bounding box.
 	2.5. Anchor is introduced to　give the network translation-invariant. (each anchor represent a combination of different aspect ration and scale)
+
 3. After getting proposals, each proposed region on Conv' is passed into a RoI pooling layer, the purpose is to get a fixed feature vector output to later FC layers.
 	3.1. RoI pooling layer is actually a special case of SPP layer (single SPP layer).
 	3.2. The layer size is varying according to the size of input feature map.
