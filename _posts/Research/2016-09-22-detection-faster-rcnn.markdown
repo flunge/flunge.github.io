@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Detection: Faster R-CNN"
-date:   2016-08-29
+date:   2016-09-22
 categories: Research
 tags: [Detection, DeepLearning]
 ---
@@ -295,8 +295,9 @@ DISCLAIMER: This dataset should be only used for non-commercial research activit
 2. Add a dataset python file
 
 	Add a `basketball.py` to `$FRCN/lib/datasets/`. You may check on the source code for reference. Here are some changes you should make for your own datasets.
-# edit later    
+    
     * Class
+    * 
 
 3. Add `basketball_eval.py`
 
