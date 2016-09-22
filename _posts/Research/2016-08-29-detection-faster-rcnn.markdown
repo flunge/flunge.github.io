@@ -260,6 +260,11 @@ ___
 
 In this part, **basketball detection** will be used as an example to illustrate how to train a new dataset using py-faster-rcnn.
 
+
+![basketball_detection_demo.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Research/detection_faster_rcnn/basketball_detection_demo.png)
+
+
+
 #### 3.1. Prepare dataset
 
 The dataset used in this part is downloaded from ImageNet. 
@@ -358,12 +363,12 @@ Now, we should modify all files in `basketball/`, including,
 
 	However, renaming the layers may cause problems in later parts since "cls_score" and "bbox_pred" are used as keys in testing. Therefore, in the training part, we can train the model accroding to the following procedure.
 
-    1. Rename the layers to *cls_score_basketball* and *bbox_pred_basketball*
-    2. Fine-tune pre-trained Faster R-CNN (FRCN) model and snapshot at iteration 0. Let's call the snapshot **Basketball_0.caffemodel**. Stop training.
-    3. Rename the layers back to *cls_score* and *bbox_pred*.
-    4. Fine-tune **Basketball_0.caffemodel** to get our final model.
+1. Rename the layers to *cls_score_basketball* and *bbox_pred_basketball*
+2. Fine-tune pre-trained Faster R-CNN (FRCN) model and snapshot at iteration 0. Let's call the snapshot **Basketball_0.caffemodel**. Stop training.
+3. Rename the layers back to *cls_score* and *bbox_pred*.
+4. Fine-tune **Basketball_0.caffemodel** to get our final model.
 
-	The details and code will be explained in the following part.
+The details and code will be explained in the following part.
 
 <br></br>
 
@@ -409,8 +414,9 @@ Now, we should modify all files in `basketball/`, including,
 	
     ![result_sample.png](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Research/detection_faster_rcnn/result_sample.png)
 
-
 After going through such long path, training on py-faster-rcnn is completed!
+
+
 
 <br></br>
 
