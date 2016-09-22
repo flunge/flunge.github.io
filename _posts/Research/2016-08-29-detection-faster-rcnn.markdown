@@ -363,7 +363,7 @@ Now, we should modify all files in `basketball/`, including,
     3. Rename the layers back to *cls_score* and *bbox_pred*.
     4. Fine-tune **Basketball_0.caffemodel** to get our final model.
 
-The details and code will be explained in the following part.
+	The details and code will be explained in the following part.
 
 <br></br>
 
