@@ -45,7 +45,7 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
     
 4. Build Caffe and PyCaffe
 	
-    For this part, please refer to [Caffe official installation instruction](http://caffe.berkeleyvision.org/installation.html) or my post about [Caffe installation](https://huangying-zhan.github.io/2016/09/09/GPU-and-Caffe-installation-in-Ubuntu.html#Caffe%20installation)
+    For this part, please refer to [Caffe official installation instruction](http://caffe.berkeleyvision.org/installation.html) or my post about [Caffe installation](https://huangying-zhan.github.io/2016/09/09/GPU-and-Caffe-installation-in-Ubuntu.html#Caffe%20installation).
 	If you have experience with Caffe, just follow the instruction below.
     
     ```
@@ -208,16 +208,16 @@ Here is a remark about the logic and idea behind the training script.
 
     Basically, there are 3 things included in the file.
     
-    * Read dataset
-    
-			imdb, roidb = combined_roidb(args.imdb_name)
-    
-    * Pass configurations from `faster_rcnn_end2end.sh` and `faster_rcnn_end2end.yml` to lower layer programs/functions
-    * Call `fast_rcnn.train_net` for training
+* Read dataset
 
-			train_net(args.solver, roidb, output_dir,
-              pretrained_model=args.pretrained_model,
-              max_iters=args.max_iters)
+        imdb, roidb = combined_roidb(args.imdb_name)
+
+* Pass configurations from `faster_rcnn_end2end.sh` and `faster_rcnn_end2end.yml` to lower layer programs/functions
+* Call `fast_rcnn.train_net` for training
+
+        train_net(args.solver, roidb, output_dir,
+          pretrained_model=args.pretrained_model,
+          max_iters=args.max_iters)
 
 4. `combined_roidb` & `pascal_voc.py`
 
