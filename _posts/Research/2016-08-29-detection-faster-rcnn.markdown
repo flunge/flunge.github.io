@@ -207,27 +207,25 @@ Here is a remark about the logic and idea behind the training script.
 3. `train_net.py`
 
     Basically, there are 3 things included in the file.
-    
-* Read dataset
+   	
+    ```
+    # Read dataset
+    imdb, roidb = combined_roidb(args.imdb_name)
 
-        imdb, roidb = combined_roidb(args.imdb_name)
-
-* Pass configurations from `faster_rcnn_end2end.sh` and `faster_rcnn_end2end.yml` to lower layer programs/functions
-* Call `fast_rcnn.train_net` for training
-
-        train_net(args.solver, roidb, output_dir,
-          pretrained_model=args.pretrained_model,
-          max_iters=args.max_iters)
+    # Pass configurations from `faster_rcnn_end2end.sh` and `faster_rcnn_end2end.yml` to lower layer programs/functions
+    # Call `fast_rcnn.train_net` for training
+		train_net(args.solver, roidb, output_dir, pretrained_model=args.pretrained_model, max_iters=args.max_iters)
+	```
 
 4. `combined_roidb` & `pascal_voc.py`
 
-	Recall that in `faster_rcnn_end2end.sh`, you have entered an argument 
+	Recall that in `faster_rcnn_end2end.sh`. You have entered an argument, 
     
     	--imdb ${TRAIN_IMDB}
     
     `combined_roidb` do nothing but just trace back and read the datasets, such as train, val, and test using functions in `$FRCN/lib/datasets/pascal_voc.py`.
     
-5. fast_rcnn.train_net
+5. `fast_rcnn.train_net`
 
 	This function is at `$FRCN/lib/fast_rcnn/train.py` This function is the core of whole training pipeline since it calls `solver.prototxt`, but in fact you don't need to care this part in most of the time.
 
@@ -265,14 +263,15 @@ In this part, **basketball detection** will be used as an example to illustrate 
 #### 3.1. Prepare dataset
 
 The dataset used in this part is downloaded from ImageNet. 
+
 DISCLAIMER: This dataset should be only used for non-commercial research activities. Please follow the ImageNet rules about the use of the dataset.
 
 1. Download dataset
 
-	Here provides a link to download [Basketball Dataset](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Research/detection_faster_rcnn/imagenet_basketball.tar.gz). This dataset has the following structure.
+	Here provides a link to download [Basketball Dataset](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Research/detection_faster_rcnn/basketball.tar.gz). This dataset has the following structure.
 
     ```
-    |-- imagenet_basketball
+    |-- basketball
         |-- JPEGImages 
             Contains all raw .JPEG images
         |-- ImageSets
@@ -283,9 +282,9 @@ DISCLAIMER: This dataset should be only used for non-commercial research activit
     
     ```
     # Unzip the folder
-    mv imagenet_basketball.tar.gz $FRCN/data/
+    mv basketball.tar.gz $FRCN/data/
     cd $FRCN/data
-    tar xzf imagenet_basketball.tar.gz
+    tar xzf basketball.tar.gz
     ```
 
 2. Add a dataset python file
@@ -357,12 +356,12 @@ Now, we should modify all files in `basketball/`, including,
     name: "bbox_pred" -> name: "bbox_pred_basketball"
     ```
 
-However, renaming the layers may cause problems in later parts since "cls_score" and "bbox_pred" are used as keys in testing. Therefore, in the training part, we can train the model accroding to the following procedure.
+	However, renaming the layers may cause problems in later parts since "cls_score" and "bbox_pred" are used as keys in testing. Therefore, in the training part, we can train the model accroding to the following procedure.
 
-1. Rename the layers to *cls_score_basketball* and *bbox_pred_basketball*
-2. Fine-tune pre-trained Faster R-CNN (FRCN) model and snapshot at iteration 0. Let's call the snapshot **Basketball_0.caffemodel**. Stop training.
-3. Rename the layers back to *cls_score* and *bbox_pred*.
-4. Fine-tune **Basketball_0.caffemodel** to get our final model.
+    1. Rename the layers to *cls_score_basketball* and *bbox_pred_basketball*
+    2. Fine-tune pre-trained Faster R-CNN (FRCN) model and snapshot at iteration 0. Let's call the snapshot **Basketball_0.caffemodel**. Stop training.
+    3. Rename the layers back to *cls_score* and *bbox_pred*.
+    4. Fine-tune **Basketball_0.caffemodel** to get our final model.
 
 The details and code will be explained in the following part.
 
