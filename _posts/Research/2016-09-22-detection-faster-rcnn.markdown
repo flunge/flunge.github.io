@@ -373,6 +373,8 @@ The details and code will be explained in the following part.
 
 #### 3.3. Training and evaluation
 
+Before training on your new dataset, you may need to check `$FRCN/data/cache` to remove caches if necessary. Caches stores information of previously trained dataset. It may cause problem while training.
+
 1. Rename the layers
 
 	As mentions in the previous part, rename the two layers. 
