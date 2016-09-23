@@ -10,6 +10,8 @@ tags: [Detection, DeepLearning]
 
 This post records my experience with py-faster-rcnn, including how to setup py-faster-rcnn from scratch, how to perform a demo training on PASCAL VOC dataset by py-faster-rcnn, how to train your own dataset, and some errors I encountered. All the steps are based on Ubuntu 14.04 + CUDA 8.0. Faster R-CNN is an important research result for object detection with an end-to-end deep convolutional neural network architure. For the details, please refer to [original paper](https://huangying-zhan.github.io/public/post_resource/Paper/detection/2016_faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf) or [my summary](https://huangying-zhan.github.io/2016/08/24/detection.html#Faster%20R-CNN).
 
+The source code is provided at: https://github.com/Huangying-Zhan/py-faster-rcnn
+
 ___
 
 ### Contents
