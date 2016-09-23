@@ -294,15 +294,11 @@ DISCLAIMER: This dataset should be only used for non-commercial research activit
 
 2. Add a dataset python file
 
-	Add a `basketball.py` to `$FRCN/lib/datasets/`. You may check on the source code for reference. Here are some changes you should make for your own datasets.
-    
-    * Class
-    * 
+	Add a `basketball.py` to `$FRCN/lib/datasets/`. You may check on the source code for reference. If you wish to modify this file, basically, you can just *find and replace* basketball by your new dataset name. 
 
 3. Add `basketball_eval.py`
 
-	Add a `basketball_eval.py` to `$FRCN/lib/datasets/`. Again, check on the source code for reference. Here are some changes you should make for your own datasets.
-# edit later
+	Add a `basketball_eval.py` to `$FRCN/lib/datasets/`. Again, check on the source code for reference. Again, *find and replace* basketabll.
 
 4. Update `/lib/datasets/factory.py`
 
