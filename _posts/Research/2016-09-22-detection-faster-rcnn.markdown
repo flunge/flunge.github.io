@@ -64,7 +64,7 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
     make pycaffe -j4
     ```
     
-5. Download pre-computed Faster R-CNN dtectors
+5. Download pre-computed Faster R-CNN models
 
 	```
     cd $FRCN_ROOT
