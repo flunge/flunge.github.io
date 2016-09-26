@@ -150,7 +150,11 @@ PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
 # CPU-only switch (uncomment to build without GPU support).
 CPU_ONLY := 1
 
-# As mentioned before, if your "export" for CUDA path is not working later on. You can update CUDA directory in this Makefile.config.
+# As mentioned before, if your "export" for CUDA path is not working later on. There are two possible solutions.
+# (1)
+sudo ldconfig /usr/local/cuda/lib64
+# (2)
+# You can update CUDA directory in this Makefile.config.
 # Search for this line,
 CUDA_DIR := /usr/local/cuda
 # Update it to 
