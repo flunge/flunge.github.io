@@ -36,12 +36,12 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
 	git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
     ```
 
-2. Lets call the directory as `FRCN_ROOT`
+2. Lets call the directory as `$FRCN`
 
 3. Build the Cython modules
 
     ```
-    cd $FRCN_ROOT/lib
+    cd $FRCN/lib
 	make
     ```
     
@@ -51,7 +51,7 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
 	If you have experience with Caffe, just follow the instruction below.
     
     ```
-	cd $FRCN_ROOT/caffe-fast-rcnn
+	cd $FRCN/caffe-fast-rcnn
     cp Makefile.config.example Makefile.config
     
     # Modify Makefile.config, uncommment this line
@@ -67,7 +67,7 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
 5. Download pre-computed Faster R-CNN models
 
 	```
-    cd $FRCN_ROOT
+    cd $FRCN
 	./data/scripts/fetch_faster_rcnn_models.sh
     ```
 
@@ -94,7 +94,7 @@ In this part, the training of py-faster-rcnn will be explained. Firstly, an orig
 1. Download VOC dataset
 
     ```
-    cd $FRCN_ROOT/data
+    cd $FRCN/data
     wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
     wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
     wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
@@ -109,7 +109,7 @@ In this part, the training of py-faster-rcnn will be explained. Firstly, an orig
 2. Download pre-trained models
 
 	```
-    cd $FRCN_ROOT
+    cd $FRCN
 	./data/scripts/fetch_imagenet_models.sh
     ./data/scripts/fetch_faster_rcnn_models.sh
     ```
@@ -122,7 +122,7 @@ In this part, the training of py-faster-rcnn will be explained. Firstly, an orig
 There are 2 types of training methods provided by [py-faster-rcnn][py-faster-rcnn]. One is using the alternating optimization algrithm while another one is approximate joint training method. In this post, approximate joint training method is introduced. For the details, please refer to the paper, [Faster R-CNN](https://huangying-zhan.github.io/2016/08/24/detection.html#Faster%20R-CNN).
 
 ```
-cd $FRCN_ROOT
+cd $FRCN
 # ./experiments/scripts/faster_rcnn_end2end.sh [GPU_ID] [NET] [DATASET]
 # Directly run this command might have an error "AssertionError: Selective search data not found at:". For the solution, please refer to Part 4.
 ./experiments/scripts/faster_rcnn_end2end.sh 0 ZF pascal_voc
