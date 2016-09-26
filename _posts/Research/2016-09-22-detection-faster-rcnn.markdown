@@ -72,7 +72,7 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
     ```
 
 6. Run the demo
-7. 
+
 	However, in this part you might get into trouble with different errors, such as without some packages. At the end of this post, some encountered errors and solution are provided. For those unexpected error, google the error and you should be able to find a solution.
     
 	```
