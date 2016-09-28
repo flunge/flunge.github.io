@@ -149,9 +149,11 @@ Forward pass:
 	2.5. Anchor is introduced to　give the network translation-invariant. (each anchor represent a combination of different aspect ration and scale)
 
 3. After getting proposals, each proposed region on Conv' is passed into a RoI pooling layer, the purpose is to get a fixed feature vector output to later FC layers.
+
 	3.1. RoI pooling layer is actually a special case of SPP layer (single SPP layer).
 	3.2. The layer size is varying according to the size of input feature map.
 	3.3. Since the layer size is changing, it always outputs a fixed feature vector.
+
 4. The RoI feature vector is fully connected to a FC layer and do classification.
 
 Training steps to have share Conv layers:
