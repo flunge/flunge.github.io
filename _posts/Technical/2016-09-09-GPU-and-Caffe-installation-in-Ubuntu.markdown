@@ -87,6 +87,8 @@ If you later on find that this `export` doesn't work for Caffe, you can directly
 
         sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 
+	If you are not using Ubuntu 14.04, you may not be able to install these dependencies. Please refer to [here](http://caffe.berkeleyvision.org/install_apt.html).
+
 <br></br>
 
 #### 2.3. (Optional) Anaconda-python
