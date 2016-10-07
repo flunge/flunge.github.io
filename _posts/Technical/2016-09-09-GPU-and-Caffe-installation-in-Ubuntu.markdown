@@ -95,7 +95,7 @@ If you later on find that this `export` doesn't work for Caffe, you can directly
 Anaconda is a package which includes a lot of useful python packages/libraries.
 It is recommended to install Anaconda but not a compulsory part for Caffe.
 
-Downalod the installer from the Anaconda's [dowloads page](https://www.continuum.io/downloads#linux).
+Downalod the installer from the Anaconda's [dowloads pag一e](https://www.continuum.io/downloads#linux).
 
 ```
 cd ~/Downloads
