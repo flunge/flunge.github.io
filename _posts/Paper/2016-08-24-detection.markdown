@@ -28,7 +28,7 @@ ___
 
 This paper proposes a multi-step object detection pipeline.
 
-![rcnn.png]({{site.url}}public/post_resource/Paper/detection/rcnn.png)
+![rcnn](https://cloud.githubusercontent.com/assets/13748721/19177462/033b95ea-8c7c-11e6-9683-79fdfa4b7a56.png)
 
 Forward pass:
 
@@ -70,7 +70,7 @@ ___
 
 This paper propose a new ConvNet architecture and detection pipeline based on R-CNN. In this ConvNet, it also follows "Proposal->Feedforward each proposal region into whole ConvNet for classification->regressor" pipeline. However, for each proposed region, warp/crop doesn't required to change the size of image to a required size (e.g. 227x227 in AlexNet). The main idea includes,
 
-![SPP-net.png]({{site.url}}public/post_resource/Paper/detection/SPP-net.png)
+![spp-net](https://cloud.githubusercontent.com/assets/13748721/19177464/0461103a-8c7c-11e6-856a-5bec8bde400a.png)
 
 
 1. Conv layers actually do not request a fixed size input image but a fixed size output vector/feature map for later FC layers.
@@ -101,7 +101,7 @@ ___
 
 An updated version of R-CNN. The main idea is a combination of R-CNN and SPP layer from SPP-net. Moreover, this paper also integrates feature extractor, SVM, bbox regressor together. The whole forward pipeline is as following,
 
-![fast_rcnn.png]({{site.url}}public/post_resource/Paper/detection/fast_rcnn.png)
+![fast_rcnn](https://cloud.githubusercontent.com/assets/13748721/19177461/021f9936-8c7c-11e6-8237-94ac59be4b65.png)
 
 1. Proposal (e.g. Selective search)
 2. For each image, feed forward and obtain a Conv feature map from the last Conv layer.
@@ -131,13 +131,14 @@ ________________________________________
 
 **Summary**
 
-![faster_rcnn_1.png]({{site.url}}public/post_resource/Paper/detection/faster_rcnn_1.png)
+![faster_rcnn_1](https://cloud.githubusercontent.com/assets/13748721/19177459/fffc3010-8c7b-11e6-8563-a3cbe769f9aa.png)
 
 An updated version of R-CNN and Fast R-CNN. The whole structure is mainly based on Fast R-CNN, but proposal part is replaced by a ConvNet. Region Proposal Network (RPN) is proposed to predict proposal regions. RPN slides over the last shared Conv feature map to determine whether the region is an object or not. Another highlight of this network is shared Conv layers for RPN and Object recognition. The whole procedure is as following,
 
 Forward pass:
 
-![faster_rcnn_2.png]({{site.url}}public/post_resource/Paper/detection/faster_rcnn_2.png)
+![faster_rcnn_2](https://cloud.githubusercontent.com/assets/13748721/19177460/01054532-8c7c-11e6-89fd-74fea01f090b.png)
+
 
 1. For each image, feed forward to get a Conv feature map (Conv') from the last Conv layer.
 2. RPN to determine object or not
@@ -178,10 +179,10 @@ Reference
 [论文笔记 《Fast R-CNN》](http://zhangliliang.com/2015/05/17/paper-note-fast-rcnn/)
 
 
-[R-CNN]: {{site.url}}public/post_resource/Paper/detection/2014_Region-based_Convolutional_Networks_for_accurate_object_detection_and_segmentation.pdf
+[R-CNN]: (https://arxiv.org/abs/1311.2524)
 
-[SPP-net]: {{site.url}}public/post_resource/Paper/detection/2014_Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
+[SPP-net]: (https://arxiv.org/abs/1406.4729)
 
-[Fast R-CNN]: {{site.url}}public/post_resource/Paper/detection/2015_Fast_R-CNN.pdf
+[Fast R-CNN]: (https://arxiv.org/abs/1504.08083)
 
-[Faster R-CNN]: {{site.url}}public/post_resource/Paper/detection/2016_faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf
+[Faster R-CNN]: (https://arxiv.org/abs/1506.01497)
