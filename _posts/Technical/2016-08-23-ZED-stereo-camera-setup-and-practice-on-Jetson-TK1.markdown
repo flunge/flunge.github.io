@@ -62,7 +62,7 @@ To study ZED, we can learn from it's [blog examples](https://www.stereolabs.com/
 <br></br>
 
 #### 2.2. Hello World
-Before jumping to the later content, a simple ["Hello-world" example](https://www.stereolabs.com/blog/index.php/2015/07/15/hello-world/) is suggested to be implemented by yourself first. Follow the instruction and build a Hello-World program. However, as mentioned before, the blog examples are quite outdated. Please use this [main-hello-world.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main-hello-world.cpp) and [CMakeLists.txt](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/CMakeLists.txt) to build the program. Remember to rename *main-hello-world.cpp* as *main.cpp*.
+Before jumping to the later content, a simple ["Hello-world" example](https://www.stereolabs.com/blog/index.php/2015/07/15/hello-world/) is suggested to be implemented by yourself first. Follow the instruction and build a Hello-World program. However, as mentioned before, the blog examples are quite outdated. Please use this [main-hello-world.cpp](https://www.dropbox.com/s/i9zhg15stjfgp5u/main-hello-world.cpp?dl=0) and [CMakeLists.txt](https://www.dropbox.com/s/uoe0iwjp582klq0/CMakeLists.txt?dl=0) to build the program. Remember to rename *main-hello-world.cpp* as *main.cpp*.
 
 <br></br>
 
@@ -79,7 +79,7 @@ make # If you can see "Linking CXX executable "ZED with OpenCV" ", the program i
 ./ZED\ with\ OpenCV
 ```
 
-Play around with the program first. Then, download and rename [main-capture.cpp](/home/jzhan/github/huangying-zhan.github.io/public/post_resource/Technical/ZED_stereo_camera_setup_and_practice_on_Jetson_TK1/main-capture.cpp) as *main.cpp*.
+Play around with the program first. Then, download and rename [main-capture.cpp](https://www.dropbox.com/s/g2g7m0flsubfe5v/main_capture.cpp?dl=0) as *main.cpp*.
 Now, replace the original *main.cpp* by this new *main.cpp* and build the program again.
 
 ```
