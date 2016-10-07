@@ -264,7 +264,7 @@ ___
 In this part, **basketball detection** will be used as an example to illustrate how to train a new dataset using py-faster-rcnn.
 
 
-![basketball_detection_demo.png]({{site.url}}/public/post_resource/Research/detection_faster_rcnn/basketball_detection_demo.png)
+![basketball_detection_demo](https://cloud.githubusercontent.com/assets/13748721/19177713/203fc01a-8c7e-11e6-8e7b-3f67d0755482.png)
 
 
 
@@ -276,7 +276,7 @@ DISCLAIMER: This dataset should be only used for non-commercial research activit
 
 1. Download dataset
 
-	Here provides a link to download [Basketball Dataset]({{site.url}}/public/post_resource/Research/detection_faster_rcnn/basketball.tar.gz). This dataset has the following structure.
+	Here provides a link to download [Basketball Dataset](https://www.dropbox.com/s/iywkgsrx2fx6t5q/basketball.tar.gz?dl=0). This dataset has the following structure.
 
     ```
     |-- basketball
@@ -414,7 +414,7 @@ Before training on your new dataset, you may need to check `$FRCN/data/cache` to
 
 	At the end, you should be able to see something like this.
 	
-    ![result_sample.png]({{site.url}}/public/post_resource/Research/detection_faster_rcnn/result_sample.png)
+    ![result_sample](https://cloud.githubusercontent.com/assets/13748721/19177712/203d190a-8c7e-11e6-91e8-54ced87b9495.png)
 
 After going through such long path, training on py-faster-rcnn is completed!
 
