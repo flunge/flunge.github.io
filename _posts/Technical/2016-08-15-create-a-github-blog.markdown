@@ -28,7 +28,7 @@ ___
 
 #### 1.1. Fork, clone and modify
 
-![fork.png]({{site.url}}/public/post_resource/Technical/Create_a_github_blog/fork.png)
+![fork](https://cloud.githubusercontent.com/assets/13748721/19178148/cdfff0b8-8c82-11e6-9004-771e78facb84.png)
 
 1. Fork a repository template from others
 2. Click "Settings"
