@@ -29,7 +29,7 @@ This paper proposes an integration of deep learning algorithm and UAV drone. The
 
 It is a classification problem. 6 types of commands (classes) are trained with CaffeNet, including, 
 
-![img_1]
+![img_1](https://cloud.githubusercontent.com/assets/13748721/19177572/f8356968-8c7c-11e6-80d8-976eb3bc446f.png)
 
 The dataset construction is based on human response imitation. Firstly, human control the drone in the environment using computer command which will be sent to the drone. Second, the commands are recorded as label of images seen by the drone. Third, train a DNN as classification problem.
 
@@ -60,7 +60,7 @@ This paper integrates deep learning (classification) and UAV drone. The target i
 2. turn left
 3. turn right
 
-![img_2] 
+![img_2](https://cloud.githubusercontent.com/assets/13748721/19177573/f8397d28-8c7c-11e6-9bbb-8615c6ebe2f4.png)
 
 The dataset construction method is innovative. A hiker put 3 cameras (GoPro) on his head and walks straghtly in forest trails. The images taken by 3 cameras corresponds to 3 different classes.
 
@@ -85,15 +85,11 @@ ___
 
 _____________________________
 
-[Deep Neural Network for Real-Time Autonmous Indoor Navigation]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/2015_DNN_for_real-time_Autonomous_Indoor_Navigation.pdf
-
-[img_1]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/img_1.png
+[Deep Neural Network for Real-Time Autonmous Indoor Navigation]: https://arxiv.org/abs/1511.04668
 
 
-[A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/2015_A_Machine_Learning_Approach_to_the_Visual_Perception_of_Forest_Trails_for_Mobile_Robots.pdf
+[A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots]: http://rpg.ifi.uzh.ch/docs/RAL16_Giusti.pdf
 
 [From Perception to Decision: A Data-driven Approach to End-to-end Motion Planning for Autonomous Ground Robots]: https://arxiv.org/pdf/1609.07910.pdf
 
-
-[img_2]: {{site.url}}/public/post_resource/Paper/UAV_and_deep_learning/navigation/img_2.png
 
