@@ -12,6 +12,7 @@ tags: [Navigation, Odometry,  DeepLearning]
 2. [A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots](#A Machine Learning Approach to the Visual Perception of Forest Trails for Mobile Robots)
 3. [From Perception to Decision: A Data-driven Approach to End-to-end Motion Planning for Autonomous Ground Robots](#From Perception to Decision: A Data-driven Approach to End-to-end Motion Planning for Autonomous Ground Robots)
 4. [Deep Learning for Laser based Odometry Estimation](#Deep Learning for Laser based Odometry Estimation)
+5. [Learning visual odometry with a convolutional network](#Learning visual odometry with a convolutional network)
 
 ___
 
@@ -166,6 +167,34 @@ For experiment part, they carry out a lot of experiments concerning pre-training
 	- Increased memory for more Conv layer
 ```
 
+<br></br>
+___
+
+<a name = "Learning visual odometry with a convolutional network"></a>
+
+| Title  | [Learning visual odometry with a convolutional network]  |
+|--------|---|
+| Author |  Kishore Konda, Roland Memisevic |
+| Year   | 2015  |
+
+**Summary**
+
+This paper presents an approach for visual odometry estimation based on deep ConvNet. The feedforward operation is showed below. The network is also initialized by unservised learning with an auto-encoder. The team reports that training CNN without using features from unsupervised pre-training resulted innoisy filters and overfitting on the training data. 
+
+![image](https://cloud.githubusercontent.com/assets/13748721/19255807/0ffa3820-8f94-11e6-8538-e6f21f59b1b5.png)
+
+Moreover, they are using discretised velocities and direction changes rather than real valued prediction. Due to lackof large amounts of data, the linear regression was unable to larn a good prediction model. Using the predicted velocity and direction, the team is also able to predict a path.
+
+![image](https://cloud.githubusercontent.com/assets/13748721/19255916/f4409ef2-8f94-11e6-895b-d35a070b267d.png)
+
+
+**Keypoint**
+
+```
+* Visual odometry based on ConvNet
+* Trained based on KITTY dataset
+```
+
 
 [Deep Neural Network for Real-Time Autonmous Indoor Navigation]: https://arxiv.org/abs/1511.04668
 
@@ -175,3 +204,5 @@ For experiment part, they carry out a lot of experiments concerning pre-training
 [From Perception to Decision: A Data-driven Approach to End-to-end Motion Planning for Autonomous Ground Robots]: https://arxiv.org/pdf/1609.07910.pdf
 
 [Deep Learning for Laser based Odometry Estimation]: http://juxi.net/workshop/deep-learning-rss-2016/papers/Nicolai%20-%20Deep%20Learning%20Lidar%20Odometry.pdf
+
+[Learning visual odometry with a convolutional network]: http://www.iro.umontreal.ca/~memisevr/pubs/VISAPP2015.pdf
