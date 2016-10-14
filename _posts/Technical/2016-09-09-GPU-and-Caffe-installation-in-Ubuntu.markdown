@@ -76,17 +76,18 @@ If you later on find that this `export` doesn't work for Caffe, you can directly
 1. Install general dependencies
 
     ```
-    sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-    sudo apt-get install libboost-all-dev
+    $ sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+    
+    $ sudo apt-get install libboost-all-dev
     ```
 
 2. Install ATLAS
 
-        sudo apt-get install libatlas-base-dev
+        $ sudo apt-get install libatlas-base-dev
 
 3. Install remaining dependencies
 
-        sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+        $ sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 
 	If you are not using Ubuntu 14.04, you may not be able to install these dependencies. Please refer to [here](http://caffe.berkeleyvision.org/install_apt.html).
 
@@ -99,10 +100,10 @@ It is recommended to install Anaconda but not a compulsory part for Caffe.
 Downalod the installer from the Anaconda's [dowloads pag一e](https://www.continuum.io/downloads#linux).
 
 ```
-cd ~/Downloads
+$ cd ~/Downloads
 
 # For different version's installer, 'xxx' is different, just refer to your downloaded installer.
-bash Anaconda2-xxx.sh 
+$ bash Anaconda2-xxx.sh 
 ```
 
 Follow the installation guideline and accept the statements.
@@ -125,14 +126,14 @@ Official requirement: OpenCV >=2.4, including 3.0. Installation of OpenCV is qui
 
 First, `git` is required, can be installed by    
 
-    sudo apt-get install git
+    $ sudo apt-get install git
 
 Then, clone caffe to a local directory
 
 ```
-git clone https://github.com/BVLC/caffe.git
-cd $CAFFE # $CAFFE is the directory of your downloaded Caffe
-cp Makefile.config.example Makefile.config
+$ git clone https://github.com/BVLC/caffe.git
+$ cd $CAFFE # $CAFFE is the directory of your downloaded Caffe
+$ cp Makefile.config.example Makefile.config
 ```
 
 You can modify the configuration before `make` in this `Makefile.config`. Here are some possible modifications.
@@ -155,22 +156,22 @@ CPU_ONLY := 1
 
 # As mentioned before, if your "export" for CUDA path is not working later on. There are two possible solutions.
 # (1)
-sudo ldconfig /usr/local/cuda/lib64
+$ sudo ldconfig /usr/local/cuda/lib64
 # (2)
 # You can update CUDA directory in this Makefile.config.
 # Search for this line,
-CUDA_DIR := /usr/local/cuda
+$ CUDA_DIR := /usr/local/cuda
 # Update it to 
-CUDA_DIR := /usr/local/cuda-8.0
+$ CUDA_DIR := /usr/local/cuda-8.0
 ```
 
 Then, we can start compiling Caffe.
 
 ```
-make clean
-make all -j8 # where -j8 means use 8 cores of your CPU for compilation which can accelerate the compilation. you should change -j according to the number of your CPU cores. 
-make test -j8
-make runtest -j8
+$ make clean
+$ make all -j8 # where -j8 means use 8 cores of your CPU for compilation which can accelerate the compilation. you should change -j according to the number of your CPU cores. 
+$ make test -j8
+$ make runtest -j8
 ```
 If there is no error up to this stage, Caffe installation is completed.
 
@@ -181,15 +182,15 @@ If there is no error up to this stage, Caffe installation is completed.
 If Python interface is used, follow the guideline to install PyCaffe
 
 ```
-sudo apt-get install python-dev
-cd $CAFFE/python
+$ sudo apt-get install python-dev
+$ cd $CAFFE/python
 
-sudo apt-get install python-pip
+$ sudo apt-get install python-pip
 
-for req in $(cat requirements.txt); do sudo pip install $req; done
+$ for req in $(cat requirements.txt); do sudo pip install $req; done
 
-cd ..
-make pycaffe
+$ cd ..
+$ make pycaffe
 ```
 
 Up to here, the installation is completed!
