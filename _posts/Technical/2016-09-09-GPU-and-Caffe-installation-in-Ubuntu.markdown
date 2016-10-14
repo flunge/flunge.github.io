@@ -187,7 +187,7 @@ $ cd $CAFFE/python
 
 $ sudo apt-get install python-pip
 
-$ for req in $(cat requirements.txt); do sudo pip install $req; done
+$ for req in $(cat requirements.txt); do pip install $req; done
 
 $ cd ..
 $ make pycaffe
