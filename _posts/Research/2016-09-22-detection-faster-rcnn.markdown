@@ -33,7 +33,7 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
 	
     ```
 	# Make sure to clone with --recursive
-	git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
+	$ git clone --recursive https://github.com/rbgirshick/py-faster-rcnn.git
     ```
 
 2. Lets call the directory as `$FRCN`
@@ -41,8 +41,8 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
 3. Build the Cython modules
 
     ```
-    cd $FRCN/lib
-	make
+    $ cd $FRCN/lib
+	$ make
     ```
     
 4. Build Caffe and PyCaffe
@@ -51,24 +51,24 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
 	If you have experience with Caffe, just follow the instruction below.
     
     ```
-	cd $FRCN/caffe-fast-rcnn
-    cp Makefile.config.example Makefile.config
+	$ cd $FRCN/caffe-fast-rcnn
+    $ cp Makefile.config.example Makefile.config
     
     # Modify Makefile.config, uncommment this line
     WITH_PYTHON_LAYER := 1
     # Modifiy Makefile.config according to your need, such as setup related to GPU support, cuDNN, CUDA version, Anaconda, OpenCV, etc.
     
     # After modification on Makefile.config
-    make -j4 # 4 is the number of core in your CPU, change it according to your computer CPU  
+    $ make all -j4 # -j4 is for complilation acceleration only. 4 is the number of core in your CPU, change it according to your computer CPU. 
     # Suppose you have installed prerequites for PyCaffe, otherwise, go back to the Caffe installation instructions.
-    make pycaffe -j4
+    $ make pycaffe -j4
     ```
     
 5. Download pre-computed Faster R-CNN models
 
 	```
-    cd $FRCN
-	./data/scripts/fetch_faster_rcnn_models.sh
+    $ cd $FRCN
+	$ ./data/scripts/fetch_faster_rcnn_models.sh
     ```
 
 6. Run the demo
@@ -76,7 +76,7 @@ In this part, a simple instruction for install py-faster-rcnn is introduced. The
 	However, in this part you might get into trouble with different errors, such as without some packages. At the end of this post, some encountered errors and solution are provided. For those unexpected error, google the error and you should be able to find a solution.
     
 	```
-    ./tools/demo.py
+    $ ./tools/demo.py
     ```
 
 <br></br>
@@ -94,24 +94,24 @@ In this part, the training of py-faster-rcnn will be explained. Firstly, an orig
 1. Download VOC dataset
 
     ```
-    cd $FRCN/data
-    wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
-    wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
-    wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
+    $ cd $FRCN/data
+    $ wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
+    $ wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
+    $ wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
 
-    tar xvf VOCdevkit_08-Jun-2007.tar 
-    tar xvf VOCtrainval_06-Nov-2007.tar
-    tar xvf VOCtest_06-Nov-2007.tar
+    $ tar xvf VOCdevkit_08-Jun-2007.tar 
+    $ tar xvf VOCtrainval_06-Nov-2007.tar
+    $ tar xvf VOCtest_06-Nov-2007.tar
 
-    ln -s VOCdevkit VOCdevkit2007 #create a softlink
+    $ ln -s VOCdevkit VOCdevkit2007 #create a softlink
     ```
 
 2. Download pre-trained models
 
 	```
-    cd $FRCN
-	./data/scripts/fetch_imagenet_models.sh
-    ./data/scripts/fetch_faster_rcnn_models.sh
+    $ cd $FRCN
+	$ ./data/scripts/fetch_imagenet_models.sh
+    $ ./data/scripts/fetch_faster_rcnn_models.sh
     ```
 
 
@@ -122,10 +122,10 @@ In this part, the training of py-faster-rcnn will be explained. Firstly, an orig
 There are 2 types of training methods provided by [py-faster-rcnn][py-faster-rcnn]. One is using the alternating optimization algrithm while another one is approximate joint training method. In this post, approximate joint training method is introduced. For the details, please refer to the paper, [Faster R-CNN](https://huangying-zhan.github.io/2016/08/24/detection.html#Faster%20R-CNN).
 
 ```
-cd $FRCN
+$ cd $FRCN
 # ./experiments/scripts/faster_rcnn_end2end.sh [GPU_ID] [NET] [DATASET]
 # Directly run this command might have an error "AssertionError: Selective search data not found at:". For the solution, please refer to Part 4.
-./experiments/scripts/faster_rcnn_end2end.sh 0 ZF pascal_voc
+$ ./experiments/scripts/faster_rcnn_end2end.sh 0 ZF pascal_voc
 ```
 
 Here is a remark about the logic and idea behind the training script.
@@ -290,9 +290,9 @@ DISCLAIMER: This dataset should be only used for non-commercial research activit
     
     ```
     # Unzip the folder
-    mv basketball.tar.gz $FRCN/data/
-    cd $FRCN/data
-    tar xzf basketball.tar.gz
+    $ mv basketball.tar.gz $FRCN/data/
+    $ cd $FRCN/data
+    $ tar xzf basketball.tar.gz
     ```
 
 2. Add a dataset python file
@@ -312,8 +312,8 @@ DISCLAIMER: This dataset should be only used for non-commercial research activit
 	As mentioned in Part 2.2 (2), we need a `config.yml` to store configurations. In here, we can use the original `faster_rcnn_end2end.yml` as a reference. However, there are many configurations you can set in this file. In here, we may set `EXP_DIR` first and others if necessary.
 
     ```
-    cd $FRCN/experiments/cfgs
-    cp faster_rcnn_end2end.yml config.yml
+    $ cd $FRCN/experiments/cfgs
+    $ cp faster_rcnn_end2end.yml config.yml
     ```
 
 6. Update `imdb.py`
@@ -329,11 +329,11 @@ To train our own model, basically we don't need to train the model from scratch 
 For simplicity, the network and model adopted in this part is ZF-net and a pre-trained Faster R-CNN (ZF) respectively.
 
 ```
-cd $FRCN/models
+$ cd $FRCN/models
 # copy a well-defined network and make modification based on it
-mkdir basketball
-cp ./pascal_voc/ZF/faster_rcnn_end2end/* ./basketball/
-cd basketball
+$ mkdir basketball
+$ cp ./pascal_voc/ZF/faster_rcnn_end2end/* ./basketball/
+$ cd basketball
 ```
 
 Now, we should modify all files in `basketball/`, including,
@@ -348,9 +348,9 @@ Now, we should modify all files in `basketball/`, including,
     For `train.prototxt` and `val.prototxt`, basically we need to update the number of output in final layers. Let's say, in this basketball dataset, we only need 2 classes (background + basketball) and 8 output for bounding box regressor. Orignial pascal_voc have 21 classes including background and 21*4 bounding box regressor output.
 
     ```
-    cd $FRCN/models/basketball
-    grep 21 *
-    grep 84 *
+    $ cd $FRCN/models/basketball
+    $ grep 21 *
+    $ grep 84 *
     # These two commands help you to check the lines that you should modify in the files.
     ```
     
@@ -387,7 +387,7 @@ Before training on your new dataset, you may need to check `$FRCN/data/cache` to
 	The purpose of first fine-tuning is to get a caffemodel which has two outputs at final fully-connected layers.
     
     ```
-    ./tools/train_net.py --gpu 0 --weights data/faster_rcnn_models/ZF_faster_rcnn_final.caffemodel --imdb basketball_train --cfg experiments/cfgs/config.yml --solver models/basketball/solver.prototxt --iter 0
+    $ ./tools/train_net.py --gpu 0 --weights data/faster_rcnn_models/ZF_faster_rcnn_final.caffemodel --imdb basketball_train --cfg experiments/cfgs/config.yml --solver models/basketball/solver.prototxt --iter 0
     ```
     
     After this fine-tuning, we should get the model we needed.
@@ -401,7 +401,7 @@ Before training on your new dataset, you may need to check `$FRCN/data/cache` to
 	This fine-tuning should train models for our final use. The pre-trained model in this stage is the model we saved in stage 2.
     
     ```
-    ./tools/train_net.py --gpu 0 --weights output/basketball/train/zf_faster_rcnn_basketball_iter_0.caffemodel --imdb basketball_train --cfg experiments/cfgs/config.yml --solver models/basketball/solver.prototxt --iter 10000
+    $ ./tools/train_net.py --gpu 0 --weights output/basketball/train/zf_faster_rcnn_basketball_iter_0.caffemodel --imdb basketball_train --cfg experiments/cfgs/config.yml --solver models/basketball/solver.prototxt --iter 10000
     ```
 
 5. Evaluation / Testing
@@ -409,7 +409,7 @@ Before training on your new dataset, you may need to check `$FRCN/data/cache` to
 	To test the performance of trained model, we can use the provided `test_net.py` for the purpose.
     
     ```
-    ./tools/test_net.py --gpu 0 --def models/basketball/test.prototxt --net output/basketball/train/zf_faster_rcnn_basketball_iter_20000.caffemodel --imdb basketball_val --cfg experiments/cfgs/config.yml
+    $ ./tools/test_net.py --gpu 0 --def models/basketball/test.prototxt --net output/basketball/train/zf_faster_rcnn_basketball_iter_20000.caffemodel --imdb basketball_val --cfg experiments/cfgs/config.yml
     ```
 
 	At the end, you should be able to see something like this.
@@ -433,25 +433,27 @@ ___
 
     ```
     # Without Anaconda
-    sudo pip install easydict
-    sudo apt-get install python-opencv
+    $ sudo pip install easydict
+    $ sudo apt-get install python-opencv
     
     # With Anaconda
-    conda install opencv
-    conda install -c verydeep easydict
+    $ conda install -c verydeep easydict
+    $ conda install opencv
     # Normally, people will follow the online instruction at https://anaconda.org/auto/easydict and install auto/easydict. However, this easydict (ver.1.4) has a problem in passing the message of configuration and cause many unexpected error while verydeep/easydict (ver.1.6) won't cause these errors.
     ```
 
 2. libcudart.so.8.0: cannot open shared object file: No such file or directory
 	
-    	sudo ldconfig /usr/local/cuda/lib64
+     ```
+     $ sudo ldconfig /usr/local/cuda/lib64
+     ```
 
 3. assertionError: Selective Search data is not found
 
 	Solution: install verydeep/easydict rather than auto/easydict
     
     ```
-    conda install -c verydeep easydict
+    $ conda install -c verydeep easydict
     ```
 
 4. box [:, 0] > box[:, 2]
