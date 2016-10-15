@@ -30,31 +30,31 @@ ___
 General
 
 ```
-rospack find [package] # return package directory
-roscd [path] # change directory to a package or a stack
-rosls [path] # list files in the package
+$ rospack find [package] # return package directory
+$ roscd [path] # change directory to a package or a stack
+$ rosls [path] # list files in the package
 
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-catkin_init_workspace
+$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws/src
+$ catkin_init_workspace
 
 
-catkin_create_pkg [package_name] [depend1] [depende2] # create a catkin worksapce
-catkin_make # build the packages
+$ catkin_create_pkg [package_name] [depend1] [depende2] # create a catkin worksapce
+$ catkin_make # build the packages
 
-roscore # start core service
-rosnode list # list running nodes
-rosnode info [node] # return node information
-rosrun [package] [node_name] #run a node
+$ roscore # start core service
+$ rosnode list # list running nodes
+$ rosnode info [node] # return node information
+$ rosrun [package] [node_name] #run a node
 
-ros rqt_graph rqt_graph
+$ ros rqt_graph rqt_graph
 
-rostopic list -v # show topics and their information
-rostopic type [topic] # get the message type of the topic
-rostopic pub [topic] [msg_type] [args] # publishes data to a topic
-rostopic hz [topic] # show the publish rate
+$ rostopic list -v # show topics and their information
+$ rostopic type [topic] # get the message type of the topic
+$ rostopic pub [topic] [msg_type] [args] # publishes data to a topic
+$ rostopic hz [topic] # show the publish rate
 
-rosmsg show <msg> #get the information of the message
+$ rosmsg show <msg> #get the information of the message
 ```
 
 
@@ -64,12 +64,12 @@ rosmsg show <msg> #get the information of the message
 
 No module named catkin_pkg
 
-	pip install catkin_pkg
+	$ pip install catkin_pkg
 
 No module named rosdep2.rospack
 
-	pip install rosdep
+	$ pip install rosdep
 
 No module named em
 	
-    pip install empy
+    $ pip install empy

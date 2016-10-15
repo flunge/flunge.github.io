@@ -36,8 +36,10 @@ ___
 
 After forking a repository, clone the repository to your local machine.
 
-	git clone https://github.com/XXX/xxx.github.io.git 
-    # XXX should be your own Github name, e.g. XXX = Huangying-Zhan; xxx = huangying-zhan
+```
+$ git clone https://github.com/XXX/xxx.github.io.git 
+# XXX should be your own Github name, e.g. XXX = Huangying-Zhan; xxx = huangying-zhan
+```
 
 Open *_config.yml* and make modifications according to your needs. The following parts are required to update.
 
@@ -55,10 +57,10 @@ How to write your own posts and update the website? First of all, you need to cl
 Suppose you have written a new post. Now we are going to update the changes we have made so far and upload the repository to Github.
 
 ```
-cd $BLOG # $BLOG is the directory of the blog on your local machine
-git add . # track all modified files
-git commit -m "First update" # Submit all modified files with message "First update"
-git push origin master # Upload the submitted files to Github
+$ cd $BLOG # $BLOG is the directory of the blog on your local machine
+$ git add . # track all modified files
+$ git commit -m "First update" # Submit all modified files with message "First update"
+$ git push origin master # Upload the submitted files to Github
 ```
 
 Wait for a while and refresh your website. You should see a brand new page with your first post.

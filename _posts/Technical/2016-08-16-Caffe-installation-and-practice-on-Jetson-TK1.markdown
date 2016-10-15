@@ -43,13 +43,13 @@ Now, we need to install some prerequisites for Caffe, including,
 1. Install  general dependencies for Caffe
 
     ```
-    sudo add-apt-repository universe
-    sudo apt-get install libprotobuf-dev protobuf-compiler gfortran \
-    libboost-dev cmake libleveldb-dev libsnappy-dev \
-    libboost-thread-dev libboost-system-dev \
-    libatlas-base-dev libhdf5-serial-dev libgflags-dev \
-    libgoogle-glog-dev liblmdb-dev gcc-4.7 g++-4.7 \
-    libboost-all-dev
+    $ sudo add-apt-repository universe
+    $ sudo apt-get install libprotobuf-dev protobuf-compiler gfortran \
+    $ libboost-dev cmake libleveldb-dev libsnappy-dev \
+    $ libboost-thread-dev libboost-system-dev \
+    $ libatlas-base-dev libhdf5-serial-dev libgflags-dev \
+    $ libgoogle-glog-dev liblmdb-dev gcc-4.7 g++-4.7 \
+    $ libboost-all-dev
     ```
 
 2. Install CUDA package
@@ -57,18 +57,18 @@ Now, we need to install some prerequisites for Caffe, including,
 	Visit [NVIDIA's developer page for Tegra] and download *CUDA 6.5 Toolkit for L4T Rel 21.x*. Let's make directory on Desktop to store all downloaded package. The installation is based on the official [CUDA for Jetson installation instruction]. If there is any unexpected problem, please refer to the official instruction.
 
     ```
-    mkdir /home/ubuntu/Desktop/packages_for_caffe
-    cd /home/ubuntu/Desktop/packages_for_caffe
+    $ mkdir /home/ubuntu/Desktop/packages_for_caffe
+    $ cd /home/ubuntu/Desktop/packages_for_caffe
 
-    sudo dpkg -i cuda-repo-l4t-r21.2-6-5-prod_6.5-34_armhf.deb
-    sudo apt-get update
-    sudo apt-get install cuda-toolkit-6-5
-    sudo usermod -a -G video $USER
+    $ sudo dpkg -i cuda-repo-l4t-r21.2-6-5-prod_6.5-34_armhf.deb
+    $ sudo apt-get update
+    $ sudo apt-get install cuda-toolkit-6-5
+    $ sudo usermod -a -G video $USER
     
-    echo "# Add CUDA bin & library paths:" >> ~/.bashrc
-    echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
-    echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
-    source ~/.bashrc
+    $ echo "# Add CUDA bin & library paths:" >> ~/.bashrc
+    $ echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
+    $ echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
+    $ source ~/.bashrc
     ```
 
 	After installation of CUDA, run `nvcc -V` to check whether everything is installed correctly. 
@@ -79,11 +79,11 @@ Now, we need to install some prerequisites for Caffe, including,
 	Now, we can install OpenCV for Jetson. The installation is also based on the official [OpenCV for Jeton installation guideline]. Again, refer to the page if there is any problem. Before installation, visit [NVIDIA's developer page for Tegra] again and download *OpenCV4Tegra for L4T 21.x*.
 
     ```
-    cd /home/ubuntu/Desktop/packages_for_caffe
+    $ cd /home/ubuntu/Desktop/packages_for_caffe
 
-    sudo dpkg -i libopencv4tegra-repo_l4t-r21_2.4.10.1_armhf.deb
-    sudo apt-get update
-    sudo apt-get install libopencv4tegra libopencv4tegra-dev
+    $ sudo dpkg -i libopencv4tegra-repo_l4t-r21_2.4.10.1_armhf.deb
+    $ sudo apt-get update
+    $ sudo apt-get install libopencv4tegra libopencv4tegra-dev
     ```
 
 <br></br>
@@ -96,31 +96,31 @@ In this part, we are finally going to download and install Caffe! First, make su
 
     ```
     # Suppose you are going to install Caffe on Desktop
-    cd /home/ubuntu/Desktop
-    git clone https://github.com/BVLC/caffe.git
-    cd $CAFFE # From now on, for simplicity, $CAFFE refers to Caffe's directory
-    cp Makefile.config.example Makefile.config
-    sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib
-    sed -i "s/# CUSTOM_CXX := g++/CUSTOM_CXX := g++-4.6/" Makefile.config
+    $ cd /home/ubuntu/Desktop
+    $ git clone https://github.com/BVLC/caffe.git
+    $ cd $CAFFE # From now on, for simplicity, $CAFFE refers to Caffe's directory
+    $ cp Makefile.config.example Makefile.config
+    $ sudo apt-get install gcc-4.6 g++-4.6 gcc-4.6-multilib g++-4.6-multilib
+    $ sed -i "s/# CUSTOM_CXX := g++/CUSTOM_CXX := g++-4.6/" Makefile.config
 
-    make all -j4
-    make test -j4
+    $ make all -j4
+    $ make test -j4
 	# After installation, runtest to test Caffe layers.
-    make runtest -j4
+    $ make runtest -j4
     # Run a benchmark test to check again.
-    build/tools/caffe time --model=models/bvlc_alexnet/deploy.prototxt --gpu=0
+    $ build/tools/caffe time --model=models/bvlc_alexnet/deploy.prototxt --gpu=0
     ```
 
 2. Install Python related package
 
     ```
-    cd $CAFFE/python
-    sudo apt-get install python-pip
-    for req in $(cat requirements.txt); do sudo pip install $req; done
-    cd ../
-    make all
-    sudo apt-get install python-numpy
-    make pycaffe
+    $ cd $CAFFE/python
+    $ sudo apt-get install python-pip
+    $ for req in $(cat requirements.txt); do sudo pip install $req; done
+    $ cd ../
+    $ make all
+    $ sudo apt-get install python-numpy
+    $ make pycaffe
     ```
 
 Up to this stage, if you didn't encounter any error. Caffe is installed on TK1! 
@@ -140,17 +140,17 @@ For the preparation of dataset and network training, basically, follow the tutor
 1. Prepare dataset
 
     ```
-    cd $CAFFE
-    ./data/mnist/get_mnist.sh
-    ./examples/mnist/create_mnist.sh
+    $ cd $CAFFE
+    $ ./data/mnist/get_mnist.sh
+    $ ./examples/mnist/create_mnist.sh
     ```
 
 2. Train LeNet
 	This step takes about 15 minutes. Go and make a cup of coffee first~
     
     ```
-    cd $CAFFE_ROOT
-    ./examples/mnist/train_lenet.sh # The trained model is stored in $CAFFE/example/mnist/ and named *lenet_iter_10000.caffemodel*
+    $ cd $CAFFE_ROOT
+    $ ./examples/mnist/train_lenet.sh # The trained model is stored in $CAFFE/example/mnist/ and named *lenet_iter_10000.caffemodel*
     ```
     
 	Now, LeNet model is ready for use!
@@ -158,6 +158,7 @@ For the preparation of dataset and network training, basically, follow the tutor
 <br></br>
 
 #### 2.2. Real-time recognition
+
 A simple [end-to-end-digit recognition][end_to_end_digit_recognition] written by Python is provided for testing LeNet. However, make sure that you are using a white paper and the digit written on the paper is large enough. If the digit is too small / lines are too thin, the system might not be able to recognize the digit correctly. Before the details of real-time implementation, we try to recognize a digit in a single picture first.
 
 1. Take a photo and store as $CAFFE/data/mnist/sample_digit.png

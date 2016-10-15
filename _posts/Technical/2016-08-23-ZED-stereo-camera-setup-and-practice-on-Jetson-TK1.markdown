@@ -33,7 +33,7 @@ Now, let's start!
     ZED Camera requires a USB3.0 port. TK1 has only one USB3.0 port. Make good use of it~
 
     ```
-    sudo vi /boot/extlinux/extlinux.conf
+    $ sudo vi /boot/extlinux/extlinux.conf
     # Replace ‘usb_port_owner_info=0‘ by ‘usb_port_owner_info=2‘.
     # Save and exit (*:wq*)
     ```
@@ -43,8 +43,8 @@ Now, let's start!
 	Visit [ZED download page](https://www.stereolabs.com/developers/#download_anchor) and download ZED SDK for Jetson, which is a *.run* file
     
     ```
-    chmod +x ZED_SDK_JTK1_v*.run
-	./ZED_SDK_JTK1_v*.run
+    $ chmod +x ZED_SDK_JTK1_v*.run
+	$ ./ZED_SDK_JTK1_v*.run
     # Accept the statement and follow installation instruction.
     ```
 
@@ -70,22 +70,22 @@ Before jumping to the later content, a simple ["Hello-world" example](https://ww
 Suppose you have built your `Hello World`. In this part, we will see a simple modification based on a ZED's [OpenCV example](https://github.com/stereolabs/zed-opencv). The ultimate goal is to capture RGB pictures, their corresponding dispartiy image and depth map from time to time. First, let's have a taste on the original example.
 
 ```
-cp /usr/local/zed/sample/cpu/with\ OpenCV ~/Desktop/zed_capture #copy and rename the example to desktop
-cd $zed_capture # For simplicity, $zed_capture represents the full directory of /zed_capture
-mkdir build
-cd build
-cmake ..
-make # If you can see "Linking CXX executable "ZED with OpenCV" ", the program is built sucessfully
-./ZED\ with\ OpenCV
+$ cp /usr/local/zed/sample/cpu/with\ OpenCV ~/Desktop/zed_capture #copy and rename the example to desktop
+$ cd $zed_capture # For simplicity, $zed_capture represents the full directory of /zed_capture
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make # If you can see "Linking CXX executable "ZED with OpenCV" ", the program is built sucessfully
+$ ./ZED\ with\ OpenCV
 ```
 
 Play around with the program first. Then, download and rename [main-capture.cpp](https://www.dropbox.com/s/g2g7m0flsubfe5v/main_capture.cpp?dl=0) as *main.cpp*.
 Now, replace the original *main.cpp* by this new *main.cpp* and build the program again.
 
 ```
-cd $zed_capture/build
-make
-./ZED\ with\ OpenCV
+$ cd $zed_capture/build
+$ make
+$ ./ZED\ with\ OpenCV
 ```
 
 This program allows you to save images, disparity images and depth maps from time to time. However, there are some settings you can modify in the *main.cpp*. Please refer to *main setup parameters* at the beginning of the code. After modification, you have to build the program again.

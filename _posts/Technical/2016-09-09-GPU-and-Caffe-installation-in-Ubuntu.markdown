@@ -27,13 +27,13 @@ The installation of GTX-1080 mainly refers to [yangcha's tutorial](yangcha.githu
 For different GPU devices, different driver should be installed. In here, the instruction is just for GTX-1080.
 
 ```
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt-get update
-sudo apt-get install nvidia-367
-sudo apt-get install mesa-common-dev
-sudo apt-get install freeglut3-dev
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+$ sudo apt-get update
+$ sudo apt-get install nvidia-367
+$ sudo apt-get install mesa-common-dev
+$ sudo apt-get install freeglut3-dev
 # Reboot the system to load the driver
-sudo reboot
+$ sudo reboot
 ```
 
 <br></br>
@@ -63,8 +63,10 @@ After entering the download page, you will see that there are 3 types of install
 After installation, you need to set CUDA environment.
 
 ```
-export PATH=/usr/local/cuda-8.0/bin:$PATH    
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH  
+$ echo "# Add CUDA bin & library paths:" >> ~/.bashrc
+$ echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
+$ echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
+$ source ~/.bashrc
 ```
 
 If you later on find that this `export` doesn't work for Caffe, you can directly update Makefile.config in Caffe. We will see.
