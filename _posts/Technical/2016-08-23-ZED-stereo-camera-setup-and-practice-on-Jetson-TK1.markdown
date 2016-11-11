@@ -14,6 +14,7 @@ As the name given, ZED Stereo Camera(ZED) is a stereo camera produced by [Steteo
 
 1. [Setup of ZED on TK1](#Setup of ZED camera)
 2. [Capture picture and depth map](#Capture picture and depth map)
+3. [Detection with Depth](#Detection with Depth)
 
 ___
 <a name = "Setup of ZED camera"></a>
@@ -89,6 +90,39 @@ $ ./ZED\ with\ OpenCV
 ```
 
 This program allows you to save images, disparity images and depth maps from time to time. However, there are some settings you can modify in the *main.cpp*. Please refer to *main setup parameters* at the beginning of the code. After modification, you have to build the program again.
+
+
+<br></br>
+___
+
+<a name="Detection with Depth"></a>
+
+### Part 3. Detection with Depth
+
+In this part, we are going to use both RGB images and depth maps in a detection algorithm. The detection algorithm is [Faster R-CNN](https://github.com/rbgirshick/py-faster-rcnn). Download and install py-faster-rcnn first by following the official guideline or Part 1 in [my post](https://huangying-zhan.github.io/2016/09/22/detection-faster-rcnn.html). 
+
+General speaking, the goal of this part is to find out the distance from the camera of detected objects. We also need this [detection_depth_multiple.py](https://www.dropbox.com/s/o3hboq7svgm1reh/detection_depth_multiple.py?dl=0). Save the script in `py-faster-rcnn/tools/`. This scipt is designed for VOC dataset only. However, making simple modifications can make this script works for other detection task under py-faster-rcnn framework.
+
+Suppose you save RBG images at `$rgb_img_dir` and depth maps at `$depth_map_dir`. 
+
+1. Update directories in line 210, 211 in `detection_depth_multiple.py`.
+
+2. Usage
+
+	```python
+    ./detection_depth_multiple.py [options]
+    options:
+    --gpu [GPU_ID]: use gpu mode and select the GPU id.
+    --cpu : use cpu mode
+    --net [zf / vgg]: select the network and corresponding model, e.g. zf, vgg
+    --image_source [0 / 1]: there are two kinds of input source mode. Mode 0 means online loading, which loads same rgb image and depth map from the directories. Mode 1 is offline loading mode. It loads a set of images.
+    --mode [0 / 1]: There are two modes. Mode 0 only exports numerical information, including bounding boxes coordinates and depth; Mode 1 visualizes the result.
+    --class [CLASS_ID, ..., CLASS_ID]: select the class indexs that you are going to detect. In VOC dataset, there are 20 classes.
+    
+    # Example: gpu mode, zf net, offline loading, output visualization, 15th class is interested
+    ./detection_depth_multiple.py --gpu 0 --net zf --image_source 1 --mode 1 --class [15]
+    ```
+
 
 
 
