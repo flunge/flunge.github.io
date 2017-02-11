@@ -6,7 +6,7 @@ paginate: 10
 author: 
   name: LI Kun
   email: elelik@nus.edu.sg
-  link: https://flungekun.com/
+  link: https://flunge.github.io/
   # weibo: 
   github: https://github.com/flunge
   # music: 
@@ -15,7 +15,7 @@ author:
 # Website's inforamtion
 title: Kun's Blog
 description: My personal blog
-url: https://flungekun.com/
+url: https://flunge.github.io/
 rss_url: /pages/atom.xml
 
 # gavatar profile picture and Favicon
@@ -25,7 +25,7 @@ favicon: /public/img/dream.jpg
 # google analytics setup
 ga:
   id: UA-91801344-1
-  url: https://flungekun.com/
+  url: https://flunge.github.io/
 
 # disqus setup
 disqus:
