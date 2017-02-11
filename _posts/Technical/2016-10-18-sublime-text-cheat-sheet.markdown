@@ -4,6 +4,7 @@ title:  "Sublime-text Cheat Sheet"
 date:   2016-10-18
 categories: Technical
 tags: [SublimeText]
+description:
 ---
 
 ### Contents
