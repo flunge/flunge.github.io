@@ -4,11 +4,11 @@ markdown: redcarpet
 
 # Blogger's information
 author: 
-  name: H.Y. ZHAN
-  email: zhanhuangying@gmail.com
-  link: https://huangying-zhan.github.io/
+  name: LI Kun
+  email: elelik@nus.edu.sg
+  link: https://kunflunge.com/
   # weibo: 
-  github: https://github.com/Huangying-Zhan
+  github: https://github.com/flunge
   # music: 
   # linkedin: 
 
@@ -25,11 +25,11 @@ favicon: /public/img/dream.jpg
 # google analytics setup
 ga:
   id: UA-84078420-1
-  url: https://huangying-zhan.github.io/
+  url: https://kunflunge.com/
 
 # disqus setup
 disqus:
-  shortname: jim_zhan
+  shortname: flunge
 
 # Auto activate a category
 active: Technical
