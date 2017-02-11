@@ -13,7 +13,7 @@ author:
   # linkedin: 
 
 # Website's inforamtion
-title: Huangying's Blog
+title: Kun's Blog
 description: My personal blog
 url: https://kunflunge.com/
 rss_url: /pages/atom.xml
@@ -24,7 +24,7 @@ favicon: /public/img/dream.jpg
 
 # google analytics setup
 ga:
-  id: UA-84078420-1
+  id: UA-91801344-1
   url: https://kunflunge.com/
 
 # disqus setup
