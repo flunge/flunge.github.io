@@ -2,7 +2,7 @@
 layout: post
 title:  "ZED Stereo Camera Setup and Practice on Jetson TK1"
 date:   2016-08-23
-categories: Technical
+categories: TechNote
 tags: [JetsonTK1, ZEDCamera]
 ---
 
