@@ -12,6 +12,7 @@ tags: [Thesis]
 | Supervisors | Prof. Ben M. Chen & Prof. Tong H. Lee |
 | Year   | 2015  |
 
+<br>
 
 **Summary**
 
@@ -19,7 +20,7 @@ This thesis presents an autonomous navigation and control solution of a fully cu
 
 **Contents**
 
-1. Introductions
+1. Introductions <br>
 1.1 An Introduction to State-of-art UAV Platforms
 1.2 An Introduction to UAV Sensing Technologies 
 1.3 An Introduction to UAV Navigation Techniques
