@@ -25,3 +25,12 @@ ___
 This is a light show demo project requested by Rotorcraft Asia 2017. This is the slides showing project preparation timeline and work division by group members.
 
 <center><iframe src="https://docs.google.com/presentation/d/14HP9sDxUVdCi_ta4vz1zegBcLQZ0L6DxQJ_Lr2DasD8/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></center>
+
+___
+
+
+### Part 3. Project Helicopter
+
+This is a project just started. The project aims to develop a industrial level flight control module for large payload and redundancy features. 
+
+<center><iframe src="https://docs.google.com/presentation/d/11r3iHizsVz0RsSG3Fj4cpgzERmrrms_JoF6e7VmZ_jM/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></center>
