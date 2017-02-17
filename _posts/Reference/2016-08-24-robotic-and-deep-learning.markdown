@@ -2,8 +2,8 @@
 layout: post
 title:  "Robotic and Deep Learning"
 date:   2016-08-24
-categories: Paper
-tags: [Navigation, Odometry,  DeepLearning]
+categories: Reference
+tags: [Odometry,  DeepLearning]
 ---
 
 ### Contents

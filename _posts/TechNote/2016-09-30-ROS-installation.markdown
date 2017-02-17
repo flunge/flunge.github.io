@@ -2,7 +2,7 @@
 layout: post
 title:  "ROS Installation & Cheatsheet"
 date:   2016-09-30
-categories: Technical
+categories: TechNote
 tags: [ROS]
 ---
 

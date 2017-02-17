@@ -2,8 +2,8 @@
 layout: post
 title:  "Caffe Installation and Practice on Jetson TK1"
 date:   2016-08-16
-categories: Technical
-tags: [Caffe, JetsonTK1, MNIST]
+categories: TechNote
+tags: [Caffe, JetsonTK1]
 ---
 
 ### Summary
