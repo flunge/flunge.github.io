@@ -6,10 +6,11 @@ categories: Thesis
 tags: [Thesis]
 ---
 
-
-| Title  | Navigation and Autonomous Control of MAVs in GPS-deined Environments |
+<center>
+| Title  | <a href="https://drive.google.com/open?id=0B6qEpC0tNfZXTXZwWG5CSElhVEk">Navigation and Autonomous Control of MAVs in GPS-deined Environments</a> |
 |--------|---|
 | Author | LI Kun |
 | Supervisor | Prof. Ben M. Chen & Prof. Tong H. Lee |
 | Year   | 2014  |
 | Link   | https://github.com/rbgirshick/rcnn|
+</center>
