@@ -21,5 +21,10 @@ ___
 
 This module provides power flight control features for general UAV platform use: multi-rotor platforms, single/coaxial rotor helicopter, unconventional aircrafts as tail-sitters and hybrids. The design extends its capability with all necessary signals connected to a customized connector, making it transportable to any extenion board with same connector type or even multiple identical flight controllers for redundancy purpose.
 
+<center>
+<img src="/public/figures/project/instinct_fc_1.jpg" style="width:50%">
+</center>
+
 **Key Features**
 
+General Information:
