@@ -99,7 +99,7 @@ Below figures shows the overall assembly effect of the platform INSTINCT. With t
 <img src="/public/figures/project/instinct_1.JPG" style="width:40%">
 <img src="/public/figures/project/instinct_2.JPG" style="width:40%">
 </center>
-<center>front and top view<a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+<center>front and top view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/bFXiUpcPxbg" frameborder="0" allowfullscreen></iframe></center>
 <center>Explosion view of assembly process</center>
@@ -115,6 +115,20 @@ Controller stuff:
 1. Modeling: nonlinearity involved by the kinematic part is handled once the current attitude and reference attitude is known, by the thrust-vector orientation method. Output of this part will be the pure 6-DOF dynamics, which can be handled with a standard method, feedback linearation with the estimated gyro rates.
 2. Control: inner-loop attitude is controlled with a 200 Hz controller, which is realized with composite nonlinear feedback method. This method is suitable for fast dynamic plant for its high gain at large error and low gain at small error, that is to say, fast convergence rate at initial state and small overshoot when output is approaching reference. For outer loop, the robust perfect tracking method is used with an augmented plant definition. 
 
+<a name = "software"></a>
+
+**Summary**
+
+Software is the core of the whole project, as the brain to a human. According to the platform, an Intel Up-board is the main CPU for higher level intelligence. The output of sensors laser scanner and front-facing RGBD-camera Intel Realsense, are all directed into Intel Up-board for further processing. Below video is the handheld platform with a Realsense camera. ORB-SLAM is running onboard on ROS kinetic version. For laser scanner, Google SLAM or hector SLAM is used for this project. The future work will be fusion of multiple software node pose estimation results, along with the inertia measurements.
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/srzCYUnKaMo" frameborder="0" allowfullscreen></iframe></center>
-<center>Hand held platform SLAM result</center>
+<center>Hand held platform SLAM result with <a href="http://webdiis.unizar.es/~raulmur/orbslam/">[ORB-SLAM]</center>
+
+Modules list:
+
+1. Flight controller firmware are processed on the MCU STM32F427, which necessary topics published to serial port and further to USB port of the upper level CPU.
+2. In the upper level CPU Up-board, the whole system is running on ROS in Ubuntu system. ROS nodes are inter-connected to share information.
+
+<center>
+<img src="/public/figures/project/uavsystem_1.pdf" style="width:100%">
+</center>
