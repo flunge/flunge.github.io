@@ -23,6 +23,7 @@ This module provides power flight control features for general UAV platform use:
 
 <center>
 <img src="/public/figures/project/instinct_fc_1.JPG" style="width:50%">
+<img src="/public/figures/project/instinct_fc_2.JPG" style="width:50%">
 </center>
 
 **Key Features**
