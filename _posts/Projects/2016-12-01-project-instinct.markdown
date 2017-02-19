@@ -130,5 +130,6 @@ Modules list:
 2. In the upper level CPU Up-board, the whole system is running on ROS in Ubuntu system. ROS nodes are inter-connected to share information.
 
 <center>
-<img src="/public/figures/project/uavsystem_1.JPG" style="width:100%">
+<img src="/public/figures/project/uavsystem_1.jpg" style="width:100%">
 </center>
+3. 
