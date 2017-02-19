@@ -22,8 +22,8 @@ ___
 This module provides power flight control features for general UAV platform use: multi-rotor platforms, single/coaxial rotor helicopter, unconventional aircrafts as tail-sitters and hybrids. The design extends its capability with all necessary signals connected to a customized connector, making it transportable to any extenion board with same connector type or even multiple identical flight controllers for redundancy purpose.
 
 <center>
-<img src="/public/figures/project/instinct_fc_1.JPG" style="width:40%">
-<img src="/public/figures/project/instinct_fc_2.JPG" style="width:40%">
+<img src="/public/figures/project/instinct_fc_1.JPG" style="width:30%">
+<img src="/public/figures/project/instinct_fc_2.JPG" style="width:30%">
 </center>
 <center>front and reverse side view <a href="https://grabcad.com/library/adaptive-flight-controller-1">[3D Model]</a></center>
 
@@ -88,3 +88,33 @@ Modules running:
 2. Servo output: PWMs/I2C bus connected to ESCs to transmit commands from controller for servo output;
 3. PPM/S-bus: receiver input from RC transmitters, a UART device is allocated to S-bus input to decode the data, while PPM is a general timer function; 
 4. Further peripherals: I2C bus will attached more devices (external magnetometers, range sensors, other MCUs), UART will be connected to upper-level CPU as Intel processor for more high level algorithm.
+
+<a name = "platformInstinct"></a>
+
+**Summary**
+
+Below figures shows the overall assembly effect of the platform INSTINCT. With the flight controller and mother board, the hexa-copter is able to perform GPS guided navigation. Design has been verified with real flight test data besides the lab. 
+
+<center>
+<img src="/public/figures/project/instinct_1.JPG" style="width:40%">
+<img src="/public/figures/project/instinct_2.JPG" style="width:40%">
+</center>
+<center>front and top view<a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/bFXiUpcPxbg" frameborder="0" allowfullscreen></iframe></center>
+<center>Explosion view of assembly process</center>
+
+Parameter table:
+
+1. Measured: several parameters are measured, as mass, dimension and beam length;
+2. Estimated: moment of inertia can be calculated with a simple experimental setup, i.e. 3-wire setup. Alternatively, they can be obtained with an estimated value from SolidWorks, given that density and mass of all components are correctly defined. 
+3. Calculated: motor & propeller parameters are calculated with experiments, i.e. a tachometer and a pwm recorder to calculate motor steady state parameters, a load cell and a tachometer to calculate propeller thrust and torque parameters.
+
+Controller stuff:
+
+1. Modeling: nonlinearity involved by the kinematic part is handled once the current attitude and reference attitude is known, by the thrust-vector orientation method. Output of this part will be the pure 6-DOF dynamics, which can be handled with a standard method, feedback linearation with the estimated gyro rates.
+2. Control: inner-loop attitude is controlled with a 200 Hz controller, which is realized with composite nonlinear feedback method. This method is suitable for fast dynamic plant for its high gain at large error and low gain at small error, that is to say, fast convergence rate at initial state and small overshoot when output is approaching reference. For outer loop, the robust perfect tracking method is used with an augmented plant definition. 
+
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/srzCYUnKaMo" frameborder="0" allowfullscreen></iframe></center>
+<center>Hand held platform SLAM result</center>
