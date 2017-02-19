@@ -22,8 +22,8 @@ ___
 This module provides power flight control features for general UAV platform use: multi-rotor platforms, single/coaxial rotor helicopter, unconventional aircrafts as tail-sitters and hybrids. The design extends its capability with all necessary signals connected to a customized connector, making it transportable to any extenion board with same connector type or even multiple identical flight controllers for redundancy purpose.
 
 <center>
-<img src="/public/figures/project/instinct_fc_1.JPG", style="width:40%">
-<img src="/public/figures/project/instinct_fc_2.JPG", style="width:40%">
+<img src="/public/figures/project/instinct_fc_1.JPG" style="width:40%">
+<img src="/public/figures/project/instinct_fc_2.JPG" style="width:40%">
 </center>
 
 **Key Features**
@@ -38,4 +38,9 @@ General Information:
 
 Sensors included:
 
-1.
+1. Gyroscopes: L3GD20;
+2. Acceleromters: MMA8452Q, LSM303D;
+3. Motion sensors: MPU6000, MPU6500, MPU9250;
+4. Magnetometers: HMC5883L, MPU9250, LSM303D;
+5. Barometers: MS5611-01BA, LPS22HB.
+6. Explanations: all of these sensors share SPI or I2C bus, drivers will be started on system initilized, data will be polled with necessary rates (gyro rates and accelerations will be at 800 or 1000 Hz, magenetometers will be queried with 100 Hz and altitude will be sampled at 50 Hz.)
