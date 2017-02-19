@@ -128,8 +128,9 @@ Modules list:
 
 1. Flight controller firmware are processed on the MCU STM32F427, which necessary topics published to serial port and further to USB port of the upper level CPU.
 2. In the upper level CPU Up-board, the whole system is running on ROS in Ubuntu system. ROS nodes are inter-connected to share information.
+3. Application layer handles the user defined missions and state change conditions. The API layer defines necessary and basic functions such as takeoff and landing, fly to waypoint or fly a certain distance. 
 
 <center>
-<img src="/public/figures/project/uavsystem_1.jpg" style="width:100%">
+<img src="/public/figures/project/uavsystem_1.jpg" style="width:70%">
 </center>
-3. 
+ 
