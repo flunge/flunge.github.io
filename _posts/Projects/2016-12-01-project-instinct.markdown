@@ -122,7 +122,7 @@ Controller stuff:
 Software is the core of the whole project, as the brain to a human. According to the platform, an Intel Up-board is the main CPU for higher level intelligence. The output of sensors laser scanner and front-facing RGBD-camera Intel Realsense, are all directed into Intel Up-board for further processing. Below video is the handheld platform with a Realsense camera. ORB-SLAM is running onboard on ROS kinetic version. For laser scanner, Google SLAM or hector SLAM is used for this project. The future work will be fusion of multiple software node pose estimation results, along with the inertia measurements.
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/srzCYUnKaMo" frameborder="0" allowfullscreen></iframe></center>
-<center>Hand held platform SLAM result with <a href="http://webdiis.unizar.es/~raulmur/orbslam/">[ORB-SLAM]</center>
+<center>Hand held platform SLAM result with <a href="http://webdiis.unizar.es/~raulmur/orbslam/">[ORB-SLAM]</a></center>
 
 Modules list:
 
@@ -130,5 +130,5 @@ Modules list:
 2. In the upper level CPU Up-board, the whole system is running on ROS in Ubuntu system. ROS nodes are inter-connected to share information.
 
 <center>
-<img src="/public/figures/project/uavsystem_1.pdf" style="width:100%">
+<img src="/public/figures/project/uavsystem_1.JPG" style="width:100%">
 </center>
