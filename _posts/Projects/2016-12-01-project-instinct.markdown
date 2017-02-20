@@ -12,6 +12,7 @@ tags: [Project, Hardware]
 2. [Mother Board](#motherboard)
 3. [Platform Instinct](#platformInstinct)
 4. [Software Modules](#software)
+5. [FPGA Stereo Vision](#fpga)
 
 ___
 
@@ -55,6 +56,7 @@ Modules running:
 5. Mission control: navigation mission control to specify mission elements, manage state machine and way-points. 
 6. Base project: current firmware project is forked from the Pixhawk repo 3 years ago.
 
+___
 
 <a name = "motherboard"></a>
 
@@ -89,6 +91,8 @@ Modules running:
 3. PPM/S-bus: receiver input from RC transmitters, a UART device is allocated to S-bus input to decode the data, while PPM is a general timer function; 
 4. Further peripherals: I2C bus will attached more devices (external magnetometers, range sensors, other MCUs), UART will be connected to upper-level CPU as Intel processor for more high level algorithm.
 
+___
+
 <a name = "platformInstinct"></a>
 
 **Summary**
@@ -104,6 +108,10 @@ Below figures shows the overall assembly effect of the platform INSTINCT. With t
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/bFXiUpcPxbg" frameborder="0" allowfullscreen></iframe></center>
 <center>Explosion view of assembly process</center>
 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/uURoJApO9Ro" frameborder="0" allowfullscreen></iframe></center>
+<center>Manual flight test</center>
+
+
 Parameter table:
 
 1. Measured: several parameters are measured, as mass, dimension and beam length;
@@ -114,6 +122,8 @@ Controller stuff:
 
 1. Modeling: nonlinearity involved by the kinematic part is handled once the current attitude and reference attitude is known, by the thrust-vector orientation method. Output of this part will be the pure 6-DOF dynamics, which can be handled with a standard method, feedback linearation with the estimated gyro rates.
 2. Control: inner-loop attitude is controlled with a 200 Hz controller, which is realized with composite nonlinear feedback method. This method is suitable for fast dynamic plant for its high gain at large error and low gain at small error, that is to say, fast convergence rate at initial state and small overshoot when output is approaching reference. For outer loop, the robust perfect tracking method is used with an augmented plant definition. 
+
+___
 
 <a name = "software"></a>
 
@@ -128,9 +138,15 @@ Modules list:
 
 1. Flight controller firmware are processed on the MCU STM32F427, which necessary topics published to serial port and further to USB port of the upper level CPU.
 2. In the upper level CPU Up-board, the whole system is running on ROS in Ubuntu system. ROS nodes are inter-connected to share information.
-3. Application layer handles the user defined missions and state change conditions. The API layer defines necessary and basic functions such as takeoff and landing, fly to waypoint or fly a certain distance. 
+3. Application layer handles the user defined missions and state change conditions. The API layer defines necessary and basic functions such as takeoff and landing, fly to waypoint or fly a certain distance. SLAM and path planning layer includes the SLAM and planning nodes subscribing raw sensor information (laser scans and raw images) and publishing reference position points. Obstacle avoidance is also handled in this node where a local/global map is maintained for planning and loop closure purpose.
+4. MAVROS is the interface between ROS and MAV platform using protocol Mavlink. 
 
 <center>
 <img src="/public/figures/project/uavsystem_1.jpg" style="width:70%">
 </center>
  
+<a name = "fpga"></a>
+
+**Summary**
+
+Field programmable gate array extends the ability of image processing by parallel processing and line synchronization. We use Xlinix Zync7020 supporting for dual-cemera drivers with high resolution and image pre-processing. Depth map estimation based on epi-polar geometry and ORB feature extraction are developed on this module. Further development of communication between FPGA module and Intel Upboard is still under progress. This module will replace the Intel Realsense as the forward facing vision system. The large view angle and high frame rate will enable fast processing, i.e. fast flight capability in dynamic environment.
