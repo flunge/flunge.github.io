@@ -31,6 +31,8 @@ auto int detail;	// Both are same
 }
 ```
 
+___
+
 ### Part 2. External or Global variable
 
 1. Global variable: A variable that is declared outside any function is a Global variable, which remain available throughout the entire program. Its value can be changed by any function in the program.
@@ -44,14 +46,14 @@ main()
 	printf("%d", x);
 }
 ```
+___
+
 ### Part 3. Static variable
 
 1. A static variable tells the compiler to persist the variable until the end of program.
 2. static is initialized only once and assigned 0 (zero) as default value by the compiler.
 3. When static specifier is applied to a local variable inside a function or block, the compiler creates permanent storage for it, but static local variable remains visible only to the function or block in which it is defined.
 ```
-# include <stdio.h>
-
 void staticDemo()
 {
   static int i;
@@ -75,8 +77,8 @@ OUTPUT
 2 1
 ```
 4. When static specifier is applied to a global variable or a function then compiler makes that variable or function known only to the file in which it is defined. These variables cannot be used in other files.
+
 ```
-#include <stdio.h>
 static int gInt = 1;
 static void staticDemo()
 {
