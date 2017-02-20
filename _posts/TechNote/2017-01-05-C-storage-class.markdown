@@ -53,6 +53,7 @@ ___
 1. A static variable tells the compiler to persist the variable until the end of program.
 2. static is initialized only once and assigned 0 (zero) as default value by the compiler.
 3. When static specifier is applied to a local variable inside a function or block, the compiler creates permanent storage for it, but static local variable remains visible only to the function or block in which it is defined.
+
 ```
 void staticDemo()
 {
@@ -76,6 +77,7 @@ OUTPUT
 1 0
 2 1
 ```
+
 4. When static specifier is applied to a global variable or a function then compiler makes that variable or function known only to the file in which it is defined. These variables cannot be used in other files.
 
 ```
@@ -99,6 +101,8 @@ OUTPUT
 0 1
 1 2
 ```
+
+___
 
 ### Part 4. Register variable
 
