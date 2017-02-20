@@ -55,6 +55,8 @@ ___
 3. When static specifier is applied to a local variable inside a function or block, the compiler creates permanent storage for it, but static local variable remains visible only to the function or block in which it is defined.
 
 ```
+#include <stdio.h>
+
 void staticDemo()
 {
   static int i;
@@ -81,6 +83,8 @@ OUTPUT
 4. When static specifier is applied to a global variable or a function then compiler makes that variable or function known only to the file in which it is defined. These variables cannot be used in other files.
 
 ```
+#include <stdio.h>
+
 static int gInt = 1;
 static void staticDemo()
 {
