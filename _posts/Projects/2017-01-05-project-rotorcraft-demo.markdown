@@ -20,7 +20,7 @@ ___
 
 This project is the application of UAV entertainment, which is specifically LED light show. This is also one of the main applications in the current drone market, since the mini-sized drones are mostly used as an entertaining toy, such as selfie cameras or LED toys instead of indsutrial use. The recent news show several companies like Yihang, Intel or some research agents did UAV light shows with a large swarm of drones up to 500 or even 1000. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/POtyYqDt_fA" frameborder="0" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/POtyYqDt_fA" frameborder="0" allowfullscreen></iframe></center>
 <center>Super Lady Gaga Drone Show</center>
 
 The project is for the opening ceremony of Rotorcraft Asia 2017, which will be held on April 18. The stage will be in a certain stadium, where no GPS signal is available. For indoor positioning, we use ultra-band width (UWB) system. The platform is also mounted an ultra-bright LED matrix pad for configurable color and brightness light. 
