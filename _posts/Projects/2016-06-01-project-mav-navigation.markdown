@@ -57,6 +57,14 @@ ___
 
 <a name = "escs"></a>
 
+**Summary** 
+
+This electronic speed controller receives command from PWM signal sent by flight control module and generates switching command to 6 power MOSFETs. These power MOSFETs serves as electrical switch to control the connectivity of each phase of the motor. A faster sequence will lead to faster RPM, and vice versa. 
 
 
+General Information:
 
+1. Layers: 6-layer PCB with 1 mm thickness. 
+2. Dimension: 35 mm X 35 mm.
+3. ESCs contained: 4 ESCs controlled by atmega8l.
+4. Necessary peripherals: minimum system, FRAM, I2C buffer, UART buffer, status LED, power regulator, power switcher, GPS ublox m8q, SD slot, 
