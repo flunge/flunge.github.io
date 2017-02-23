@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "NUS Project Field Oriented Control"
-date:   2016-06-01
+title:  "NUS Project Electronic Speed Controller"
+date:   2016-04-08
 categories: Project
 tags: [Project, Hardware]
 ---
 
 ### Contents
 
-1. [Electronic Speed Controller](#esc)
+1. [Traditional Scalar Control](#scalar)
 2. [Field Oriented Control](#foc)
 
 ___
 
-<a name = "esc"></a>
+<a name = "scalar"></a>
 
 **Summary**
 
