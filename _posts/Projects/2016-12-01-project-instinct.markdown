@@ -105,13 +105,6 @@ Below figures shows the overall assembly effect of the platform INSTINCT. With t
 </center>
 <center>Top and side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/bFXiUpcPxbg" frameborder="0" allowfullscreen></iframe></center>
-<center>Explosion view of assembly process</center>
-
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/uURoJApO9Ro" frameborder="0" allowfullscreen></iframe></center>
-<center>Manual flight test</center>
-
-
 Parameter table:
 
 1. Measured: several parameters are measured, as mass, dimension and beam length;
@@ -122,6 +115,12 @@ Controller stuff:
 
 1. Modeling: nonlinearity involved by the kinematic part is handled once the current attitude and reference attitude is known, by the thrust-vector orientation method. Output of this part will be the pure 6-DOF dynamics, which can be handled with a standard method, feedback linearation with the estimated gyro rates.
 2. Control: inner-loop attitude is controlled with a 200 Hz controller, which is realized with composite nonlinear feedback method. This method is suitable for fast dynamic plant for its high gain at large error and low gain at small error, that is to say, fast convergence rate at initial state and small overshoot when output is approaching reference. For outer loop, the robust perfect tracking method is used with an augmented plant definition. 
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/bFXiUpcPxbg" frameborder="0" allowfullscreen></iframe></center>
+<center>Explosion view of assembly process</center>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/uURoJApO9Ro" frameborder="0" allowfullscreen></iframe></center>
+<center>Manual flight test</center>
 
 ___
 
