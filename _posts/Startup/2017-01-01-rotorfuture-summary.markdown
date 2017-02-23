@@ -25,6 +25,10 @@ At that time, there were a lot of UAV companies in China, and several of them do
 
 The status makes us think about a reasonable business plan to avoid direct competition with large corporations. At that time, using drones for education, especially pre-school education was not popular, at least no companies have chain business in different provices. This might be a blank area and we can fill them in with our UAV technologies.
 
+Below is a video trailer showing my friend's thoughts and motivation.
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/v06AhhQxlqU" frameborder="0" allowfullscreen></iframe></center>
+
 ___
 
 <a name = "initialscale"></a>
@@ -95,6 +99,8 @@ Main Features
 ___
 
 <a name = "futureplan"></a>
+
+**To be continued...**
 
 For future development, more adaptive modules such as LED light panels, buzzer module, disassembly and re-assembly features catering for more funny and interesting functions to be used on the courses. Corresponding teaching materials will also be made. 
 

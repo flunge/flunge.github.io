@@ -59,5 +59,13 @@ Other Modules:
 3. Up-board: the upper level CPU used for path planning and trajectory generation. Coordinates calculation for a certain tag given a random setup of anchors is also processed in the CPU. 
 4. LED device: we select Neopixel LED matrix for light display for its high lumin parameter and the color and brightness can be configured to desired values. 
 
+<center>
+<img src="/public/figures/project/rotorcraft_lower_1.JPG" style="width:40%">
+<img src="/public/figures/project/rotorcraft_lower_2.JPG" style="width:40%">
+</center>
+<center>Top and side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+
+Below is our first manual flight test, where we conducted outside our lab. It can be seen from the video vibration exists at the take-off period. This could be the gain tuning problem. 
+
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/dUXnVfIDlSk" frameborder="0" allowfullscreen></iframe></center>
 <center>Manual flight test</center>

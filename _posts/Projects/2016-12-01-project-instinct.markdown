@@ -26,7 +26,7 @@ This module provides power flight control features for general UAV platform use:
 <img src="/public/figures/project/instinct_fc_1.JPG" style="width:30%">
 <img src="/public/figures/project/instinct_fc_2.JPG" style="width:30%">
 </center>
-<center>front and reverse side view <a href="https://grabcad.com/library/adaptive-flight-controller-1">[3D Model]</a></center>
+<center>Front and reverse side view <a href="https://grabcad.com/library/adaptive-flight-controller-1">[3D Model]</a></center>
 
 **Key Features**
 
@@ -68,7 +68,7 @@ This motherboard extends the capabilities of the flight controller described in 
 <img src="/public/figures/project/instinct_mth_1.JPG" style="width:40%">
 <img src="/public/figures/project/instinct_mth_2.JPG" style="width:40%">
 </center>
-<center>front and reverse side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+<center>Front and reverse side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
 
 General Information:
 
@@ -100,10 +100,10 @@ ___
 Below figures shows the overall assembly effect of the platform INSTINCT. With the flight controller and mother board, the hexa-copter is able to perform GPS guided navigation. Design has been verified with real flight test data besides the lab. 
 
 <center>
-<img src="/public/figures/project/instinct_1.JPG" style="width:40%">
-<img src="/public/figures/project/instinct_2.JPG" style="width:40%">
+<img src="/public/figures/project/instinct_hex_1.JPG" style="width:70%">
+<img src="/public/figures/project/instinct_hex_2.JPG" style="width:70%">
 </center>
-<center>front and top view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+<center>Top and side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/bFXiUpcPxbg" frameborder="0" allowfullscreen></iframe></center>
 <center>Explosion view of assembly process</center>
