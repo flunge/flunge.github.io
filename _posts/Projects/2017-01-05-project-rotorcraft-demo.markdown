@@ -60,8 +60,8 @@ Other Modules:
 4. LED device: we select Neopixel LED matrix for light display for its high lumin parameter and the color and brightness can be configured to desired values. 
 
 <center>
-<img src="/public/figures/project/rotorcraft_lower_1.JPG" style="width:40%">
-<img src="/public/figures/project/rotorcraft_lower_2.JPG" style="width:40%">
+<img src="/public/figures/project/rotorcraft_quad_1.JPG" style="width:70%">
+<img src="/public/figures/project/rotorcraft_quad_2.JPG" style="width:70%">
 </center>
 <center>Top and side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
 
