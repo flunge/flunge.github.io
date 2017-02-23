@@ -100,8 +100,8 @@ ___
 Below figures shows the overall assembly effect of the platform INSTINCT. With the flight controller and mother board, the hexa-copter is able to perform GPS guided navigation. Design has been verified with real flight test data besides the lab. 
 
 <center>
-<img src="/public/figures/project/instinct_hex_1.JPG" style="width:70%">
-<img src="/public/figures/project/instinct_hex_2.JPG" style="width:70%">
+<img src="/public/figures/project/instinct_hex_1.png" style="width:70%">
+<img src="/public/figures/project/instinct_hex_2.png" style="width:70%">
 </center>
 <center>Top and side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
 
