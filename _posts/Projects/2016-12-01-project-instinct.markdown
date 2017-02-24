@@ -103,7 +103,7 @@ Below figures shows the overall assembly effect of the platform INSTINCT. With t
 <img src="/public/figures/project/instinct_hex_1.png" style="width:60%">
 <img src="/public/figures/project/instinct_hex_2.png" style="width:60%">
 </center>
-<center>Top and side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+<center>Top and side view</center>
 
 Parameter table:
 
