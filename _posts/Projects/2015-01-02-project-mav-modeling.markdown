@@ -67,5 +67,5 @@ ___
 
 **Modeling and Control**
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/watch?v=k6hwQ-BYAlE" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/k6hwQ-BYAlE" frameborder="0" allowfullscreen></iframe></center>
 <center>Final demonstration with real flight tests</center>
