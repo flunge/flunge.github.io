@@ -59,7 +59,7 @@ The first version was brute-force integration with my existing research resource
 <img src="/public/figures/project/rotfuture1_1.JPG" style="width:40%">
 <img src="/public/figures/project/rotfuture1_2.JPG" style="width:40%">
 </center>
-<center>Version 1.2 Overview<a href="https://grabcad.com/library/rotfuture-version-1-1">[3D Model]</a></center> 
+<center>Version 1.2 Overview<a href="https://grabcad.com/library/rotfuture-version-1-1"> [3D Model]</a></center> 
 
 Version Two
 
@@ -69,7 +69,7 @@ From the first to second version, the platform has undergone several sub-version
 <img src="/public/figures/project/rotfuture2_1.JPG" style="width:40%">
 <img src="/public/figures/project/rotfuture2_2.JPG" style="width:40%">
 </center>
-<center>Version 2.6 Overview<a href="https://grabcad.com/library/rotfuture-version-2-1">[3D Model]</a></center> 
+<center>Version 2.6 Overview<a href="https://grabcad.com/library/rotfuture-version-2-1"> [3D Model]</a></center> 
 
 Main Features
 
@@ -90,7 +90,7 @@ The third version considers the detailed production and cooperation with the mec
 <img src="/public/figures/project/rotfuture3_1.JPG" style="width:40%">
 <img src="/public/figures/project/rotfuture3_2.JPG" style="width:40%">
 </center>
-<center>Version 3.0 Overview<a href="https://grabcad.com/library/rotfuture-version-3-1">[3D Model]</a></center> 
+<center>Version 3.0 Overview<a href="https://grabcad.com/library/rotfuture-version-3-1"> [3D Model]</a></center> 
 
 Main Features
 

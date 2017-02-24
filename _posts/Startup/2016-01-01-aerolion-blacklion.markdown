@@ -21,7 +21,7 @@ The aerolion technologies is a spin-off company from the Unmanned Systems Resear
 
 Their main directions include autonomous navigation of unmanned rotorcraft systems, design of unconventional aircrafts, and to provide solutions with intelligent UAVs for a wide range of real-life applications. Their solutions allow intuitive interactions between UAVs and users to precisely navigate and continuously broadcast useful information to the users.
 
-Most of our group members are shareholders in that company and also contribute part of the technologies. I am also a shareholder as well as a member of the board committee. My main responsbility is to develop the hardware system and flight firmware for their main products <a href="http://www.aerolion.com/index.php?fc=module&module=leoblog&id=75&controller=blog&id_lang=1">BL168, <a href="http://www.aerolion.com/index.php?fc=module&module=leoblog&id=71&controller=blog&id_lang=1">BL108, and<a href="http://www.aerolion.com/index.php?fc=module&module=leoblog&id=66&controller=blog&id_lang=1">BL068.
+Most of our group members are shareholders in that company and also contribute part of the technologies. I am also a shareholder as well as a member of the board committee. My main responsbility is to develop the hardware system and flight firmware for their main products <a href="http://www.aerolion.com/index.php?fc=module&module=leoblog&id=75&controller=blog&id_lang=1">BL168, <a href="http://www.aerolion.com/index.php?fc=module&module=leoblog&id=71&controller=blog&id_lang=1">BL108, <a href="http://www.aerolion.com/index.php?fc=module&module=leoblog&id=66&controller=blog&id_lang=1">BL068.
 
 
 ___

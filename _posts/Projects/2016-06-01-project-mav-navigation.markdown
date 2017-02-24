@@ -74,7 +74,7 @@ General Information:
 <img src="/public/figures/project/mav_esc_1.JPG" style="width:30%">
 <img src="/public/figures/project/mav_esc_2.JPG" style="width:30%">
 </center>
-<center>Front and reverse side view <a href="https://grabcad.com/library/micro-quad-flight-controller-1">[3D Model]</a></center>
+<center>Front and reverse side view <a href="https://grabcad.com/library/quad-esc-board-1">[3D Model]</a></center>
 
 ESC firmware running:
 
@@ -119,7 +119,7 @@ In order to extend the computational capability and process more sensor input fr
 
 <center>
 <img src="/public/figures/project/mav_process_1.JPG" style="width:30%">
-<img src="/public/figures/project/mav_process_1.JPG" style="width:30%">
+<img src="/public/figures/project/mav_process_2.JPG" style="width:30%">
 </center>
 <center>Front and reverse side view <a href="https://grabcad.com/library/gumstix-extension-board-1">[3D Model]</a></center>
 
@@ -133,6 +133,8 @@ ___
 
 <a name = "platform"></a>
 
+**Platform Overview**
+
 The overall platform includes all the circuit modules with external sensors attached: ultrasonic modules, cameras, optical flow modules. The flight demo and detailed algorithm, SLAM and ROS integration can be found in my thesis and defense PPT, which is also avaiable in this website.
 
 
@@ -140,9 +142,11 @@ The overall platform includes all the circuit modules with external sensors atta
 <img src="/public/figures/project/nusmav_1.JPG" style="width:50%">
 <img src="/public/figures/project/nusmav_2.JPG" style="width:50%">
 </center>
-<center>Top and side view</a></center>
+<center>Top and side view</center>
 
 ___
+
+**Side Project**
 
 This is another side project, which use a similar module that is only able to perform GPS based navigation. The special feature for this platform is that it can drop a bannar from the mechanism mounted underneath the main structure with a metal-gear servo. This platform is usually used for demos or show for a special event. 
 
@@ -152,4 +156,4 @@ This is another side project, which use a similar module that is only able to pe
 <img src="/public/figures/project/banner_quad_1.png" style="width:50%">
 <img src="/public/figures/project/banner_quad_2.png" style="width:50%">
 </center>
-<center>Top and side view</a></center>
+<center>Top and side view</center>
