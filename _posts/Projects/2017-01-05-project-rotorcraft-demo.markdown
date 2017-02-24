@@ -35,7 +35,7 @@ Flight controller extension board:
 <img src="/public/figures/project/rotorcraft_upper_1.JPG" style="width:40%">
 <img src="/public/figures/project/rotorcraft_upper_2.JPG" style="width:40%">
 </center>
-<center>front and top view <a href="https://grabcad.com/library/flight-control-extension-board-for-lightshow-1">[3D Model]</a></center>
+<center>Front and top view <a href="https://grabcad.com/library/flight-control-extension-board-for-lightshow-1">[3D Model]</a></center>
 
 1. The board integrates necessary peripherals: SD card for data logging, serial to Wi-Fi module for data-link, serial to USB device for debugging, LED controller, power rails and IO ports.
 2. The LED controller uses Arduino as platform and Neopixel libraries for light control and pattern design.
@@ -46,7 +46,7 @@ Power extension:
 <img src="/public/figures/project/rotorcraft_lower_1.JPG" style="width:40%">
 <img src="/public/figures/project/rotorcraft_lower_2.JPG" style="width:40%">
 </center>
-<center>front and top view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+<center>Front and top view <a href="https://grabcad.com/library/power-with-communication-board-1">[3D Model]</a></center>
 
 1. This platform adopts dual-board design in order to reduce the foot-print, as a quad-rotor helicopter with dimension limitation confines its space left for avionics;
 2. Another reason for dual board design is that the onboard magnetometer is prone to be interfered by large current, if there is only one extension board, where large current drained by ESCs is inevitable. Dual board design separates large current and megnetic components with one mu-metal slice sheet placed in between if necessary;
@@ -63,7 +63,7 @@ Other Modules:
 <img src="/public/figures/project/rotorcraft_quad_1.png" style="width:60%">
 <img src="/public/figures/project/rotorcraft_quad_2.png" style="width:60%">
 </center>
-<center>Top and side view <a href="https://grabcad.com/library/motherboard-for-project-instinct-1">[3D Model]</a></center>
+<center>Top and side view</center>
 
 Below is our first manual flight test, where we conducted outside our lab. It can be seen from the video vibration exists at the take-off period. This could be the gain tuning problem. 
 

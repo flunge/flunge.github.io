@@ -51,7 +51,7 @@ For a minimalist design of palm sized quad-rotor UAV, there is no COTS available
 <img src="/public/figures/project/rf_1.JPG" style="width:20%">
 <img src="/public/figures/project/rf_2.JPG" style="width:20%">
 </center>
-<center>front and reverse side view <a href="https://grabcad.com/library/simple-rc-receiver-1">[3D Model]</a></center> 
+<center>Front and reverse side view <a href="https://grabcad.com/library/simple-rc-receiver-1">[3D Model]</a></center> 
 
 Hardware Specs 
 
