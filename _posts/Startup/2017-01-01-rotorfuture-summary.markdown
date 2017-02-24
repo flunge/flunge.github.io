@@ -52,7 +52,7 @@ The first version was brute-force integration with my existing research resource
 1. Dimension: Tip-to-tip dimension is 12 cm;
 2. Weight: overall take-off weight with a 10 gram 350 mAh battery is 45 gram;
 3. Autonomous level: able to perform indoor positioning with optical flow and outdoor positioning with GPS u-blox module;
-4. Problems: not able to be controlled with mobile phone or tablets; not able to be re-charge battery on-board;
+4. Problems: not able to be controlled with mobile phone or tablets; not able to re-charge battery on-board;
 
 
 <center>
@@ -90,7 +90,7 @@ The third version considers the detailed production and cooperation with the mec
 <img src="/public/figures/project/rotfuture3_1.JPG" style="width:40%">
 <img src="/public/figures/project/rotfuture3_2.JPG" style="width:40%">
 </center>
-<center>Version 3.0 Overview<a href="https://grabcad.com/library/rotfuture-version-2-1">[3D Model]</a></center> 
+<center>Version 3.0 Overview<a href="https://grabcad.com/library/rotfuture-version-3-1">[3D Model]</a></center> 
 
 Main Features
 
