@@ -54,6 +54,14 @@ We have tested 2 kinds of materials, carbon fibre and fibre glass, five types of
 
 Avionics System
 
+
+<center>
+<img src="/public/figures/project/atmel_avionic_1.JPG" style="width:30%">
+<img src="/public/figures/project/atmel_avionic_2.JPG" style="width:30%">
+</center>
+<center>Front and reverse side view <a href="https://grabcad.com/library/simple-avionics-board-1">[3D Model]</a></center>
+
+
 ___
 
 <a name = "optical"></a>
