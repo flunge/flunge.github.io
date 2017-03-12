@@ -23,6 +23,12 @@ This project is the application of UAV entertainment, which is specifically LED 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/aOd4-T_p5fA" frameborder="0" allowfullscreen></iframe></center>
 <center>Intel swarm drones</center>
 
+Before the Intel 500 demos, the NUS UAV team also realized a 16-set quadcopter outdoor light show with aid of differential GPS for very accurate positioning. Below video is the show, where the prime minister Lee Hsien Loong appeared. 
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/yk8_nqSM1WE" frameborder="0" allowfullscreen></iframe></center>
+<center>Lightshow formation by NUS UAV team at Singapore Gardens by the Bay</center>
+
+
 The project is for the opening ceremony of Rotorcraft Asia 2017, which will be held on April 18. The stage will be in a certain stadium, where no GPS signal is available. For indoor positioning, we use ultra-band width (UWB) system. The platform is also mounted an ultra-bright LED matrix pad for configurable color and brightness light. 
 
 Flight controller:
@@ -69,3 +75,10 @@ Below is our first manual flight test, where we conducted outside our lab. It ca
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/dUXnVfIDlSk" frameborder="0" allowfullscreen></iframe></center>
 <center>Manual flight test</center>
+
+Updates on Mar 3, 2017
+
+This is a milestone for fully autonomous control of the UWB version quad-copter designed for this project. We have mounted several VICON markers on the platform and placed in the VICON environment. In order to test the performance of the implemented control law as well as calibrate the UWB positioning accuracy, we first do the auto hovering in VICON room and further with a simple path. 
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/xKCNQzzwZnU" frameborder="0" allowfullscreen></iframe></center>
+<center>Fully autonomous control with aid of VICON system</center>
