@@ -21,7 +21,7 @@ ___
 
 1. A variable declared inside a function without any storage class specification, is by default an automatic variable. 
 2. They are created when a function is called and are destroyed automatically when the function exits. 
-3. By default they are assigned garbage value by the compiler.
+3. By default they are assigned garbage value by the compiler. CPAL=0
 
 ```
 void main()
