@@ -12,7 +12,7 @@ SPI interface allows to transmit and receive data simultaneously on two lines (M
 
 ___
 
-Mode 0
+### Mode 0
 
 <center>
 <img src="/public/figures/technote/spi-cpol-0-cpha-0.png" style="width:60%">
@@ -22,7 +22,7 @@ Mode 0
 The data must be available before the first clock signal rising. The clock idle state is zero. The data on MISO and MOSI lines must be stable while the clock is high and can be changed when the clock is low. The data is captured on the clock's low-to-high transition and propagated on high-to-low clock transition.
 ___
 
-Mode 1
+### Mode 1
 
 <center>
 <img src="/public/figures/technote/spi-cpol-0-cpha-1.png" style="width:60%">
@@ -32,7 +32,7 @@ Mode 1
 The first clock signal rising can be used to prepare the data. The clock idle state is zero. The data on MISO and MOSI lines must be stable while the clock is low and can be changed when the clock is high. The data is captured on the clock's high-to-low transition and propagated on low-to-high clock transition.
 ___
 
-Mode 2
+### Mode 2
 
 <center>
 <img src="/public/figures/technote/spi-cpol-1-cpha-0.png" style="width:60%">
@@ -42,7 +42,7 @@ Mode 2
 The data must be available before the first clock signal falling. The clock idle state is one. The data on MISO and MOSI lines must be stable while the clock is low and can be changed when the clock is high. The data is captured on the clock's high-to-low transition and propagated on low-to-high clock transition.
 ___
 
-Mode 3
+### Mode 3
 
 <center>
 <img src="/public/figures/technote/spi-cpol-1-cpha-1.png" style="width:60%">
