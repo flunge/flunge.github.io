@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "Push Pull and Open Drain"
+date:   2016-12-15
+categories: TechNote
+tags: [Hardware]
+---
+
+### General Purpose Input/Output 
+
+ARM processors provide general purpose input and output functions, where there several parameters to be set. The first is the output type, second is the pull up or pull down mode and the third one is the output speed. 
+
+___
+
+### Pull-up / Pull-down
+
+In digital circuits, the signal lines are generally not allowed to put as "float", i.e., they need to always be in a high state or a low state. When floating, the state is undetermined, which may cause some IO errors.
+
+If the parameter of GPIO_PuPd is set as "GPIO_PuPd_UP",  it is equivelent to adding a resistor between the signal line and Vcc and it is the same case for "GPIO_PuPd_DOWN". For some application, one needs to do this manually and for most of the ARM processors, the feature is done by its build-in circuitry. 
+
+___
+
+### GPIO_OType (Output type)
+
+Push-pull: this is the output type that most of us think of as "standard". When the output goes low, it is actively "pull" to ground. Conversely, when the output is set to high, it is actively "pushed" towards Vcc. The below figure shows the working principle of push-pull circuitry.
+
+<center>
+<img src="/public/figures/technote/push-pull-circuitry.png" style="width:60%">
+</center>
+<center>Push-pull circuitry</center>
+
+An Open-Drain output, on the other hand, is only active in one direction. It can pull the pin towards ground, but it cannot drive it high. Imagine the previous image, but without the upper MOSFET. When it "release" the wire, the (lower-side) MOSFET is simply non-conductive, which causes the output to float.
+
+For this type of output, there needs to be a pull-up resistor added to the circuit, which will cause the line to go high when not driven low. You can do this with an external part, or by setting the GPIO_PuPd value to GPIO_PuPd_UP.
+
+The name comes from the fact that the MOSFET's drain isn't internally connected to anything. This type of output is also called "open-collector" when using a BJT instead of a MOSFET.
+
+<center>
+<img src="/public/figures/technote/open-drain-circuitry.png" style="width:60%">
+</center>
+<center>Open-drain/collector circuitry</center>
+
+___
+
+### GPIO Speed
+
+Basically, this controls the slew rate (the rise time and fall time) of the output signal. The faster the slew rate, the more noise is radiated from the circuit. It is good practice to keep the slew rate slow, and only increase it if you have a specific reason.
