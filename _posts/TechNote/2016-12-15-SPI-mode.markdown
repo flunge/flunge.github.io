@@ -20,6 +20,7 @@ ___
 <center>CPOL=0 and CPHA=0</center>
 
 The data must be available before the first clock signal rising. The clock idle state is zero. The data on MISO and MOSI lines must be stable while the clock is high and can be changed when the clock is low. The data is captured on the clock's low-to-high transition and propagated on high-to-low clock transition.
+
 ___
 
 ### Mode 1
@@ -30,6 +31,7 @@ ___
 <center>CPOL=0 and CPHA=1</center>
 
 The first clock signal rising can be used to prepare the data. The clock idle state is zero. The data on MISO and MOSI lines must be stable while the clock is low and can be changed when the clock is high. The data is captured on the clock's high-to-low transition and propagated on low-to-high clock transition.
+
 ___
 
 ### Mode 2
@@ -40,6 +42,7 @@ ___
 <center>CPOL=1 and CPHA=0</center>
 
 The data must be available before the first clock signal falling. The clock idle state is one. The data on MISO and MOSI lines must be stable while the clock is low and can be changed when the clock is high. The data is captured on the clock's high-to-low transition and propagated on low-to-high clock transition.
+
 ___
 
 ### Mode 3
