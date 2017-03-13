@@ -10,6 +10,8 @@ tags: [Hardware]
 
 SPI interface allows to transmit and receive data simultaneously on two lines (MOSI and MISO). Clock polarity (CPOL) and clock phase (CPHA) are the main parameters that define a clock format to be used by the SPI bus. Depending on CPOL parameter, SPI clock may be inverted or non-inverted. CPHA parameter is used to shift the sampling phase. If CPHA=0 the data are sampled on the leading (first) clock edge. If CPHA=1 the data are sampled on the trailing (second) clock edge, regardless of whether that clock edge is rising or falling.
 
+___
+
 Mode 0
 
 <center>
@@ -18,6 +20,7 @@ Mode 0
 <center>CPOL=0 and CPHA=0</center>
 
 The data must be available before the first clock signal rising. The clock idle state is zero. The data on MISO and MOSI lines must be stable while the clock is high and can be changed when the clock is low. The data is captured on the clock's low-to-high transition and propagated on high-to-low clock transition.
+___
 
 Mode 1
 
@@ -27,6 +30,7 @@ Mode 1
 <center>CPOL=0 and CPHA=1</center>
 
 The first clock signal rising can be used to prepare the data. The clock idle state is zero. The data on MISO and MOSI lines must be stable while the clock is low and can be changed when the clock is high. The data is captured on the clock's high-to-low transition and propagated on low-to-high clock transition.
+___
 
 Mode 2
 
@@ -36,6 +40,7 @@ Mode 2
 <center>CPOL=1 and CPHA=0</center>
 
 The data must be available before the first clock signal falling. The clock idle state is one. The data on MISO and MOSI lines must be stable while the clock is low and can be changed when the clock is high. The data is captured on the clock's high-to-low transition and propagated on low-to-high clock transition.
+___
 
 Mode 3
 
