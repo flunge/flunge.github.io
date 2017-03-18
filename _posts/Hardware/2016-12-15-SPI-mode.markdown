@@ -2,7 +2,7 @@
 layout: post
 title:  "SPI bus mode"
 date:   2016-12-15
-categories: TechNote
+categories: Hardware
 tags: [Hardware]
 ---
 

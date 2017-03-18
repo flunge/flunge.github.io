@@ -2,7 +2,7 @@
 layout: post
 title:  "GPU and Caffe Installation in Ubuntu"
 date:   2016-09-09
-categories: TechNote
+categories: Practice
 tags: [GPU, Caffe]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Caffe Installation and Practice on Jetson TK1"
 date:   2016-08-16
-categories: TechNote
+categories: Practice
 tags: [Caffe, JetsonTK1]
 ---
 
