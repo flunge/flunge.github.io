@@ -2,7 +2,7 @@
 layout: post
 title:  "C storage class"
 date:   2017-01-05
-categories: Programming
+categories: Program
 tags: [C & C++]
 ---
 
