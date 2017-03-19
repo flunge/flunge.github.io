@@ -13,9 +13,7 @@ tags: [C & C++]
 1. 'const' used on variables;
 2. 'const' used on reference;
 3. 'const' used on pointers;
-4. 'const' used on parameter passing;
-5. 'const' used on member functions.
-
+4. 'const' used on parameter passing and functions;
 ___
 
 ### Part 1. 'const' used on variables
@@ -104,4 +102,56 @@ const string *cstr;
 string* const cstr;
 ```
 ___
+### Part 4. 'const' used on parameter passing
 
+a) const parameters by reference avoid parameters being modified in the function calls;
+
+b) const return value by reference avoid the result being modified;
+
+c) const member functions reject modification of any member variables, except those with 'mutable' declarations, and const functions can only call other const functions;
+
+```
+class Dog{
+	int age;
+	string name;
+
+public: 
+	Dog() {age = 3; name = "dummy";}
+
+	void setAge (const int& a) // const parameters by reference
+	{
+		age = a; 
+		a++; // error: cannot be modified
+	}
+
+	const string& getName() {return name;} // const return value by reference
+
+	void printDogName() const // const functions
+	{
+		cout << name << "const" << endl; // prints "dummyconst"
+		age++; // error: in const functions cannot change any member variable
+		cout << getName() << endl; // error: non-const functions called in const functions
+	}
+
+	void printDogName() // non-const function overload
+	{
+		cout << getName() << "nonconst" << endl; // prints "dummynonconst"
+	}
+}
+
+int main() {
+	Dog d;
+
+	int i = 9;
+	d.setAge(i) // ok: age has been set to 9
+
+	const string& n = d.getName(); // n cannot be changed
+
+	d.printDogName(); // invoke non-const functions
+
+	const Dog d2;
+	d2.printDogName(); // invoke const version
+}
+
+```
+___
