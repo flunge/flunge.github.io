@@ -61,7 +61,7 @@ const int &ri = dval;
 // which is equal to the following
 int temp = dval; // a force transform
 const int &ri = temp; // bind ri to that temp
-
+```
 ___
 
 ### Part 3. 'const' used on pointers
