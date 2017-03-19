@@ -66,7 +66,7 @@ ___
 
 ### Part 3. 'const' used on pointers
 
-1. If 'const' is on the left of '*', data is const, we call it 'const data pointer', and if 'const' is on the right of '*', pointer is const, we call it 'const pointer';
+a) If 'const' is on the left of '*', data is const, we call it 'const data pointer', and if 'const' is on the right of '*', pointer is const, we call it 'const pointer';
 
 ```
 const int i = 9;
@@ -75,7 +75,7 @@ int const *p2 = &i; // data is const, pointer is not
 int* const p2 = &i; // data is not, pointer is const
 ```
 
-2. A const data cannot be bind with a normal pointer, while a const data pointer can be bind with a normal data, but cannot modify the value through the pointer;
+b) A const data cannot be bind with a normal pointer, while a const data pointer can be bind with a normal data, but cannot modify the value through the pointer;
 
 ```
 const double *cptr;
@@ -86,7 +86,7 @@ void *pv = &pi; // error: const data cannot be binded with normal pointer
 double dval = 3.14;
 cptr = &dval; //ok: but cannot change dval though cptr
 ```
-3. A const pointer points to a fixed object and cannot be re-pointed to other objects.
+b) A const pointer points to a fixed object and cannot be re-pointed to other objects.
 
 ```
 int errNumb = 0;
