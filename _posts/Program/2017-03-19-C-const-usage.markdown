@@ -21,6 +21,7 @@ ___
 ### Part 1. 'const' used on variables
 
 a) 'const' is a compile time constraint that an object cannot be modified;
+
 b) 'const' declaration must be initialized.
 
 ```
@@ -39,6 +40,7 @@ extern const int bufSize; // use bufSize from file_1
 ### Part 2. 'const' used on reference
 
 a) A reference is an alias to a certain object and a reference has to be initialized and cannot redefined;
+
 b)  const reference is a reference to const variable and non-const reference cannot be initialized by a const variable;
 
 ```
@@ -66,7 +68,7 @@ ___
 
 ### Part 3. 'const' used on pointers
 
-a) If 'const' is on the left of '&*', data is const, we call it 'const data pointer', and if 'const' is on the right of '&*', pointer is const, we call it 'const pointer';
+a) If 'const' is on the left of '&star', data is const, we call it 'const data pointer', and if 'const' is on the right of '&star', pointer is const, we call it 'const pointer';
 
 ```
 const int i = 9;
