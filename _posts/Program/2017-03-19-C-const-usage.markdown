@@ -68,7 +68,7 @@ ___
 
 ### Part 3. 'const' used on pointers
 
-a) If 'const' is on the left of '&star', data is const, we call it 'const data pointer', and if 'const' is on the right of '&star', pointer is const, we call it 'const pointer';
+a) If 'const' is on the left of \*, data is const, we call it 'const data pointer', and if 'const' is on the right of \*, pointer is const, we call it 'const pointer';
 
 ```
 const int i = 9;
