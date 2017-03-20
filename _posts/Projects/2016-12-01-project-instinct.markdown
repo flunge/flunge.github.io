@@ -13,6 +13,7 @@ tags: [Project, Hardware]
 3. [Platform Instinct](#platformInstinct)
 4. [Software Modules](#software)
 5. [FPGA Stereo Vision](#fpga)
+6. [Autonomous Performance in SAFMC](#auto)
 
 ___
 
@@ -149,3 +150,13 @@ Modules list:
 **Summary**
 
 Field programmable gate array extends the ability of image processing by parallel processing and line synchronization. We use Xlinix Zync7020 supporting for dual-cemera drivers with high resolution and image pre-processing. Depth map estimation based on epi-polar geometry and ORB feature extraction are developed on this module. Further development of communication between FPGA module and Intel Upboard is still under progress. This module will replace the Intel Realsense as the forward facing vision system. The large view angle and high frame rate will enable fast processing, i.e. fast flight capability in dynamic environment.
+
+___
+
+
+<a name = "flightController"></a>
+
+**Summary**
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/TZbpOoGi-JE" frameborder="0" allowfullscreen></iframe></center>
+<center>Autonomous flight performance</center>
