@@ -154,7 +154,7 @@ Field programmable gate array extends the ability of image processing by paralle
 ___
 
 
-<a name = "flightController"></a>
+<a name = "auto"></a>
 
 **Summary**
 
