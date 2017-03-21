@@ -158,5 +158,11 @@ ___
 
 **Summary**
 
+The platform InstinCT is specially designed for GPS-denied environment navigation, catering for applications in unknown and realisitic scenarios. With different configuration of Lidar and visual sensors, we first demonstrated our capability in 2017 Singapore Amazing Flying Machine Competition category D2, the fully autonomous category, with the hexacopter drone performing autonomous navigation with a 30-meter Hokuyo laser range finder. This video shows the preparation of the competition, where all the efforts done are based on our group member's research work, on mission management, lidar SLAM, path planning and trajectory generation, state fusion, communication, flight control, and hardware integration. Thanks to the integration of Google cartographer, a lidar based SLAM, providing high frequency updating rate, loop closure detection and low computational consumption. 
+
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/TZbpOoGi-JE" frameborder="0" allowfullscreen></iframe></center>
 <center>Autonomous flight performance</center>
+
+**Real Competition Scenario**
+
+Coming soon...
