@@ -8,18 +8,34 @@ tags: [Project, Hardware]
 
 ### Contents
 
-1. [Flight Controller](#flightController)
-2. [Mother Board](#motherboard)
-3. [Platform Instinct](#platformInstinct)
-4. [Software Modules](#software)
-5. [FPGA Stereo Vision](#fpga)
-6. [Autonomous Performance in SAFMC](#auto)
+1. [Project Mainline](#mainline)
+2. [Platform Development](#motherboard)
+3. [Software Modules](#software)
+4. [FPGA Stereo Vision](#fpga)
+5. [Sub-project1: SAFMC-2017](#safmc)
+6. [Sub-project2: IMAV-2017](#imav)
 
 ___
 
-<a name = "flightController"></a>
+<a name = "mainline"></a>
+
+### Project Mainline
+
+**Introduction**
+
+This project aims to deelop a comprehensive and implementable UAV GPS-less navigation system capable of navigating through indoor and under-foliage. The system must be light-weight to be carried on-board, real-time processing and robust in handling realistic scenarios. Multiple agent cooperation for missions will also be studied through this project.
+
+**Scope of Work**
 
 **Summary**
+
+___
+
+<a name = "platform"></a>
+
+### Platform Development
+
+**Flight Control Module**
 
 This module provides power flight control features for general UAV platform use: multi-rotor platforms, single/coaxial rotor helicopter, unconventional aircrafts as tail-sitters and hybrids. The design extends its capability with all necessary signals connected to a customized connector, making it transportable to any extenion board with same connector type or even multiple identical flight controllers for redundancy purpose.
 
@@ -28,8 +44,6 @@ This module provides power flight control features for general UAV platform use:
 <img src="/public/figures/project/instinct_fc_2.JPG" style="width:30%">
 </center>
 <center>Front and reverse side view <a href="https://grabcad.com/library/adaptive-flight-controller-1">[3D Model]</a></center>
-
-**Key Features**
 
 General Information:
 
@@ -57,11 +71,7 @@ Modules running:
 5. Mission control: navigation mission control to specify mission elements, manage state machine and way-points. 
 6. Base project: current firmware project is forked from the Pixhawk repo 3 years ago.
 
-___
-
-<a name = "motherboard"></a>
-
-**Summary**
+**Motherboard**
 
 This motherboard extends the capabilities of the flight controller described in the above part. Besides providing power and extension signals to the flight controller, this motherboard got its own standalone functions. The current design works for quad-rotor, hexa-rotor and Y-3 configurations, with the pre-defined functions and shapes. 
 
@@ -92,11 +102,7 @@ Modules running:
 3. PPM/S-bus: receiver input from RC transmitters, a UART device is allocated to S-bus input to decode the data, while PPM is a general timer function; 
 4. Further peripherals: I2C bus will attached more devices (external magnetometers, range sensors, other MCUs), UART will be connected to upper-level CPU as Intel processor for more high level algorithm.
 
-___
-
-<a name = "platformInstinct"></a>
-
-**Summary**
+**Platform Overview**
 
 Below figures shows the overall assembly effect of the platform INSTINCT. With the flight controller and mother board, the hexa-copter is able to perform GPS guided navigation. Design has been verified with real flight test data besides the lab. 
 
@@ -127,7 +133,9 @@ ___
 
 <a name = "software"></a>
 
-**Summary**
+### Software Modules
+
+**ROS Hierachy**
 
 Software is the core of the whole project, as the brain to a human. According to the platform, an Intel Up-board is the main CPU for higher level intelligence. The output of sensors laser scanner and front-facing RGBD-camera Intel Realsense, are all directed into Intel Up-board for further processing. Below video is the handheld platform with a Realsense camera. ORB-SLAM is running onboard on ROS kinetic version. For laser scanner, Google SLAM or hector SLAM is used for this project. The future work will be fusion of multiple software node pose estimation results, along with the inertia measurements.
 
@@ -144,19 +152,23 @@ Modules list:
 <center>
 <img src="/public/figures/project/uavsystem_1.jpg" style="width:70%">
 </center>
+
+___
  
 <a name = "fpga"></a>
 
-**Summary**
+### FPGA Stereo Vision
 
 Field programmable gate array extends the ability of image processing by parallel processing and line synchronization. We use Xlinix Zync7020 supporting for dual-cemera drivers with high resolution and image pre-processing. Depth map estimation based on epi-polar geometry and ORB feature extraction are developed on this module. Further development of communication between FPGA module and Intel Upboard is still under progress. This module will replace the Intel Realsense as the forward facing vision system. The large view angle and high frame rate will enable fast processing, i.e. fast flight capability in dynamic environment.
 
 ___
 
 
-<a name = "auto"></a>
+<a name = "safmc"></a>
 
-**Summary**
+### Sub-project1: SAFMC-2017
+
+**Introduction**
 
 The platform InstinCT is specially designed for GPS-denied environment navigation, catering for applications in unknown and realisitic scenarios. With different configuration of Lidar and visual sensors, we first demonstrated our capability in 2017 Singapore Amazing Flying Machine Competition category D2, the fully autonomous category, with the hexacopter drone performing autonomous navigation with a 30-meter Hokuyo laser range finder. This video shows the preparation of the competition, where all the efforts done are based on our group member's research work, on mission management, lidar SLAM, path planning and trajectory generation, state fusion, communication, flight control, and hardware integration. Thanks to the integration of Google cartographer, a lidar based SLAM, providing high frequency updating rate, loop closure detection and low computational consumption. 
 
@@ -164,6 +176,17 @@ The platform InstinCT is specially designed for GPS-denied environment navigatio
 <center>Autonomous flight performance</center>
 
 **Real Competition Scenario**
+
+The actual challenge includes several scoring points: 
+1. autonomous take-off;
+2. entering building through window;
+3. flying through corridors;
+4. chemical sampling at an unknown location through visual detection;
+5. identify casualty's name tag through on-board camera;
+6. enter and identifying personnel in dark room;
+7. passing through array of poles and a fan to emulate windy condition;
+8. visual guided precise landing. 
+The NUS UAV team completes all of the missions and awarded the championship. 
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/l_Ys-ouD7VM" frameborder="0" allowfullscreen></iframe></center>
 <center>Autonomous flight performance</center>

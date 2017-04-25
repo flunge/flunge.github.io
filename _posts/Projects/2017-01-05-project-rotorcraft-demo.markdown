@@ -78,6 +78,8 @@ Below is our first manual flight test, where we conducted outside our lab. It ca
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/dUXnVfIDlSk" frameborder="0" allowfullscreen></iframe></center>
 <center>Manual flight test</center>
 
+___
+
 ### Autonomous Navigation
 
 This is a milestone for fully autonomous control of the UWB version quad-copter designed for this project. We have mounted several VICON markers on the platform and placed in the VICON environment. In order to test the performance of the implemented control law as well as calibrate the UWB positioning accuracy, we first do the auto hovering in VICON room and further with a simple path. 
@@ -91,6 +93,8 @@ This is a milestone for fully autonomous control of the UWB version quad-copter 
 2. UWB ranging error: this was mainly caused by setup of the UWB anchors. The positions and distance between each other affect the final ranging accuracy. 
 3. UWB estimation error: this was introduced by low update rates of UWB range information as well as the extended Kalman Filter motion model. The motion model was a constant velocity model which did not concern the dynamics of the drones. We added the acceleration information into the motion model and improved the update frequency of the overall range request loops, the accuracy was also improved to 5cm and latency was limited within 200ms. 
 4. Magnetometer interference problem: this was caused by the large current interference to the magnetic field around the magnetometer. The final platform uses shielding materials above the power regulation board and eventually mitigated the effect. 
+
+___
 
 ### Actual Performance
 
