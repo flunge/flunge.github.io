@@ -165,4 +165,5 @@ The platform InstinCT is specially designed for GPS-denied environment navigatio
 
 **Real Competition Scenario**
 
-Coming soon...
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/l_Ys-ouD7VM" frameborder="0" allowfullscreen></iframe></center>
+<center>Autonomous flight performance</center>

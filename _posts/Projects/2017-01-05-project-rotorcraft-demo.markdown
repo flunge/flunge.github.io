@@ -82,3 +82,12 @@ This is a milestone for fully autonomous control of the UWB version quad-copter 
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/xKCNQzzwZnU" frameborder="0" allowfullscreen></iframe></center>
 <center>Fully autonomous control with aid of VICON system</center>
+
+Updates on Apr 18, 2017
+
+It was the actual day for the UMSA openning ceremony. We have been testing the whole formation drones system for the last two weeks in Changi Exhibition Center, the Aviation Park beside the sea. The UWB signal is very stable and reliable in the demo hall area with the full dimension around 15m X 15m X 7m. The formation drones was reduced to 6 sets from 10 sets due to the confined area and signal bandwidth capability. The formation shape and path designed for each drone is based on the music rhythm and light will also changes their patterns and color accordingly.  
+
+The patterns include a formal square shape, a figure eight rotation, a random flight, a heart shape, leader and followers shape. With the starry night background and the music, the overall effect is really touching and exciting.  
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/imvOHrcYKy4" frameborder="0" allowfullscreen></iframe></center>
+<center>Fully autonomous control with aid of VICON system</center>
