@@ -186,7 +186,16 @@ The actual challenge includes several scoring points:
 6. enter and identifying personnel in dark room;
 7. passing through array of poles and a fan to emulate windy condition;
 8. visual guided precise landing. 
+
 The NUS UAV team completes all of the missions and awarded the championship. 
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/l_Ys-ouD7VM" frameborder="0" allowfullscreen></iframe></center>
 <center>Autonomous flight performance</center>
+
+___
+
+<a name = "imav"></a>
+
+### Sub-project2: IMAV-2017
+
+Coming soon...
