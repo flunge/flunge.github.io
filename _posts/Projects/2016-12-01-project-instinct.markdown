@@ -27,7 +27,29 @@ This project aims to deelop a comprehensive and implementable UAV GPS-less navig
 
 **Scope of Work**
 
-**Summary**
+1.	Multi-sensory data fusion
+2.	3D real-time simultaneous localization and mapping (SLAM)
+3.	Dynamic 3D Path planning in unknown environments
+4.	Multi-UAV cooperative control 
+
+Multi-sensory Data Fusion
+
+GPS-denied navigation in unknown environments has to rely on sophisticated sensors, such as Lidar(s) and camera(s) on-board of UAV platform itself. Most of the existing studies involve only one of the sensor types and the corresponding data fusion mechanisms with IMU are similar to that of the traditional GPS-INS architecture in which the sensor data are loosely integrated. In this project, the  aim  is to develop a close integration  of heterogeneous sensors on-board of an MAV to solve the navigation  problem for all kinds of indoor and outdoor cluttered environments. This close integration of sensors is able to enhance two features of the  unmanned system, namely robust and accurate navigation (localization) and  intelligent situation awareness (mapping and obstacle avoidance). Key works under this problem include optimal sensor selection and placement, sensor data synchronization and inter­sensor calibration. The optimal combination and placement of sensors also need to be thought through with constraints like payload budget, power budget, line-of-sight obstruction and singularity. Thereafter, data synchronization and inter-sensor calibration need to be done as accurate as possible to make sure that the inputs to the later navigation algorithms are sufficient, accurate and delay-free. All the aforementioned will eventually affect quality and complexity of the navigation and situation awareness algorithms.
+
+
+3D Real-time Simultaneous Localization and Mapping (SLAM)
+
+This is a key area of this project where the application of simultaneous localization and mapping (SLAM) in a large scale 3-D environment would be developed. Although researchers have successfully implemented SLAM in various robotics applications (mostly for ground robots), there are still issues on robust data association, effective landmark representation, SLAM for large environments and full-scale 3-D SLAM that remained to be solved, particularly in real-time on-board system of a payload-limited UAV. One key challenge here is to reduce the complexity of SLAM algorithms. The project will explore various techniques, multiple types of sensors and also based on multiple types of features(visual or geometric) to ensure that the proposed method should work consistently well for different types of indoor and outdoor environments. Hardware optimization such as FPGA or GPU  implementation will also be explored after the SLAM algorithms are functionally verified. This will help to greatly reduce size and weight requirement for the UAV platform.
+
+Dynamic 30 Path Planning in Unknown Environments
+
+Path planning for unknown environments in a 3-D space is still challenging due to three issues, namely there is  no well-defined global destination,  the knowledge about obstacles inside the environment are unknown before the mission, but can only be acquired dynamically, and the complexity is too high for real-time computation. In this project, our path planning algorithm will be formulated in a 3-D space with map knowledge only from the aforementioned SLAM algorithm. To achieve this, an efficient data structure for map representation (eg. kd-tree, Oct-tree, Quad-tree and BSP) will first be investigated. Comparison and improvements among these data  structures have to be done to cater for project requirements. Once an optimal map representation is determined and realized, various path finding  algorithms will be tested for the purpose of obstacle avoidance. The key requirements here are the expandability of algorithm to a 3-D space and its computational complexity. As the environment is unknown and navigation is dynamic, the algorithms will be optimized to run in real time with high frequency (at least 1 Hz).
+
+A 30 trajectory planning function will be developed to generate UAV trajectory references, taking into consideration of UAV speed, acceleration and jerk, so as to ensure a smooth and stable UAV flight profile during obstacles avoidance.
+
+Multi-UAV Cooperative Control
+
+Due to small payload capacity, short flight endurance and slow exploration speed, the capability of a single UAV in relatively large-scale environments is very limited. To overcome these limitations, this project will explore exploitation cooperative navigation and control strategies  using multiple MAVs. The approach will adopt a de-centralized, cooperative navigation and control structure relying only on information provided by neighbouring UAVs and low­bandwidth communications. The cooperative navigation will be developed for conducting cooperative search mission in unknown environment where individual UAV will scout the terrain via their optimal path-planning and relay information back to GCS for consolidation once communication with the GCS can be established. The project will develop a mechanism to efficiently combine map information from individual entities and to display the result in a coherent visualization.
 
 ___
 

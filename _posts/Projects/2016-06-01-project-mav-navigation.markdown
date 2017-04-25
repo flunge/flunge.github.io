@@ -8,18 +8,18 @@ tags: [Project, Hardware]
 
 ### Contents
 
-1. [Flight Controller](#flightController)
-2. [Electronic Speed Control](#escs)
+1. [Flight Control System](#flightController)
+2. [Electronic Speed Controller](#escs)
 3. [Optical Flow Module](#optical)
 4. [Gumstix on YOCTO Project](#gumstix)
 5. [Platform Overview](#platform)
-6. [Side Project](#sideproject)
+6. [Sub-project1: Banner-quad](#sideproject)
 
 ___
 
 <a name = "flightController"></a>
 
-**Summary**
+### Flight Control System
 
 This flight control module is the most optimized integration compared to the COTS products. The development duration expands for two years, where I improved the controller from the aspects of new functions, smaller footprints, EMC/EMI concerns, current inteference, signal reflection and oscillation. These signal integrity issues affects the performance of the signal as well as the lifttime of the components to a large extent. 
 
@@ -29,9 +29,7 @@ This flight control module is the most optimized integration compared to the COT
 </center>
 <center>Front and reverse side view <a href="https://grabcad.com/library/micro-quad-flight-controller-1">[3D Model]</a></center>
 
-**Key Features**
-
-General Information:
+**General Information**
 
 1. Layers: 8-layer PCB with 1 mm thickness. 
 2. Dimension: 35 mm X 35 mm.
@@ -45,7 +43,7 @@ General Information:
 5. Barometers: MS5611-01BA.
 6. Explanations: all of these sensors share SPI or I2C bus, drivers will be started on system initilized, data will be polled with necessary rates (gyro rates and accelerations will be at 800 or 1000 Hz, magenetometers will be queried with 100 Hz and altitude will be sampled at 50 Hz). Sensors can also be connected on the expandable ports.
 
-Modules running:
+**Firmware Running**
 
 1. Sensor module: set all calibration parameters for opened sensors, obtain data from drivers output, combined all sensor data in one publishable topic;
 2. Commander module: processing regular events as status display, low voltage alarm, arm-disarm operations, switch control mode and navigation mode, decoding commands from GCS, broadcasting status information;
@@ -58,12 +56,11 @@ ___
 
 <a name = "escs"></a>
 
-**Summary** 
+### Electronic Speed Controller
 
 This electronic speed controller receives command from PWM signal sent by flight control module and generates switching command to 6 power MOSFETs. These power MOSFETs serves as electrical switch to control the connectivity of each phase of the motor. A faster sequence will lead to faster RPM, and vice versa. 
 
-
-General Information:
+**General Information**
 
 1. Layers: 6-layer PCB with 1 mm thickness. 
 2. Dimension: 35 mm X 35 mm.
@@ -76,7 +73,7 @@ General Information:
 </center>
 <center>Front and reverse side view <a href="https://grabcad.com/library/quad-esc-board-1">[3D Model]</a></center>
 
-ESC firmware running:
+**ESC firmware**
 
 The ESC firmware is composed in Assembly language which is mainly forked from SimonK firmware. Several adapations were done to improve the input PWM width and add I2C for input and status output.
 
@@ -84,11 +81,11 @@ ___
 
 <a name = "optical"></a>
 
-**Summary** 
+### Optical Flow Module
 
 The optical-flow is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and a scene, which is imitation from the insect vision. This technique is now widely used in computer vision and robotics, mainly for estimation of lateral movements velocity. 
 
-Hardware Specs:
+**Hardware Specs**
 
 1. General info: a 6-layer PCB with dimension of 35 mm X 35 mm;
 2. Processor: STM32F407;
@@ -101,7 +98,7 @@ Hardware Specs:
 </center>
 <center>Front and reverse side view <a href="https://grabcad.com/library/optical-flow-module-1">[3D Model]</a></center>
 
-Firmware Implementation:
+**Firmware Implementation**
 
 The firmware can be separate into two parts: drivers and algorithm. The driver part is more tricky for OV9655 as configurations of registers determines the resolution, fps, image format and other image features. With the DCMI interface enabled for the camera, a complicated scheme to swap the RAM area to stor and transmit images to GCS as a calibration and display tool is developed. Image transfer mainly uses DMA instead of RAM for faster speed. Drivers for other sensors are also necessary, which are SPI interface for gyro, uart interface for ultrasonic sensor and I2C interface for Teraranger One. 
 
@@ -113,7 +110,8 @@ ___
 
 <a name = "gumstix"></a>
 
-**Summary** 
+
+### Gumstix on YOCTO Project 
 
 In order to extend the computational capability and process more sensor input from external camera/laser scanner or range sensor, the above mentioned modules are not enought. However, to implement industrial grade process unit exceeds the weight budget far away. Thus, we selected the Gumstix Overo fire based on ARM cortex A9, with a dimension of 17mm X 58mm, for further processing power. I have designed an extension board for the Gumstix module to introduce its SPI/I2C and UART peripherals. 
 
@@ -123,7 +121,7 @@ In order to extend the computational capability and process more sensor input fr
 </center>
 <center>Front and reverse side view <a href="https://grabcad.com/library/gumstix-extension-board-1">[3D Model]</a></center>
 
-Firmware Implementation:
+**Firmware Implementation**
 
 Based on YOCTO project, I customized the embedded Linux system for Gumstix architecture. Most work to be done is at metadata layer of the Yocto project. These layers provide the three main functions: Metadata, which includes all the software/kernal codes that to be compiled; board support package (BSP) layer, which is to conﬁgure hardware, speciﬁcally is to provide the hardware support for Gumstix OMAP3530; Distro layer, which includes some conﬁguration ﬁles and layer settings. After configuration for BSP, the only thing we need to do is wait for compilation and prepare a SD card for image and u-boot burning.
 
@@ -133,7 +131,7 @@ ___
 
 <a name = "platform"></a>
 
-**Platform Overview**
+### Platform Overview
 
 The overall platform includes all the circuit modules with external sensors attached: ultrasonic modules, cameras, optical flow modules. The flight demo and detailed algorithm, SLAM and ROS integration can be found in my thesis and defense PPT, which is also avaiable in this website.
 
@@ -146,7 +144,7 @@ The overall platform includes all the circuit modules with external sensors atta
 
 ___
 
-**Side Project**
+### Sub-project1: Banner-quad
 
 This is another side project, which use a similar module that is only able to perform GPS based navigation. The special feature for this platform is that it can drop a bannar from the mechanism mounted underneath the main structure with a metal-gear servo. This platform is usually used for demos or show for a special event. 
 

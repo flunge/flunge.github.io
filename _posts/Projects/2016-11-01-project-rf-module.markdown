@@ -8,13 +8,15 @@ tags: [Project, Hardware]
 
 ### Contents
 
-1. [RF module](#rfmodule)
-2. [Radio Receiver](#radioreceiver)
-3. [UWB module](#uwb)
+1. [RF Datalink](#datalink)
+2. [Radio Transceiver](#radioreceiver)
+3. [UWB Module](#uwb)
 
 ___
 
-<a name = "rfmodule"></a>
+<a name = "datalink"></a>
+
+### RF Datalink
 
 **Motivation**
 
@@ -43,6 +45,8 @@ ___
 
 <a name = "radioreceiver"></a>
 
+### Radio Transceiver
+
 **Motivation**
 
 For a minimalist design of palm sized quad-rotor UAV, there is no COTS available product, which is small and light enough and compatible with the main brand transmitters like Futaba, Spectrum or JR. This is the motivation to develop such a module that is compatible with one of these transmitter and has a much smaller footprint than the COTS receivers.
@@ -53,13 +57,13 @@ For a minimalist design of palm sized quad-rotor UAV, there is no COTS available
 </center>
 <center>Front and reverse side view <a href="https://grabcad.com/library/simple-rc-receiver-1">[3D Model]</a></center> 
 
-Hardware Specs 
+**Hardware Specs**
 
 1. Dimension: 12mm X 14mm;
 2. Transceiver: CYRF6936 with a SPI bus connects to the FCU. 
 3. RF: ISM band with transmitting power less than 4 dBm.
 
-Software Issues
+**Software Issues**
 
 1. Related work: forked from the TU Delft branch, the Spectrum protocol was hacked and implemented in the processor. 
 2. Protocol: DSMx, working better in more radio-crowded environment and performs better to resist noise. 
@@ -68,6 +72,8 @@ Software Issues
 ___
 
 <a name = "uwb"></a>
+
+### UWB Module
 
 **Motivation**
 
@@ -83,13 +89,13 @@ This is the motivation for me to find out a low-cost solutin to develop a UWB mo
 </center>
 <center>UWB module front view <a href="https://grabcad.com/library/uwb-module-1">[3D Model]</a></center> 
 
-Hardware Specs 
+**Hardware Specs**
 
 1. Dimension: 40mm X 14mm;
 2. Processor: STM32F405; 
 3. UWB transceiver: Decawave DWM1000.
 
-Software Issues
+**Software Issues**
 
 1. Operating System: Nuttx; 
 2. DWM1000 Driver: the driver is forked from the online documents;
