@@ -9,7 +9,7 @@ tags: [Project, Hardware]
 ### Contents
 
 1. [Project Mainline](#mainline)
-2. [Platform Development](#motherboard)
+2. [Platform Development](#platform)
 3. [Software Modules](#software)
 4. [FPGA Stereo Vision](#fpga)
 5. [Sub-project1: SAFMC-2017](#safmc)

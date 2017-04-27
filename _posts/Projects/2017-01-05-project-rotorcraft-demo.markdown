@@ -10,7 +10,7 @@ tags: [Project, Hardware]
 
 1. [Demo Platform](#platform)
 2. [Autonomous Navigation](#uwb)
-3. [Actual Performance](#sideshow)
+3. [Actual Performance](#umsashow)
 
 ___
 
@@ -80,6 +80,8 @@ Below is our first manual flight test, where we conducted outside our lab. It ca
 
 ___
 
+<a name = "uwb"></a>
+
 ### Autonomous Navigation
 
 This is a milestone for fully autonomous control of the UWB version quad-copter designed for this project. We have mounted several VICON markers on the platform and placed in the VICON environment. In order to test the performance of the implemented control law as well as calibrate the UWB positioning accuracy, we first do the auto hovering in VICON room and further with a simple path. 
@@ -95,6 +97,8 @@ This is a milestone for fully autonomous control of the UWB version quad-copter 
 4. Magnetometer interference problem: this was caused by the large current interference to the magnetic field around the magnetometer. The final platform uses shielding materials above the power regulation board and eventually mitigated the effect. 
 
 ___
+
+<a name = "umsashow"></a>
 
 ### Actual Performance
 
